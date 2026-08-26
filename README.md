@@ -9,6 +9,7 @@ Code and data used for the numerical experiments reported in:
 - Dominant Vertices (DV)
 - Node Elimination (NE)
 - Two-Step Reduction (TS)
+- Leaf-Node Removal (LR)
 
 ## Dataset
 
