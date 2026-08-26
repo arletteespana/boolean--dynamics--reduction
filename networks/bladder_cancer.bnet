@@ -1,0 +1,45 @@
+# Bladder cancer Boolean network, corrected value-based KEGG reconstruction
+# Missing-interaction entries (-/-) were excluded and do not define regulatory dependencies.
+# Convention retained: --> and ..> positive; --| negative; +p inherits the accompanying sign.
+targets, factors
+ARAF, (HRAS | KRAS | NRAS)
+BRAF, (HRAS | KRAS | NRAS)
+CCND1, CCND1
+CDH1, CDH1
+CDK4, CDK4
+CDKN1A, CDKN1A
+CDKN2A, CDKN2A
+CXCL8, CXCL8
+DAPK1, DAPK1
+DAPK2, DAPK2
+DAPK3, DAPK3
+E2F1, E2F1
+E2F2, E2F2
+E2F3, E2F3
+EGF, EGF
+EGFR, EGF
+ERBB2, EGF
+FGFR3, FGFR3
+HBEGF, HBEGF
+HRAS, FGFR3
+KRAS, FGFR3
+MAP2K1, (ARAF | BRAF | RAF1)
+MAP2K2, (ARAF | BRAF | RAF1)
+MAPK1, (MAP2K1 | MAP2K2)
+MAPK3, (MAP2K1 | MAP2K2)
+MDM2, MDM2
+MMP1, MMP1
+MMP2, MMP2
+MMP9, MMP9
+MYC, MYC
+NRAS, FGFR3
+RAF1, (HRAS | KRAS | NRAS)
+RASSF1, RASSF1
+RB1, (CCND1 | CDK4 | E2F1 | E2F2 | E2F3)
+RPS6KA5, (MAPK1 | MAPK3)
+SRC, SRC
+THBS1, THBS1
+TP53, TP53 & !MDM2
+TYMP, TYMP
+UPK3A, UPK3A
+VEGFA, VEGFA
