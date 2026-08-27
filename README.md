@@ -79,8 +79,8 @@ The Dominant Vertices method identifies all dominant sets of minimum cardinality
 Because a network may have more than one minimum dominant set, this method receives an **output directory** instead of a single output file.
 
 ```bash
-python src/methods/dominant_vertices.py \
-    networks/acute_myeloid_leukemia.bnet \
+python src/methods/dominant_vertices.py 
+    networks/acute_myeloid_leukemia.bnet 
     results/models/acute_myeloid_leukemia/dominant_vertices/
 ```
 
