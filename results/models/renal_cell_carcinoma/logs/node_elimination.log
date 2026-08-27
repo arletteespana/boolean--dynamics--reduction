@@ -1,0 +1,7 @@
+Original size: 70
+Reduced size: 27
+Removed nodes: 43
+Iterations: 44
+Removal order: AKT1 -> AKT2 -> AKT3 -> CRK -> CRKL -> EPAS1 -> ETS1 -> GAB1 -> GRB2 -> HIF1A -> JUN -> LOC106821730 -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MET -> P3R3URF_PIK3R3 -> PAK1 -> PAK2 -> PAK3 -> PAK4 -> PAK6 -> PAK7 -> PDGFB -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> PTPN11 -> RAP1A -> RAP1B -> RAPGEF1 -> SLC2A1 -> SOS1 -> SOS2 -> TGFA -> TGFB1 -> TGFB2 -> TGFB3 -> VEGFA
+Retained nodes: ARAF, ARNT, ARNT2, BAD, BRAF, CDC42, CDKN1A, CREBBP, CUL2, EGLN1, EGLN2, EGLN3, ELOB, ELOC, EP300, FH, FLCN, HGF, HRAS, KRAS, NRAS, PRCC, RAC1, RAF1, RBX1, TFE3, VHL
+Reduced model written to: results\models\renal_cell_carcinoma\node_elimination.bnet
