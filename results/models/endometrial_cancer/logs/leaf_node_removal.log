@@ -1,0 +1,14 @@
+Original size: 59
+Reduced size: 39
+Removed nodes: 20
+Removal rounds: 7
+Removal layers:
+  Round 1: CCND1, ELK1, MYC
+  Round 2: LEF1, MAPK1, MAPK3, TCF7, TCF7L1, TCF7L2
+  Round 3: MAP2K1, MAP2K2
+  Round 4: ARAF, BRAF, RAF1
+  Round 5: HRAS, KRAS, NRAS
+  Round 6: SOS1, SOS2
+  Round 7: GRB2
+Retained nodes: AKT1, AKT2, AKT3, APC, APC2, AXIN1, AXIN2, BAD, BAK1, BAX, CASP9, CDH1, CDKN1A, CTNNA1, CTNNA2, CTNNA3, CTNNB1, DDB2, EGF, EGFR, ERBB2, FOXO3, GADD45A, GADD45B, GADD45G, GSK3B, ILK, MLH1, P3R3URF_PIK3R3, PDPK1, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, POLK, PTEN, TP53
+Reduced model written to: results\models\endometrial_cancer\leaf_node_removal.bnet

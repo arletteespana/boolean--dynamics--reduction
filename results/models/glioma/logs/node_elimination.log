@@ -1,0 +1,7 @@
+Original size: 76
+Reduced size: 32
+Removed nodes: 44
+Iterations: 45
+Removal order: ARAF -> BRAF -> CAMK1 -> CAMK1D -> CAMK1G -> CAMK2A -> CAMK2B -> CAMK2D -> CAMK2G -> CAMK4 -> CDKN1A -> E2F1 -> E2F2 -> E2F3 -> EGFR -> GRB2 -> HRAS -> IGF1R -> KRAS -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MTOR -> NRAS -> P3R3URF_PIK3R3 -> PDGFRA -> PDGFRB -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> PLCG1 -> PLCG2 -> RAF1 -> RB1 -> SHC1 -> SHC2 -> SHC3 -> SHC4 -> SOS1 -> SOS2
+Retained nodes: AKT1, AKT2, AKT3, BAK1, BAX, CALM1, CALM2, CALM3, CALML3, CALML4, CALML5, CALML6, CCND1, CDK4, CDK6, CDKN2A, DDB2, EGF, GADD45A, GADD45B, GADD45G, IGF1, MDM2, PDGFA, PDGFB, POLK, PRKCA, PRKCB, PRKCG, PTEN, TGFA, TP53
+Reduced model written to: results\models\glioma\node_elimination.bnet

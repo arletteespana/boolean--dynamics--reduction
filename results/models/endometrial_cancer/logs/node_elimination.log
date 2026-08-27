@@ -1,0 +1,7 @@
+Original size: 59
+Reduced size: 26
+Removed nodes: 33
+Iterations: 34
+Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BRAF -> CCND1 -> EGFR -> ELK1 -> GRB2 -> HRAS -> ILK -> KRAS -> LEF1 -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MYC -> NRAS -> P3R3URF_PIK3R3 -> PDPK1 -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> RAF1 -> SOS1 -> SOS2 -> TCF7 -> TCF7L1 -> TCF7L2
+Retained nodes: APC, APC2, AXIN1, AXIN2, BAD, BAK1, BAX, CASP9, CDH1, CDKN1A, CTNNA1, CTNNA2, CTNNA3, CTNNB1, DDB2, EGF, ERBB2, FOXO3, GADD45A, GADD45B, GADD45G, GSK3B, MLH1, POLK, PTEN, TP53
+Reduced model written to: results\models\endometrial_cancer\node_elimination.bnet

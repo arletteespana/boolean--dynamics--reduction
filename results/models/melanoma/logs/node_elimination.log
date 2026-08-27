@@ -1,0 +1,7 @@
+Original size: 73
+Reduced size: 43
+Removed nodes: 30
+Iterations: 31
+Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BRAF -> CCND1 -> CDK4 -> CDKN1A -> EGFR -> FGFR1 -> HRAS -> IGF1R -> KRAS -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MET -> NRAS -> P3R3URF_PIK3R3 -> PDGFRA -> PDGFRB -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> RAF1 -> RB1
+Retained nodes: AREG, BAD, BAK1, BAX, CDH1, CDK6, CDKN2A, DDB2, E2F1, E2F2, E2F3, EGF, EREG, FGF1, FGF10, FGF16, FGF17, FGF18, FGF19, FGF2, FGF20, FGF21, FGF22, FGF23, FGF3, FGF4, FGF5, FGF6, FGF7, FGF8, FGF9, GADD45A, GADD45B, GADD45G, HGF, IGF1, MDM2, MITF, PDGFA, PDGFB, POLK, PTEN, TP53
+Reduced model written to: results\models\melanoma\node_elimination.bnet

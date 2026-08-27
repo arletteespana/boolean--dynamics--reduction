@@ -1,0 +1,8 @@
+Original size: 73
+After stabilized-node removal: 73
+Reduced size: 73
+Total removed nodes: 0
+Step 1 - no stabilized nodes removed.
+Step 2 - no simple mediators removed.
+Retained nodes: AKT1, AKT2, AKT3, ARAF, AREG, BAD, BAK1, BAX, BRAF, CCND1, CDH1, CDK4, CDK6, CDKN1A, CDKN2A, DDB2, E2F1, E2F2, E2F3, EGF, EGFR, EREG, FGF1, FGF10, FGF16, FGF17, FGF18, FGF19, FGF2, FGF20, FGF21, FGF22, FGF23, FGF3, FGF4, FGF5, FGF6, FGF7, FGF8, FGF9, FGFR1, GADD45A, GADD45B, GADD45G, HGF, HRAS, IGF1, IGF1R, KRAS, MAP2K1, MAP2K2, MAPK1, MAPK3, MDM2, MET, MITF, NRAS, P3R3URF_PIK3R3, PDGFA, PDGFB, PDGFRA, PDGFRB, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, POLK, PTEN, RAF1, RB1, TP53
+Reduced model written to: results\models\melanoma\two_step.bnet

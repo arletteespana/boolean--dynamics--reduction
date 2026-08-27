@@ -1,0 +1,8 @@
+Original size: 76
+After stabilized-node removal: 76
+Reduced size: 76
+Total removed nodes: 0
+Step 1 - no stabilized nodes removed.
+Step 2 - no simple mediators removed.
+Retained nodes: AKT1, AKT2, AKT3, ARAF, BAK1, BAX, BRAF, CALM1, CALM2, CALM3, CALML3, CALML4, CALML5, CALML6, CAMK1, CAMK1D, CAMK1G, CAMK2A, CAMK2B, CAMK2D, CAMK2G, CAMK4, CCND1, CDK4, CDK6, CDKN1A, CDKN2A, DDB2, E2F1, E2F2, E2F3, EGF, EGFR, GADD45A, GADD45B, GADD45G, GRB2, HRAS, IGF1, IGF1R, KRAS, MAP2K1, MAP2K2, MAPK1, MAPK3, MDM2, MTOR, NRAS, P3R3URF_PIK3R3, PDGFA, PDGFB, PDGFRA, PDGFRB, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PLCG1, PLCG2, POLK, PRKCA, PRKCB, PRKCG, PTEN, RAF1, RB1, SHC1, SHC2, SHC3, SHC4, SOS1, SOS2, TGFA, TP53
+Reduced model written to: results\models\glioma\two_step.bnet
