@@ -59,8 +59,8 @@ results/models/acute_myeloid_leukemia/
 The original model is copied without modifying its Boolean rules. It is used as the baseline for comparison with the reduced models.
 
 ```bash
-python src/methods/original.py \
-    networks/acute_myeloid_leukemia.bnet \
+python src/methods/original.py 
+    networks/acute_myeloid_leukemia.bnet 
     results/models/acute_myeloid_leukemia/original.bnet
 ```
 
