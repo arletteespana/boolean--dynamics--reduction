@@ -1,0 +1,16 @@
+Original size: 73
+Reduced size: 40
+Removed nodes: 33
+Removal rounds: 9
+Removal layers:
+  Round 1: P3R3URF_PIK3R3, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PLCG1, PLCG2, RASSF5, RB1, STAT3, STAT5A, STAT5B
+  Round 2: CCND1, JAK3, RASSF1
+  Round 3: MAPK1, MAPK3
+  Round 4: MAP2K1, MAP2K2
+  Round 5: ARAF, BRAF, RAF1
+  Round 6: HRAS, KRAS, NRAS
+  Round 7: SOS1, SOS2
+  Round 8: GRB2
+  Round 9: EGFR, ERBB2, MET
+Retained nodes: AKT1, AKT2, AKT3, ALK, BAD, BAK1, BAX, CASP9, CDK4, CDK6, CDKN1A, CDKN2A, DDB2, E2F1, E2F2, E2F3, EGF, EML4, FHIT, FOXO3, GADD45A, GADD45B, GADD45G, HGF, KIF5A, KIF5B, KIF5C, PDPK1, POLK, PRKCA, PRKCB, PRKCG, RARB, RET, RXRA, RXRB, RXRG, STK4, TGFA, TP53
+Reduced model written to: results\models\non_small_cell_lung_cancer\leaf_node_removal.bnet

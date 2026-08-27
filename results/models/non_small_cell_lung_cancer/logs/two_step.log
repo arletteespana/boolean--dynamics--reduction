@@ -1,0 +1,9 @@
+Original size: 73
+After stabilized-node removal: 73
+Reduced size: 72
+Total removed nodes: 1
+Step 1 - no stabilized nodes removed.
+Step 2 - simple mediators:
+  RASSF1: KRAS -> RASSF1 -> RASSF5
+Retained nodes: AKT1, AKT2, AKT3, ALK, ARAF, BAD, BAK1, BAX, BRAF, CASP9, CCND1, CDK4, CDK6, CDKN1A, CDKN2A, DDB2, E2F1, E2F2, E2F3, EGF, EGFR, EML4, ERBB2, FHIT, FOXO3, GADD45A, GADD45B, GADD45G, GRB2, HGF, HRAS, JAK3, KIF5A, KIF5B, KIF5C, KRAS, MAP2K1, MAP2K2, MAPK1, MAPK3, MET, NRAS, P3R3URF_PIK3R3, PDPK1, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PLCG1, PLCG2, POLK, PRKCA, PRKCB, PRKCG, RAF1, RARB, RASSF5, RB1, RET, RXRA, RXRB, RXRG, SOS1, SOS2, STAT3, STAT5A, STAT5B, STK4, TGFA, TP53
+Reduced model written to: results\models\non_small_cell_lung_cancer\two_step.bnet
