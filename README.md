@@ -105,8 +105,8 @@ The summary file contains information such as the dominant-set size, depth, recu
 The Node Elimination method iteratively removes non-autoregulated variables and propagates their Boolean rules into the functions of their targets.
 
 ```bash
-python src/methods/node_elimination.py \
-    networks/acute_myeloid_leukemia.bnet \
+python src/methods/node_elimination.py 
+    networks/acute_myeloid_leukemia.bnet 
     results/models/acute_myeloid_leukemia/node_elimination.bnet
 ```
 
@@ -128,8 +128,8 @@ The Two-Step Reduction applies two successive procedures:
 2. iterative elimination of eligible simple mediator nodes.
 
 ```bash
-python src/methods/two_step.py \
-    networks/acute_myeloid_leukemia.bnet \
+python src/methods/two_step.py 
+    networks/acute_myeloid_leukemia.bnet 
     results/models/acute_myeloid_leukemia/two_step.bnet
 ```
 
@@ -148,8 +148,8 @@ The execution report distinguishes the variables eliminated during the stabilize
 Leaf-Node Removal iteratively removes variables with effective out-degree equal to zero.
 
 ```bash
-python src/methods/leaf_node_removal.py \
-    networks/acute_myeloid_leukemia.bnet \
+python src/methods/leaf_node_removal.py 
+    networks/acute_myeloid_leukemia.bnet 
     results/models/acute_myeloid_leukemia/leaf_node_removal.bnet
 ```
 
