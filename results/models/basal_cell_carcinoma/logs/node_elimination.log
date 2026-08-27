@@ -1,0 +1,7 @@
+Original size: 63
+Reduced size: 21
+Removed nodes: 42
+Iterations: 43
+Removal order: BMP2 -> BMP4 -> DVL1 -> DVL2 -> DVL3 -> FZD1 -> FZD10 -> FZD2 -> FZD3 -> FZD4 -> FZD5 -> FZD6 -> FZD7 -> FZD8 -> FZD9 -> HHIP -> LEF1 -> PTCH1 -> PTCH2 -> SUFU -> TCF7 -> TCF7L1 -> TCF7L2 -> WNT1 -> WNT10A -> WNT10B -> WNT11 -> WNT16 -> WNT2 -> WNT2B -> WNT3 -> WNT3A -> WNT4 -> WNT5A -> WNT5B -> WNT6 -> WNT7A -> WNT7B -> WNT8A -> WNT8B -> WNT9A -> WNT9B
+Retained nodes: APC, APC2, AXIN1, AXIN2, BAK1, BAX, CDKN1A, CTNNB1, DDB2, GADD45A, GADD45B, GADD45G, GLI1, GLI2, GLI3, GSK3B, KIF7, POLK, SHH, SMO, TP53
+Reduced model written to: results\models\basal_cell_carcinoma\node_elimination.bnet

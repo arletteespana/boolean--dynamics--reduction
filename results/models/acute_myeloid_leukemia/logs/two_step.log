@@ -1,0 +1,8 @@
+Original size: 67
+After stabilized-node removal: 67
+Reduced size: 67
+Total removed nodes: 0
+Step 1 - no stabilized nodes removed.
+Step 2 - no simple mediators removed.
+Retained nodes: AKT1, AKT2, AKT3, ARAF, BAD, BCL2A1, BRAF, CCNA1, CCNA2, CCND1, CD14, CEBPA, CEBPE, CHUK, CSF1R, CSF2, DUSP6, EIF4EBP1, FCGR1A, FLT3, GRB2, HRAS, IKBKB, IKBKG, IL3, ITGAM, JUP, KIT, KRAS, LEF1, MAP2K1, MAP2K2, MAPK1, MAPK3, MPO, MTOR, MYC, NFKB1, NRAS, P3R3URF_PIK3R3, PER2, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PIM1, PIM2, PML, PPARD, RARA, RELA, RPS6KB1, RPS6KB2, RUNX1, RUNX1T1, SOS1, SOS2, SPI1, STAT3, STAT5A, STAT5B, TCF7, TCF7L1, TCF7L2, ZBTB16
+Reduced model written to: results\models\acute_myeloid_leukemia\two_step.bnet

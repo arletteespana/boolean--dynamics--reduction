@@ -1,0 +1,7 @@
+Original size: 77
+Reduced size: 27
+Removed nodes: 50
+Iterations: 51
+Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BCL2L1 -> BRAF -> CBL -> CDKN1A -> CHUK -> CRK -> CRKL -> CTBP1 -> CTBP2 -> GAB2 -> GRB2 -> HDAC1 -> HDAC2 -> HRAS -> IKBKB -> IKBKG -> KRAS -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MDM2 -> MYC -> NFKBIA -> NRAS -> P3R3URF_PIK3R3 -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> PTPN11 -> RAF1 -> RB1 -> SHC1 -> SHC2 -> SHC3 -> SHC4 -> SMAD3 -> SOS1 -> SOS2 -> STAT5A -> STAT5B -> TGFBR1 -> TGFBR2
+Retained nodes: ABL1, BAD, BAK1, BAX, BCR, CCND1, CDK4, CDK6, CDKN1B, CDKN2A, DDB2, E2F1, E2F2, E2F3, GADD45A, GADD45B, GADD45G, MECOM, NFKB1, POLK, RELA, RUNX1, SMAD4, TGFB1, TGFB2, TGFB3, TP53
+Reduced model written to: results\models\chronic_myeloid_leukemia\node_elimination.bnet

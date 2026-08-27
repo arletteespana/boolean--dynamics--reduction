@@ -1,0 +1,2 @@
+id,file,dominant_set_size,dominant_set,depth,recurrence_length,state_dimension
+1,dominant_vertices_01.bnet,27,ABL1;BAD;BAK1;BAX;BCR;CCND1;CDK4;CDK6;CDKN1B;CDKN2A;DDB2;E2F1;E2F2;E2F3;GADD45A;GADD45B;GADD45G;MECOM;NFKB1;POLK;RELA;RUNX1;SMAD4;TGFB1;TGFB2;TGFB3;TP53,6,6,162
