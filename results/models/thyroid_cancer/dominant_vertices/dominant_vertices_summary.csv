@@ -1,0 +1,2 @@
+id,file,dominant_set_size,dominant_set,depth,recurrence_length,state_dimension
+1,dominant_vertices_01.bnet,17,BAK1;BAX;CCDC6;CDKN1A;CTNNB1;DDB2;GADD45G;NCOA4;NTRK1;PAX8;POLK;PPARG;RET;TFG;TP53;TPM3;TPR,4,1,17

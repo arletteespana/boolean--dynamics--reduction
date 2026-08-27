@@ -1,0 +1,7 @@
+Original size: 37
+Reduced size: 17
+Removed nodes: 20
+Iterations: 21
+Removal order: BRAF -> CCND1 -> CDH1 -> GADD45A -> GADD45B -> HRAS -> KRAS -> LEF1 -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MYC -> NRAS -> RXRA -> RXRB -> RXRG -> TCF7 -> TCF7L1 -> TCF7L2
+Retained nodes: BAK1, BAX, CCDC6, CDKN1A, CTNNB1, DDB2, GADD45G, NCOA4, NTRK1, PAX8, POLK, PPARG, RET, TFG, TP53, TPM3, TPR
+Reduced model written to: results\models\thyroid_cancer\node_elimination.bnet

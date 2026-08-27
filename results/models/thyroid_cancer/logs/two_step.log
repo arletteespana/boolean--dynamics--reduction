@@ -1,0 +1,8 @@
+Original size: 37
+After stabilized-node removal: 37
+Reduced size: 37
+Total removed nodes: 0
+Step 1 - no stabilized nodes removed.
+Step 2 - no simple mediators removed.
+Retained nodes: BAK1, BAX, BRAF, CCDC6, CCND1, CDH1, CDKN1A, CTNNB1, DDB2, GADD45A, GADD45B, GADD45G, HRAS, KRAS, LEF1, MAP2K1, MAP2K2, MAPK1, MAPK3, MYC, NCOA4, NRAS, NTRK1, PAX8, POLK, PPARG, RET, RXRA, RXRB, RXRG, TCF7, TCF7L1, TCF7L2, TFG, TP53, TPM3, TPR
+Reduced model written to: results\models\thyroid_cancer\two_step.bnet

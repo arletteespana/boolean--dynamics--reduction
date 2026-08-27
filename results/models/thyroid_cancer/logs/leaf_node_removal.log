@@ -1,0 +1,11 @@
+Original size: 37
+Reduced size: 17
+Removed nodes: 20
+Removal rounds: 4
+Removal layers:
+  Round 1: CCND1, CDH1, GADD45A, GADD45B, MAPK1, MAPK3, MYC, RXRA, RXRB, RXRG
+  Round 2: LEF1, MAP2K1, MAP2K2, TCF7, TCF7L1, TCF7L2
+  Round 3: BRAF
+  Round 4: HRAS, KRAS, NRAS
+Retained nodes: BAK1, BAX, CCDC6, CDKN1A, CTNNB1, DDB2, GADD45G, NCOA4, NTRK1, PAX8, POLK, PPARG, RET, TFG, TP53, TPM3, TPR
+Reduced model written to: results\models\thyroid_cancer\leaf_node_removal.bnet
