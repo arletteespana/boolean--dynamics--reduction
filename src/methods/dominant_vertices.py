@@ -373,6 +373,12 @@ def build_induced_bnet(
         if node in U and 0 <= absolute_time < ell:
             return memory_symbols[(node, absolute_time)]
 
+        rule = model.rules[node]
+
+        # Constant rules do not require any state history.
+        if not rule.free_symbols:
+            return rule
+
         if absolute_time <= 0:
             raise ValueError(
                 "Insufficient dominant-state history while constructing the induced dynamics. "
@@ -381,9 +387,12 @@ def build_induced_bnet(
 
         substitutions = {}
         for regulator in graph.predecessors(node):
-            substitutions[model.symbols[regulator]] = expression_at(regulator, absolute_time - 1)
+            substitutions[model.symbols[regulator]] = expression_at(
+                regulator,
+                absolute_time - 1,
+            )
 
-        return model.rules[node].xreplace(substitutions)
+        return rule.xreplace(substitutions)
 
     output_rules: list[tuple[str, sp.Basic]] = []
 
