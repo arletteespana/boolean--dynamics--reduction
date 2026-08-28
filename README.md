@@ -68,6 +68,7 @@ The current `requirements.txt` is:
 ```text
 networkx>=3.2
 sympy>=1.12
+mpbn>=4.4
 ```
 
 ---
