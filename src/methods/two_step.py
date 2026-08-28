@@ -63,9 +63,9 @@ def _parse_rule(rule: str, symbols: dict[str, sp.Symbol]) -> sp.Basic:
         elif token == ")":
             converted.append(")")
         elif low in ("1", "true"):
-            converted.append("True")
+            converted.append("_TRUE")
         elif low in ("0", "false"):
-            converted.append("False")
+            converted.append("_FALSE")
         elif token in symbols:
             converted.append(symbols[token].name)
         else:
@@ -75,6 +75,8 @@ def _parse_rule(rule: str, symbols: dict[str, sp.Symbol]) -> sp.Basic:
             )
 
     local_dict = {symbol.name: symbol for symbol in symbols.values()}
+    local_dict["_TRUE"] = sp.true
+    local_dict["_FALSE"] = sp.false
 
     return sp.sympify(
         " ".join(converted),
