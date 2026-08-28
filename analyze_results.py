@@ -322,7 +322,7 @@ def main() -> None:
 
         print(
             "[FIXED POINTS] original / original "
-            "(exact SAT)"
+            "(exact mpbn)"
         )
 
         original_fixed_row = analyze_fixed_points(
@@ -330,7 +330,7 @@ def main() -> None:
         )
         original_fixed_row[
             "fixed_point_source"
-        ] = "exact_sat"
+        ] = "mpbn_exact"
 
         original_fixed_points = int(
             original_fixed_row[
@@ -385,7 +385,7 @@ def main() -> None:
 
             else:
                 print(
-                    "  [FIXED POINTS] exact SAT"
+                    "  [FIXED POINTS] exact mpbn"
                 )
 
                 fixed_row = analyze_fixed_points(
@@ -393,7 +393,7 @@ def main() -> None:
                 )
                 fixed_row[
                     "fixed_point_source"
-                ] = "exact_sat"
+                ] = "mpbn_exact"
 
             fixed_point_rows.append(
                 fixed_row
