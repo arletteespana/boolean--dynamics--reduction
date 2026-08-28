@@ -169,6 +169,23 @@ def add_total_attractor_agreement(
             )
 
 
+def theoretical_dv_fixed_point_row(
+    record,
+    model,
+    original_fixed_points: int,
+) -> dict[str, object]:
+    return {
+        "network": record.network,
+        "method": record.method,
+        "variant": record.variant,
+        "model_file": str(record.path),
+        "state_dimension": len(model.nodes),
+        "fixed_points": original_fixed_points,
+        "fixed_point_time_seconds": "",
+        "fixed_point_source": "theoretical_preservation",
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
@@ -277,6 +294,22 @@ def main() -> None:
             network_dir
         )
 
+        original_record = next(
+            (
+                record
+                for record in records
+                if record.method == "original"
+            ),
+            None,
+        )
+
+        if original_record is None:
+            print(
+                f"[SKIP] {network_dir.name}: "
+                "original model record not found"
+            )
+            continue
+
         print()
         print("=" * 70)
         print(
@@ -286,6 +319,24 @@ def main() -> None:
             f"Models found: {len(records)}"
         )
         print("=" * 70)
+
+        print(
+            "[FIXED POINTS] original / original "
+            "(exact SAT)"
+        )
+
+        original_fixed_row = analyze_fixed_points(
+            original_record
+        )
+        original_fixed_row[
+            "fixed_point_source"
+        ] = "exact_sat"
+
+        original_fixed_points = int(
+            original_fixed_row[
+                "fixed_points"
+            ]
+        )
 
         for record in records:
             model = load_bnet(
@@ -313,10 +364,43 @@ def main() -> None:
                 )
             )
 
-            fixed_point_rows.append(
-                analyze_fixed_points(
+            if record.method == "original":
+                fixed_row = dict(
+                    original_fixed_row
+                )
+
+            elif record.method == "dominant_vertices":
+                print(
+                    "  [FIXED POINTS] inherited from original "
+                    "(theoretical preservation)"
+                )
+
+                fixed_row = theoretical_dv_fixed_point_row(
+                    record=record,
+                    model=model,
+                    original_fixed_points=(
+                        original_fixed_points
+                    ),
+                )
+
+            else:
+                print(
+                    "  [FIXED POINTS] exact SAT"
+                )
+
+                fixed_row = analyze_fixed_points(
                     record
                 )
+                fixed_row[
+                    "fixed_point_source"
+                ] = "exact_sat"
+
+            fixed_point_rows.append(
+                fixed_row
+            )
+
+            print(
+                f"  [DYNAMICS] {analysis_type}"
             )
 
             dynamics, basins = (
