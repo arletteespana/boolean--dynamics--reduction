@@ -595,9 +595,10 @@ For Dominant Vertices, all minimum dominant sets are retained and analyzed separ
 
 The implemented reduction methods are based on the following works:
 
-- España, A., Funez, W., and Ugalde, E. *Dominant Vertices and Attractors' Landscape for Boolean Networks*.
+- España, A., Funez, W., and Ugalde, E. (2026) *Dominant Vertices and Attractors' Landscape for Boolean Networks*. Discrete and Continuous Dynamical Systems - Series B
 - Naldi, A., Remy, E., Thieffry, D., and Chaouiya, C. (2011). *Dynamically consistent reduction of logical regulatory graphs*. Theoretical Computer Science, 412, 2207-2218.
 - Saadatpour, A., Albert, R., and Reluga, T. C. (2013). *A reduction method for Boolean network models proven to conserve attractors*. SIAM Journal on Applied Dynamical Systems, 12(4), 1997-2011.
+- Richardson, K. (2005). *Simplifying Boolean Networks*. Advances in Complex Systems 8.4, 365–381.
 
 ---
 
