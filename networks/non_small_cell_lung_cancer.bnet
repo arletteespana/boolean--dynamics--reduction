@@ -1,77 +1,79 @@
-# Non-small cell lung cancer Boolean network, corrected value-based KEGG reconstruction
-# Missing-interaction entries (-/-) were excluded and do not define regulatory dependencies.
-# Convention retained: --> and ..> positive; --| negative; +p inherits the accompanying sign.
+# Non Small Cell Lung Cancer
+# Reconstructed from the supplied KEGG node/edge dumps.
+# missing interaction (-/-), binding/association, and dissociation were excluded.
+# Nodes without retained incoming regulatory dependencies are fixed to 0.
+# Genuine KEGG self-regulation is retained; no artificial identity self-loops are added.
 targets, factors
-AKT1, PDPK1
-AKT2, PDPK1
-AKT3, PDPK1
-ALK, ALK
-ARAF, (HRAS | KRAS | NRAS | PRKCA | PRKCB | PRKCG)
-BAD, BAD & !(AKT1 | AKT2 | AKT3)
-BAK1, BAK1
-BAX, BAX
-BRAF, (HRAS | KRAS | NRAS | PRKCA | PRKCB | PRKCG)
-CASP9, CASP9 & !(AKT1 | AKT2 | AKT3)
-CCND1, (MAPK1 | MAPK3)
-CDK4, CDK4
-CDK6, CDK6
-CDKN1A, CDKN1A
-CDKN2A, CDKN2A
-DDB2, DDB2
-E2F1, E2F1
-E2F2, E2F2
-E2F3, E2F3
-EGF, EGF
-EGFR, (EGF | TGFA)
-EML4, EML4
-ERBB2, (EGF | TGFA)
-FHIT, FHIT
-FOXO3, FOXO3 & !(AKT1 | AKT2 | AKT3)
-GADD45A, GADD45A
-GADD45B, GADD45B
-GADD45G, GADD45G
-GRB2, (EGFR | ERBB2 | MET)
-HGF, HGF
-HRAS, (ALK | EML4 | KIF5A | KIF5B | KIF5C | RET | SOS1 | SOS2)
-JAK3, (ALK | EML4)
-KIF5A, KIF5A
-KIF5B, KIF5B
-KIF5C, KIF5C
-KRAS, (ALK | EML4 | KIF5A | KIF5B | KIF5C | RET | SOS1 | SOS2)
-MAP2K1, (ARAF | BRAF | RAF1)
-MAP2K2, (ARAF | BRAF | RAF1)
-MAPK1, (MAP2K1 | MAP2K2)
-MAPK3, (MAP2K1 | MAP2K2)
-MET, HGF
-NRAS, (ALK | EML4 | KIF5A | KIF5B | KIF5C | RET | SOS1 | SOS2)
-P3R3URF_PIK3R3, KRAS
-PDPK1, PDPK1
-PIK3CA, (ALK | EGFR | EML4 | ERBB2 | KRAS | MET)
-PIK3CB, (ALK | EGFR | EML4 | ERBB2 | KRAS | MET)
-PIK3CD, (ALK | EGFR | EML4 | ERBB2 | KRAS | MET)
-PIK3R1, KRAS
-PIK3R2, KRAS
-PIK3R3, KRAS
-PLCG1, (EGFR | ERBB2)
-PLCG2, (EGFR | ERBB2)
-POLK, POLK
-PRKCA, PRKCA
-PRKCB, PRKCB
-PRKCG, PRKCG
-RAF1, (HRAS | KRAS | NRAS | PRKCA | PRKCB | PRKCG)
-RARB, RARB
-RASSF1, KRAS
-RASSF5, RASSF1
-RB1, (CCND1 | CDK4 | CDK6 | E2F1 | E2F2 | E2F3)
-RET, RET
-RXRA, RXRA
-RXRB, RXRB
-RXRG, RXRG
-SOS1, GRB2
-SOS2, GRB2
-STAT3, JAK3
-STAT5A, JAK3
-STAT5B, JAK3
-STK4, STK4
-TGFA, TGFA
-TP53, TP53
+hsa_5578, 0
+hsa_5579, 0
+hsa_5582, 0
+hsa_2309, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_842, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_572, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_10000, hsa_5170
+hsa_207, hsa_5170
+hsa_208, hsa_5170
+hsa_5170, 0
+hsa_110117499, hsa_3845
+hsa_5290, (hsa_3845 | hsa_1956 | hsa_2064 | hsa_238 | hsa_27436 | hsa_4233)
+hsa_5291, (hsa_3845 | hsa_1956 | hsa_2064 | hsa_238 | hsa_27436 | hsa_4233)
+hsa_5293, (hsa_3845 | hsa_1956 | hsa_2064 | hsa_238 | hsa_27436 | hsa_4233)
+hsa_5295, hsa_3845
+hsa_5296, hsa_3845
+hsa_8503, hsa_3845
+hsa_1019, 0
+hsa_1021, 0
+hsa_595, (hsa_5594 | hsa_5595)
+hsa_1869, 0
+hsa_1870, 0
+hsa_1871, 0
+hsa_3265, (hsa_6654 | hsa_6655 | hsa_238 | hsa_27436)
+hsa_3845, (hsa_6654 | hsa_6655 | hsa_238 | hsa_27436)
+hsa_4893, (hsa_6654 | hsa_6655 | hsa_238 | hsa_27436)
+hsa_5335, (hsa_1956 | hsa_2064)
+hsa_5336, (hsa_1956 | hsa_2064)
+hsa_7039, 0
+hsa_1956, (hsa_7039 | hsa_1950)
+hsa_6789, 0
+hsa_2064, (hsa_7039 | hsa_1950)
+hsa_1950, 0
+hsa_5925, (hsa_1019 | hsa_1021 | hsa_595)
+hsa_5915, 0
+hsa_6654, hsa_2885
+hsa_6655, hsa_2885
+hsa_2885, (hsa_1956 | hsa_2064 | hsa_4233)
+hsa_6256, 0
+hsa_6257, 0
+hsa_6258, 0
+hsa_11186, hsa_3845
+hsa_83593, 0
+hsa_1029, 0
+hsa_2272, 0
+hsa_5594, (hsa_5604 | hsa_5605)
+hsa_5595, (hsa_5604 | hsa_5605)
+hsa_5604, (hsa_369 | hsa_5894 | hsa_673)
+hsa_5605, (hsa_369 | hsa_5894 | hsa_673)
+hsa_369, (hsa_5578 | hsa_5579 | hsa_5582 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5894, (hsa_5578 | hsa_5579 | hsa_5582 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_673, (hsa_5578 | hsa_5579 | hsa_5582 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_238, 0
+hsa_27436, 0
+hsa_3718, (hsa_238 | hsa_27436)
+hsa_6774, hsa_3718
+hsa_6776, hsa_3718
+hsa_6777, hsa_3718
+hsa_7157, 0
+hsa_1026, 0
+hsa_10912, 0
+hsa_1647, 0
+hsa_4616, 0
+hsa_581, 0
+hsa_578, 0
+hsa_1643, 0
+hsa_51426, 0
+hsa_4233, hsa_3082
+hsa_3082, 0
+hsa_3798, 0
+hsa_3799, 0
+hsa_3800, 0
+hsa_5979, 0

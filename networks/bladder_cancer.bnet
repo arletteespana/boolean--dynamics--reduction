@@ -1,45 +1,47 @@
-# Bladder cancer Boolean network, corrected value-based KEGG reconstruction
-# Missing-interaction entries (-/-) were excluded and do not define regulatory dependencies.
-# Convention retained: --> and ..> positive; --| negative; +p inherits the accompanying sign.
+# Bladder Cancer
+# Reconstructed from the supplied KEGG node/edge dumps.
+# missing interaction (-/-), binding/association, and dissociation were excluded.
+# Nodes without retained incoming regulatory dependencies are fixed to 0.
+# Genuine KEGG self-regulation is retained; no artificial identity self-loops are added.
 targets, factors
-ARAF, (HRAS | KRAS | NRAS)
-BRAF, (HRAS | KRAS | NRAS)
-CCND1, CCND1
-CDH1, CDH1
-CDK4, CDK4
-CDKN1A, CDKN1A
-CDKN2A, CDKN2A
-CXCL8, CXCL8
-DAPK1, DAPK1
-DAPK2, DAPK2
-DAPK3, DAPK3
-E2F1, E2F1
-E2F2, E2F2
-E2F3, E2F3
-EGF, EGF
-EGFR, EGF
-ERBB2, EGF
-FGFR3, FGFR3
-HBEGF, HBEGF
-HRAS, FGFR3
-KRAS, FGFR3
-MAP2K1, (ARAF | BRAF | RAF1)
-MAP2K2, (ARAF | BRAF | RAF1)
-MAPK1, (MAP2K1 | MAP2K2)
-MAPK3, (MAP2K1 | MAP2K2)
-MDM2, MDM2
-MMP1, MMP1
-MMP2, MMP2
-MMP9, MMP9
-MYC, MYC
-NRAS, FGFR3
-RAF1, (HRAS | KRAS | NRAS)
-RASSF1, RASSF1
-RB1, (CCND1 | CDK4 | E2F1 | E2F2 | E2F3)
-RPS6KA5, (MAPK1 | MAPK3)
-SRC, SRC
-THBS1, THBS1
-TP53, TP53 & !MDM2
-TYMP, TYMP
-UPK3A, UPK3A
-VEGFA, VEGFA
+hsa_3265, hsa_2261
+hsa_4312, 0
+hsa_4313, 0
+hsa_4318, 0
+hsa_1890, 0
+hsa_7422, 0
+hsa_3576, 0
+hsa_7057, 0
+hsa_1956, hsa_1950
+hsa_999, 0
+hsa_2064, hsa_1950
+hsa_1029, 0
+hsa_1026, 0
+hsa_4609, 0
+hsa_11186, 0
+hsa_1612, 0
+hsa_1613, 0
+hsa_23604, 0
+hsa_4193, 0
+hsa_7157, !hsa_4193
+hsa_1869, 0
+hsa_1870, 0
+hsa_1871, 0
+hsa_5925, (hsa_1019 | hsa_595)
+hsa_2261, 0
+hsa_1019, 0
+hsa_595, 0
+hsa_9252, (hsa_5594 | hsa_5595)
+hsa_1950, 0
+hsa_5594, (hsa_5604 | hsa_5605)
+hsa_5595, (hsa_5604 | hsa_5605)
+hsa_5604, (hsa_369 | hsa_5894 | hsa_673)
+hsa_5605, (hsa_369 | hsa_5894 | hsa_673)
+hsa_369, (hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5894, (hsa_3265 | hsa_3845 | hsa_4893)
+hsa_673, (hsa_3265 | hsa_3845 | hsa_4893)
+hsa_3845, hsa_2261
+hsa_4893, hsa_2261
+hsa_7380, 0
+hsa_1839, 0
+hsa_6714, 0

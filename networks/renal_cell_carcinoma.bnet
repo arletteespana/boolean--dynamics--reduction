@@ -1,74 +1,76 @@
-# Renal cell carcinoma Boolean network, corrected value-based KEGG reconstruction
-# Missing-interaction entries (-/-) were excluded and do not define regulatory dependencies.
-# Convention retained: --> and ..> positive; --| negative; +p inherits the accompanying sign.
+# Renal Cell Carcinoma
+# Reconstructed from the supplied KEGG node/edge dumps.
+# missing interaction (-/-), binding/association, and dissociation were excluded.
+# Nodes without retained incoming regulatory dependencies are fixed to 0.
+# Genuine KEGG self-regulation is retained; no artificial identity self-loops are added.
 targets, factors
-AKT1, (P3R3URF_PIK3R3 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-AKT2, (P3R3URF_PIK3R3 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-AKT3, (P3R3URF_PIK3R3 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-ARAF, ARAF
-ARNT, ARNT
-ARNT2, ARNT2
-BAD, BAD & !(AKT1 | AKT2 | AKT3)
-BRAF, BRAF
-CDC42, CDC42
-CDKN1A, CDKN1A
-CREBBP, CREBBP
-CRK, GAB1
-CRKL, GAB1
-CUL2, CUL2
-EGLN1, EGLN1
-EGLN2, EGLN2
-EGLN3, EGLN3
-ELOB, ELOB
-ELOC, ELOC
-EP300, EP300
-EPAS1, (ARNT | ARNT2 | CREBBP | EGLN1 | EGLN2 | EGLN3 | EP300)
-ETS1, (MAPK1 | MAPK3)
-FH, FH
-FLCN, FLCN
-GAB1, MET
-GRB2, (GAB1 | MET)
-HGF, HGF
-HIF1A, (ARNT | ARNT2 | CREBBP | EGLN1 | EGLN2 | EGLN3 | EP300)
-HRAS, HRAS
-JUN, (MAPK1 | MAPK3)
-KRAS, KRAS
-LOC106821730, (CDC42 | RAC1)
-MAP2K1, (ARAF | BRAF | RAF1)
-MAP2K2, (ARAF | BRAF | RAF1)
-MAPK1, (MAP2K1 | MAP2K2 | PTPN11)
-MAPK3, (MAP2K1 | MAP2K2 | PTPN11)
-MET, HGF
-NRAS, NRAS
-P3R3URF_PIK3R3, GAB1
-PAK1, (CDC42 | RAC1)
-PAK2, (CDC42 | RAC1)
-PAK3, (CDC42 | RAC1)
-PAK4, (CDC42 | RAC1)
-PAK6, (CDC42 | RAC1)
-PAK7, (CDC42 | RAC1)
-PDGFB, (EPAS1 | HIF1A)
-PIK3CA, GAB1
-PIK3CB, GAB1
-PIK3CD, GAB1
-PIK3R1, GAB1
-PIK3R2, GAB1
-PIK3R3, GAB1
-PRCC, PRCC
-PTPN11, GAB1
-RAC1, RAC1
-RAF1, RAF1
-RAP1A, RAPGEF1
-RAP1B, RAPGEF1
-RAPGEF1, (CRK | CRKL)
-RBX1, RBX1
-SLC2A1, (EPAS1 | HIF1A)
-SOS1, GRB2
-SOS2, GRB2
-TFE3, TFE3
-TGFA, (EPAS1 | HIF1A)
-TGFB1, (EPAS1 | HIF1A)
-TGFB2, (EPAS1 | HIF1A)
-TGFB3, (EPAS1 | HIF1A)
-VEGFA, (EPAS1 | HIF1A)
-VHL, VHL
+hsa_5781, hsa_2549
+hsa_7040, (hsa_2034 | hsa_3091)
+hsa_7042, (hsa_2034 | hsa_3091)
+hsa_7043, (hsa_2034 | hsa_3091)
+hsa_7422, (hsa_2034 | hsa_3091)
+hsa_6513, (hsa_2034 | hsa_3091)
+hsa_405, 0
+hsa_9915, 0
+hsa_1387, 0
+hsa_2033, 0
+hsa_8453, 0
+hsa_9978, 0
+hsa_6923, 0
+hsa_6921, 0
+hsa_7428, 0
+hsa_112398, 0
+hsa_112399, 0
+hsa_54583, 0
+hsa_2034, (hsa_112398 | hsa_112399 | hsa_54583)
+hsa_3091, (hsa_112398 | hsa_112399 | hsa_54583)
+hsa_7039, (hsa_2034 | hsa_3091)
+hsa_5155, (hsa_2034 | hsa_3091)
+hsa_201163, 0
+hsa_2271, 0
+hsa_5879, 0
+hsa_1398, hsa_2549
+hsa_1399, hsa_2549
+hsa_2889, (hsa_1398 | hsa_1399)
+hsa_6654, hsa_2885
+hsa_6655, hsa_2885
+hsa_2885, (hsa_4233 | hsa_2549)
+hsa_4233, hsa_3082
+hsa_2549, hsa_4233
+hsa_10298, (hsa_5879 | hsa_998)
+hsa_106821730, (hsa_5879 | hsa_998)
+hsa_5058, (hsa_5879 | hsa_998)
+hsa_5062, (hsa_5879 | hsa_998)
+hsa_5063, (hsa_5879 | hsa_998)
+hsa_56924, (hsa_5879 | hsa_998)
+hsa_57144, (hsa_5879 | hsa_998)
+hsa_5906, hsa_2889
+hsa_5908, hsa_2889
+hsa_998, 0
+hsa_2113, (hsa_5594 | hsa_5595)
+hsa_10000, (hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_207, (hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_208, (hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_110117499, hsa_2549
+hsa_5290, hsa_2549
+hsa_5291, hsa_2549
+hsa_5293, hsa_2549
+hsa_5295, hsa_2549
+hsa_5296, hsa_2549
+hsa_8503, hsa_2549
+hsa_3725, (hsa_5594 | hsa_5595)
+hsa_3082, 0
+hsa_5594, (hsa_5781 | hsa_5604 | hsa_5605)
+hsa_5595, (hsa_5781 | hsa_5604 | hsa_5605)
+hsa_5604, (hsa_369 | hsa_5894 | hsa_673)
+hsa_5605, (hsa_369 | hsa_5894 | hsa_673)
+hsa_369, 0
+hsa_5894, 0
+hsa_673, 0
+hsa_3265, 0
+hsa_3845, 0
+hsa_4893, 0
+hsa_572, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_5546, 0
+hsa_7030, 0
+hsa_1026, 0
