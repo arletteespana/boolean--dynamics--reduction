@@ -1,9 +1,81 @@
 Original size: 73
-After stabilized-node removal: 73
-Reduced size: 72
-Total removed nodes: 1
-Step 1 - no stabilized nodes removed.
-Step 2 - simple mediators:
-  RASSF1: KRAS -> RASSF1 -> RASSF5
-Retained nodes: AKT1, AKT2, AKT3, ALK, ARAF, BAD, BAK1, BAX, BRAF, CASP9, CCND1, CDK4, CDK6, CDKN1A, CDKN2A, DDB2, E2F1, E2F2, E2F3, EGF, EGFR, EML4, ERBB2, FHIT, FOXO3, GADD45A, GADD45B, GADD45G, GRB2, HGF, HRAS, JAK3, KIF5A, KIF5B, KIF5C, KRAS, MAP2K1, MAP2K2, MAPK1, MAPK3, MET, NRAS, P3R3URF_PIK3R3, PDPK1, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PLCG1, PLCG2, POLK, PRKCA, PRKCB, PRKCG, RAF1, RARB, RASSF5, RB1, RET, RXRA, RXRB, RXRG, SOS1, SOS2, STAT3, STAT5A, STAT5B, STK4, TGFA, TP53
-Reduced model written to: results\models\non_small_cell_lung_cancer\two_step.bnet
+After stabilized-node removal: 0
+Reduced size: 0
+Total removed nodes: 73
+Step 1 - stabilized nodes:
+  hsa_5578 = 0
+  hsa_5579 = 0
+  hsa_5582 = 0
+  hsa_5170 = 0
+  hsa_10000 = 0
+  hsa_207 = 0
+  hsa_208 = 0
+  hsa_2309 = 1
+  hsa_842 = 1
+  hsa_572 = 1
+  hsa_1019 = 0
+  hsa_1021 = 0
+  hsa_1869 = 0
+  hsa_1870 = 0
+  hsa_1871 = 0
+  hsa_7039 = 0
+  hsa_6789 = 0
+  hsa_1950 = 0
+  hsa_1956 = 0
+  hsa_2064 = 0
+  hsa_5335 = 0
+  hsa_5336 = 0
+  hsa_5915 = 0
+  hsa_6256 = 0
+  hsa_6257 = 0
+  hsa_6258 = 0
+  hsa_83593 = 0
+  hsa_1029 = 0
+  hsa_2272 = 0
+  hsa_238 = 0
+  hsa_27436 = 0
+  hsa_3718 = 0
+  hsa_6774 = 0
+  hsa_6776 = 0
+  hsa_6777 = 0
+  hsa_7157 = 0
+  hsa_1026 = 0
+  hsa_10912 = 0
+  hsa_1647 = 0
+  hsa_4616 = 0
+  hsa_581 = 0
+  hsa_578 = 0
+  hsa_1643 = 0
+  hsa_51426 = 0
+  hsa_3082 = 0
+  hsa_4233 = 0
+  hsa_2885 = 0
+  hsa_6654 = 0
+  hsa_6655 = 0
+  hsa_3265 = 0
+  hsa_3845 = 0
+  hsa_110117499 = 0
+  hsa_5290 = 0
+  hsa_5291 = 0
+  hsa_5293 = 0
+  hsa_5295 = 0
+  hsa_5296 = 0
+  hsa_8503 = 0
+  hsa_4893 = 0
+  hsa_11186 = 0
+  hsa_369 = 0
+  hsa_5894 = 0
+  hsa_673 = 0
+  hsa_5604 = 0
+  hsa_5605 = 0
+  hsa_5594 = 0
+  hsa_5595 = 0
+  hsa_595 = 0
+  hsa_5925 = 0
+  hsa_3798 = 0
+  hsa_3799 = 0
+  hsa_3800 = 0
+  hsa_5979 = 0
+Step 2 - no simple mediators removed.
+Retained nodes: 
+Reduced model written to: results/models/non_small_cell_lung_cancer/two_step.bnet

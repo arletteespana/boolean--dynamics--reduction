@@ -1,109 +1,112 @@
-# Prostate cancer Boolean network, corrected value-based KEGG reconstruction
-# Missing-interaction entries (-/-) were excluded and do not define regulatory dependencies.
-# Convention retained: --> and ..> positive; --| negative; +p inherits the accompanying sign.
+# Prostate Cancer
+# Reconstructed from the supplied KEGG node/edge dumps.
+# missing interaction (-/-), binding/association, and dissociation were excluded.
+# Nodes without retained incoming regulatory dependencies are fixed to 0.
+# Genuine KEGG self-regulation is retained; no artificial identity self-loops are added.
 targets, factors
-AKT1, (P3R3URF_PIK3R3 | PDPK1 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-AKT2, (P3R3URF_PIK3R3 | PDPK1 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-AKT3, (P3R3URF_PIK3R3 | PDPK1 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-AR, (AR | HSP90AA1 | HSP90AB1 | HSP90B1 | MAPK1 | MAPK3)
-ARAF, (HRAS | KRAS | NRAS)
-AREG, AREG
-ATF6B, ATF6B & !GSK3B
-BAD, BAD & !(AKT1 | AKT2 | AKT3)
-BCL2, (NFKB1 | RELA)
-BRAF, (HRAS | KRAS | NRAS)
-CASP9, CASP9 & !(AKT1 | AKT2 | AKT3)
-CCND1, (LEF1 | TCF7 | TCF7L1 | TCF7L2)
-CCNE1, CCNE1
-CCNE2, CCNE2
-CDK2, CDK2
-CDKN1A, CDKN1A & !(AKT1 | AKT2 | AKT3)
-CDKN1B, CDKN1B & !(AKT1 | AKT2 | AKT3)
-CHUK, (AKT1 | AKT2 | AKT3)
-CREB1, CREB1 & !GSK3B
-CREB3, CREB3 & !GSK3B
-CREB3L1, CREB3L1 & !GSK3B
-CREB3L2, CREB3L2 & !GSK3B
-CREB3L3, CREB3L3 & !GSK3B
-CREB3L4, CREB3L4 & !GSK3B
-CREB5, CREB5 & !GSK3B
-CREBBP, CREBBP & !(ATF6B | CREB1 | CREB3 | CREB3L1 | CREB3L2 | CREB3L3 | CREB3L4 | CREB5 | CTNNB1)
-CTNNB1, CTNNB1 & !GSK3B
-E2F1, E2F1
-E2F2, E2F2
-E2F3, E2F3
-EGF, EGF
-EGFR, (AREG | EGF | EREG | IGF1 | INS | PDGFA | PDGFB | TGFA)
-EP300, EP300 & !(ATF6B | CREB1 | CREB3 | CREB3L1 | CREB3L2 | CREB3L3 | CREB3L4 | CREB5 | CTNNB1)
-ERBB2, (AREG | EGF | EREG | IGF1 | INS | PDGFA | PDGFB | TGFA)
-EREG, EREG
-ERG, ERG
-ETV5, ETV5
-FGFR1, (AREG | EGF | EREG | IGF1 | INS | PDGFA | PDGFB | TGFA)
-FGFR2, (AREG | EGF | EREG | IGF1 | INS | PDGFA | PDGFB | TGFA)
-FOLH1, FOLH1
-FOLR1, FOLR1
-FOLR2, FOLR2
-FOLR3, FOLR3
-FOXO1, FOXO1 & !(AKT1 | AKT2 | AKT3)
-GRB2, (EGFR | ERBB2 | FGFR1 | FGFR2 | IGF1R | INSR | PDGFRA | PDGFRB)
-GRM1, GRM1
-GRM5, GRM5
-GSK3B, GSK3B & !(AKT1 | AKT2 | AKT3)
-GSTP1, GSTP1
-HRAS, (SOS1 | SOS2)
-HSP90AA1, HSP90AA1
-HSP90AB1, HSP90AB1
-HSP90B1, HSP90B1
-IGF1, IGF1
-IGF1R, (AREG | EGF | EREG | IGF1 | INS | PDGFA | PDGFB | TGFA)
-IKBKB, (AKT1 | AKT2 | AKT3)
-IL1R2, IL1R2
-INS, INS
-INSR, (AREG | EGF | EREG | IGF1 | INS | PDGFA | PDGFB | TGFA)
-KLK3, AR
-KRAS, (SOS1 | SOS2)
-LEF1, CTNNB1
-MAP2K1, (ARAF | BRAF | RAF1)
-MAP2K2, (ARAF | BRAF | RAF1)
-MAPK1, (MAP2K1 | MAP2K2)
-MAPK3, (MAP2K1 | MAP2K2)
-MDM2, (AKT1 | AKT2 | AKT3)
-MMP3, MMP3
-MMP9, MMP9
-MTOR, (AKT1 | AKT2 | AKT3)
-NFKB1, NFKB1
-NFKBIA, (CHUK | IKBKB | NFKB1 | RELA)
-NKX3_1, NKX3_1
-NRAS, (SOS1 | SOS2)
-P3R3URF_PIK3R3, (EGFR | ERBB2 | FGFR1 | FGFR2 | IGF1R | INSR | PDGFRA | PDGFRB)
-PDGFA, PDGFA
-PDGFB, PDGFB
-PDGFRA, (AREG | EGF | EREG | IGF1 | INS | PDGFA | PDGFB | TGFA)
-PDGFRB, (AREG | EGF | EREG | IGF1 | INS | PDGFA | PDGFB | TGFA)
-PDPK1, (P3R3URF_PIK3R3 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-PIK3CA, (EGFR | ERBB2 | FGFR1 | FGFR2 | IGF1R | INSR | PDGFRA | PDGFRB)
-PIK3CB, (EGFR | ERBB2 | FGFR1 | FGFR2 | IGF1R | INSR | PDGFRA | PDGFRB)
-PIK3CD, (EGFR | ERBB2 | FGFR1 | FGFR2 | IGF1R | INSR | PDGFRA | PDGFRB)
-PIK3R1, (EGFR | ERBB2 | FGFR1 | FGFR2 | IGF1R | INSR | PDGFRA | PDGFRB)
-PIK3R2, (EGFR | ERBB2 | FGFR1 | FGFR2 | IGF1R | INSR | PDGFRA | PDGFRB)
-PIK3R3, (EGFR | ERBB2 | FGFR1 | FGFR2 | IGF1R | INSR | PDGFRA | PDGFRB)
-PLAT, PLAT
-PLAU, PLAU
-PTEN, PTEN
-RAF1, (HRAS | KRAS | NRAS)
-RB1, (CCNE1 | CCNE2 | CDK2 | E2F1 | E2F2 | E2F3)
-RELA, RELA
-SLC19A1, SLC19A1
-SLC46A1, SLC46A1
-SOS1, GRB2
-SOS2, GRB2
-SPINT1, SPINT1
-SRD5A2, SRD5A2
-TCF7, CTNNB1
-TCF7L1, CTNNB1
-TCF7L2, CTNNB1
-TGFA, TGFA
-TMPRSS2, TMPRSS2
-TP53, TP53 & !MDM2
-ZEB1, ZEB1
+hsa_6716, 0
+hsa_367, (hsa_367 | hsa_3320 | hsa_3326 | hsa_7184 | hsa_5594 | hsa_5595)
+hsa_4790, 0
+hsa_5970, 0
+hsa_4792, (hsa_1147 | hsa_3551 | hsa_8517)
+hsa_1027, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_5728, 0
+hsa_4824, 0
+hsa_354, hsa_367
+hsa_596, (hsa_4790 | hsa_5970)
+hsa_595, (hsa_51176 | hsa_6932 | hsa_6934 | hsa_83439)
+hsa_51176, hsa_1499
+hsa_6932, hsa_1499
+hsa_6934, hsa_1499
+hsa_83439, hsa_1499
+hsa_1387, !(hsa_1499 | hsa_10488 | hsa_1385 | hsa_148327 | hsa_468 | hsa_64764 | hsa_84699 | hsa_90993 | hsa_9586)
+hsa_2033, !(hsa_1499 | hsa_10488 | hsa_1385 | hsa_148327 | hsa_468 | hsa_64764 | hsa_84699 | hsa_90993 | hsa_9586)
+hsa_4193, (hsa_10000 | hsa_207 | hsa_208)
+hsa_1026, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_2308, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_1017, 0
+hsa_1499, !hsa_2932
+hsa_1869, 0
+hsa_1870, 0
+hsa_1871, 0
+hsa_3265, (hsa_6654 | hsa_6655)
+hsa_3845, (hsa_6654 | hsa_6655)
+hsa_4893, (hsa_6654 | hsa_6655)
+hsa_7157, !hsa_4193
+hsa_1956, (hsa_1950 | hsa_3479 | hsa_3630 | hsa_5154 | hsa_5155 | hsa_56034 | hsa_7039 | hsa_80310)
+hsa_2064, (hsa_1950 | hsa_3479 | hsa_3630 | hsa_5154 | hsa_5155 | hsa_56034 | hsa_7039 | hsa_80310)
+hsa_2260, (hsa_1950 | hsa_3479 | hsa_3630 | hsa_5154 | hsa_5155 | hsa_56034 | hsa_7039 | hsa_80310)
+hsa_2263, (hsa_1950 | hsa_3479 | hsa_3630 | hsa_5154 | hsa_5155 | hsa_56034 | hsa_7039 | hsa_80310)
+hsa_3480, (hsa_1950 | hsa_3479 | hsa_3630 | hsa_5154 | hsa_5155 | hsa_56034 | hsa_7039 | hsa_80310)
+hsa_3645, (hsa_1950 | hsa_3479 | hsa_3630 | hsa_5154 | hsa_5155 | hsa_56034 | hsa_7039 | hsa_80310)
+hsa_5156, (hsa_1950 | hsa_3479 | hsa_3630 | hsa_5154 | hsa_5155 | hsa_56034 | hsa_7039 | hsa_80310)
+hsa_5159, (hsa_1950 | hsa_3479 | hsa_3630 | hsa_5154 | hsa_5155 | hsa_56034 | hsa_7039 | hsa_80310)
+hsa_1147, (hsa_10000 | hsa_207 | hsa_208)
+hsa_3551, (hsa_10000 | hsa_207 | hsa_208)
+hsa_8517, (hsa_10000 | hsa_207 | hsa_208)
+hsa_572, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_842, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_10488, !hsa_2932
+hsa_1385, !hsa_2932
+hsa_148327, !hsa_2932
+hsa_468, !hsa_2932
+hsa_64764, !hsa_2932
+hsa_84699, !hsa_2932
+hsa_90993, !hsa_2932
+hsa_9586, !hsa_2932
+hsa_898, 0
+hsa_9134, 0
+hsa_1950, 0
+hsa_3479, 0
+hsa_3630, 0
+hsa_5154, 0
+hsa_5155, 0
+hsa_56034, 0
+hsa_7039, 0
+hsa_80310, 0
+hsa_5925, (hsa_1017 | hsa_898 | hsa_9134)
+hsa_5170, (hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_6654, hsa_2885
+hsa_6655, hsa_2885
+hsa_2885, (hsa_1956 | hsa_2064 | hsa_2260 | hsa_2263 | hsa_3480 | hsa_3645 | hsa_5156 | hsa_5159)
+hsa_2932, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_3320, 0
+hsa_3326, 0
+hsa_7184, 0
+hsa_2475, (hsa_10000 | hsa_207 | hsa_208)
+hsa_10000, (hsa_5170 | hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_207, (hsa_5170 | hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_208, (hsa_5170 | hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_110117499, (hsa_1956 | hsa_2064 | hsa_2260 | hsa_2263 | hsa_3480 | hsa_3645 | hsa_5156 | hsa_5159)
+hsa_5290, (hsa_1956 | hsa_2064 | hsa_2260 | hsa_2263 | hsa_3480 | hsa_3645 | hsa_5156 | hsa_5159)
+hsa_5291, (hsa_1956 | hsa_2064 | hsa_2260 | hsa_2263 | hsa_3480 | hsa_3645 | hsa_5156 | hsa_5159)
+hsa_5293, (hsa_1956 | hsa_2064 | hsa_2260 | hsa_2263 | hsa_3480 | hsa_3645 | hsa_5156 | hsa_5159)
+hsa_5295, (hsa_1956 | hsa_2064 | hsa_2260 | hsa_2263 | hsa_3480 | hsa_3645 | hsa_5156 | hsa_5159)
+hsa_5296, (hsa_1956 | hsa_2064 | hsa_2260 | hsa_2263 | hsa_3480 | hsa_3645 | hsa_5156 | hsa_5159)
+hsa_8503, (hsa_1956 | hsa_2064 | hsa_2260 | hsa_2263 | hsa_3480 | hsa_3645 | hsa_5156 | hsa_5159)
+hsa_2950, 0
+hsa_5594, (hsa_5604 | hsa_5605)
+hsa_5595, (hsa_5604 | hsa_5605)
+hsa_5604, (hsa_369 | hsa_5894 | hsa_673)
+hsa_5605, (hsa_369 | hsa_5894 | hsa_673)
+hsa_369, (hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5894, (hsa_3265 | hsa_3845 | hsa_4893)
+hsa_673, (hsa_3265 | hsa_3845 | hsa_4893)
+hsa_7113, 0
+hsa_2078, 0
+hsa_2119, 0
+hsa_5328, 0
+hsa_4314, 0
+hsa_4318, 0
+hsa_6935, 0
+hsa_7850, 0
+hsa_6692, 0
+hsa_5327, 0
+hsa_2911, 0
+hsa_2915, 0
+hsa_113235, 0
+hsa_6573, 0
+hsa_2348, 0
+hsa_2350, 0
+hsa_2352, 0
+hsa_2346, 0

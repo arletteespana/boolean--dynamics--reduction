@@ -1,7 +1,7 @@
-Original size: 105
-Reduced size: 60
-Removed nodes: 45
-Iterations: 46
-Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BCL2 -> BRAF -> CCND1 -> CHUK -> EGFR -> ERBB2 -> FGFR1 -> FGFR2 -> GRB2 -> HRAS -> IGF1R -> IKBKB -> INSR -> KLK3 -> KRAS -> LEF1 -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MDM2 -> MTOR -> NFKBIA -> NRAS -> P3R3URF_PIK3R3 -> PDGFRA -> PDGFRB -> PDPK1 -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> RAF1 -> RB1 -> SOS1 -> SOS2 -> TCF7 -> TCF7L1 -> TCF7L2
-Retained nodes: AR, AREG, ATF6B, BAD, CASP9, CCNE1, CCNE2, CDK2, CDKN1A, CDKN1B, CREB1, CREB3, CREB3L1, CREB3L2, CREB3L3, CREB3L4, CREB5, CREBBP, CTNNB1, E2F1, E2F2, E2F3, EGF, EP300, EREG, ERG, ETV5, FOLH1, FOLR1, FOLR2, FOLR3, FOXO1, GRM1, GRM5, GSK3B, GSTP1, HSP90AA1, HSP90AB1, HSP90B1, IGF1, IL1R2, INS, MMP3, MMP9, NFKB1, NKX3_1, PDGFA, PDGFB, PLAT, PLAU, PTEN, RELA, SLC19A1, SLC46A1, SPINT1, SRD5A2, TGFA, TMPRSS2, TP53, ZEB1
-Reduced model written to: results\models\prostate_cancer\node_elimination.bnet
+Original size: 106
+Reduced size: 1
+Removed nodes: 105
+Iterations: 106
+Removal order: hsa_6716 -> hsa_4790 -> hsa_5970 -> hsa_4792 -> hsa_1027 -> hsa_5728 -> hsa_4824 -> hsa_354 -> hsa_596 -> hsa_595 -> hsa_51176 -> hsa_6932 -> hsa_6934 -> hsa_83439 -> hsa_1387 -> hsa_2033 -> hsa_4193 -> hsa_1026 -> hsa_2308 -> hsa_1017 -> hsa_1499 -> hsa_1869 -> hsa_1870 -> hsa_1871 -> hsa_3265 -> hsa_3845 -> hsa_4893 -> hsa_7157 -> hsa_1956 -> hsa_2064 -> hsa_2260 -> hsa_2263 -> hsa_3480 -> hsa_3645 -> hsa_5156 -> hsa_5159 -> hsa_1147 -> hsa_3551 -> hsa_8517 -> hsa_572 -> hsa_842 -> hsa_10488 -> hsa_1385 -> hsa_148327 -> hsa_468 -> hsa_64764 -> hsa_84699 -> hsa_90993 -> hsa_9586 -> hsa_898 -> hsa_9134 -> hsa_1950 -> hsa_3479 -> hsa_3630 -> hsa_5154 -> hsa_5155 -> hsa_56034 -> hsa_7039 -> hsa_80310 -> hsa_5925 -> hsa_5170 -> hsa_6654 -> hsa_6655 -> hsa_2885 -> hsa_2932 -> hsa_3320 -> hsa_3326 -> hsa_7184 -> hsa_2475 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_2950 -> hsa_5594 -> hsa_5595 -> hsa_5604 -> hsa_5605 -> hsa_369 -> hsa_5894 -> hsa_673 -> hsa_7113 -> hsa_2078 -> hsa_2119 -> hsa_5328 -> hsa_4314 -> hsa_4318 -> hsa_6935 -> hsa_7850 -> hsa_6692 -> hsa_5327 -> hsa_2911 -> hsa_2915 -> hsa_113235 -> hsa_6573 -> hsa_2348 -> hsa_2350 -> hsa_2352 -> hsa_2346
+Retained nodes: hsa_367
+Reduced model written to: results/models/prostate_cancer/node_elimination.bnet

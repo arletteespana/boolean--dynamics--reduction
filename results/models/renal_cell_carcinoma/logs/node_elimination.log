@@ -1,7 +1,7 @@
 Original size: 70
-Reduced size: 27
-Removed nodes: 43
-Iterations: 44
-Removal order: AKT1 -> AKT2 -> AKT3 -> CRK -> CRKL -> EPAS1 -> ETS1 -> GAB1 -> GRB2 -> HIF1A -> JUN -> LOC106821730 -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MET -> P3R3URF_PIK3R3 -> PAK1 -> PAK2 -> PAK3 -> PAK4 -> PAK6 -> PAK7 -> PDGFB -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> PTPN11 -> RAP1A -> RAP1B -> RAPGEF1 -> SLC2A1 -> SOS1 -> SOS2 -> TGFA -> TGFB1 -> TGFB2 -> TGFB3 -> VEGFA
-Retained nodes: ARAF, ARNT, ARNT2, BAD, BRAF, CDC42, CDKN1A, CREBBP, CUL2, EGLN1, EGLN2, EGLN3, ELOB, ELOC, EP300, FH, FLCN, HGF, HRAS, KRAS, NRAS, PRCC, RAC1, RAF1, RBX1, TFE3, VHL
-Reduced model written to: results\models\renal_cell_carcinoma\node_elimination.bnet
+Reduced size: 0
+Removed nodes: 70
+Iterations: 71
+Removal order: hsa_5781 -> hsa_7040 -> hsa_7042 -> hsa_7043 -> hsa_7422 -> hsa_6513 -> hsa_405 -> hsa_9915 -> hsa_1387 -> hsa_2033 -> hsa_8453 -> hsa_9978 -> hsa_6923 -> hsa_6921 -> hsa_7428 -> hsa_112398 -> hsa_112399 -> hsa_54583 -> hsa_2034 -> hsa_3091 -> hsa_7039 -> hsa_5155 -> hsa_201163 -> hsa_2271 -> hsa_5879 -> hsa_1398 -> hsa_1399 -> hsa_2889 -> hsa_6654 -> hsa_6655 -> hsa_2885 -> hsa_4233 -> hsa_2549 -> hsa_10298 -> hsa_106821730 -> hsa_5058 -> hsa_5062 -> hsa_5063 -> hsa_56924 -> hsa_57144 -> hsa_5906 -> hsa_5908 -> hsa_998 -> hsa_2113 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_3725 -> hsa_3082 -> hsa_5594 -> hsa_5595 -> hsa_5604 -> hsa_5605 -> hsa_369 -> hsa_5894 -> hsa_673 -> hsa_3265 -> hsa_3845 -> hsa_4893 -> hsa_572 -> hsa_5546 -> hsa_7030 -> hsa_1026
+Retained nodes: 
+Reduced model written to: results/models/renal_cell_carcinoma/node_elimination.bnet

@@ -1,7 +1,7 @@
-Original size: 92
-Reduced size: 47
-Removed nodes: 45
-Iterations: 46
-Removal order: AKT1 -> AKT2 -> AKT3 -> BCL2L1 -> BIRC2 -> BIRC3 -> BIRC7 -> CCND1 -> CDK4 -> CDK6 -> CDKN2B -> CHUK -> CKS1B -> CKS2 -> GADD45A -> GADD45B -> IKBKG -> ITGA2 -> ITGA2B -> ITGA3 -> ITGA6 -> ITGAV -> ITGB1 -> NFKB1 -> NFKBIA -> NOS2 -> P3R3URF_PIK3R3 -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> PTGS2 -> PTK2 -> RB1 -> RELA -> SKP2 -> TRAF1 -> TRAF2 -> TRAF3 -> TRAF4 -> TRAF5 -> TRAF6 -> XIAP
-Retained nodes: APAF1, BAK1, BAX, BCL2, CASP3, CASP9, CCNE1, CCNE2, CDK2, CDKN1A, CDKN1B, COL4A1, COL4A2, COL4A3, COL4A4, COL4A5, COL4A6, CYCS, DDB2, E2F1, E2F2, E2F3, FHIT, FN1, GADD45G, LAMA1, LAMA2, LAMA3, LAMA4, LAMA5, LAMB1, LAMB2, LAMB3, LAMB4, LAMC1, LAMC2, LAMC3, MAX, MYC, POLK, PTEN, RARB, RXRA, RXRB, RXRG, TP53, ZBTB17
-Reduced model written to: results\models\small_cell_lung_cancer\node_elimination.bnet
+Original size: 93
+Reduced size: 0
+Removed nodes: 93
+Iterations: 94
+Removal order: hsa_898 -> hsa_9134 -> hsa_1017 -> hsa_595 -> hsa_3688 -> hsa_3655 -> hsa_3673 -> hsa_3674 -> hsa_3675 -> hsa_3685 -> hsa_7709 -> hsa_1027 -> hsa_6256 -> hsa_6257 -> hsa_6258 -> hsa_5915 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_1163 -> hsa_1164 -> hsa_842 -> hsa_317 -> hsa_4149 -> hsa_4609 -> hsa_5728 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_5747 -> hsa_2272 -> hsa_54205 -> hsa_10319 -> hsa_1282 -> hsa_1284 -> hsa_1285 -> hsa_1286 -> hsa_1287 -> hsa_1288 -> hsa_22798 -> hsa_2335 -> hsa_284217 -> hsa_3908 -> hsa_3909 -> hsa_3910 -> hsa_3911 -> hsa_3912 -> hsa_3913 -> hsa_3914 -> hsa_3915 -> hsa_3918 -> hsa_329 -> hsa_330 -> hsa_331 -> hsa_79444 -> hsa_596 -> hsa_4843 -> hsa_5743 -> hsa_1147 -> hsa_3551 -> hsa_8517 -> hsa_4792 -> hsa_598 -> hsa_7185 -> hsa_7186 -> hsa_7187 -> hsa_7188 -> hsa_7189 -> hsa_9618 -> hsa_1869 -> hsa_1870 -> hsa_1871 -> hsa_1019 -> hsa_1021 -> hsa_4790 -> hsa_5970 -> hsa_5925 -> hsa_6502 -> hsa_1030 -> hsa_581 -> hsa_836 -> hsa_7157 -> hsa_1026 -> hsa_10912 -> hsa_1647 -> hsa_4616 -> hsa_578 -> hsa_1643 -> hsa_51426
+Retained nodes: 
+Reduced model written to: results/models/small_cell_lung_cancer/node_elimination.bnet

@@ -1,7 +1,7 @@
 Original size: 73
-Reduced size: 37
-Removed nodes: 36
-Iterations: 37
-Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BRAF -> CCND1 -> EGFR -> ERBB2 -> GRB2 -> HRAS -> JAK3 -> KRAS -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MET -> NRAS -> P3R3URF_PIK3R3 -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> PLCG1 -> PLCG2 -> RAF1 -> RASSF1 -> RASSF5 -> RB1 -> SOS1 -> SOS2 -> STAT3 -> STAT5A -> STAT5B
-Retained nodes: ALK, BAD, BAK1, BAX, CASP9, CDK4, CDK6, CDKN1A, CDKN2A, DDB2, E2F1, E2F2, E2F3, EGF, EML4, FHIT, FOXO3, GADD45A, GADD45B, GADD45G, HGF, KIF5A, KIF5B, KIF5C, PDPK1, POLK, PRKCA, PRKCB, PRKCG, RARB, RET, RXRA, RXRB, RXRG, STK4, TGFA, TP53
-Reduced model written to: results\models\non_small_cell_lung_cancer\node_elimination.bnet
+Reduced size: 0
+Removed nodes: 73
+Iterations: 74
+Removal order: hsa_5578 -> hsa_5579 -> hsa_5582 -> hsa_2309 -> hsa_842 -> hsa_572 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_5170 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_1019 -> hsa_1021 -> hsa_595 -> hsa_1869 -> hsa_1870 -> hsa_1871 -> hsa_3265 -> hsa_3845 -> hsa_4893 -> hsa_5335 -> hsa_5336 -> hsa_7039 -> hsa_1956 -> hsa_6789 -> hsa_2064 -> hsa_1950 -> hsa_5925 -> hsa_5915 -> hsa_6654 -> hsa_6655 -> hsa_2885 -> hsa_6256 -> hsa_6257 -> hsa_6258 -> hsa_11186 -> hsa_83593 -> hsa_1029 -> hsa_2272 -> hsa_5594 -> hsa_5595 -> hsa_5604 -> hsa_5605 -> hsa_369 -> hsa_5894 -> hsa_673 -> hsa_238 -> hsa_27436 -> hsa_3718 -> hsa_6774 -> hsa_6776 -> hsa_6777 -> hsa_7157 -> hsa_1026 -> hsa_10912 -> hsa_1647 -> hsa_4616 -> hsa_581 -> hsa_578 -> hsa_1643 -> hsa_51426 -> hsa_4233 -> hsa_3082 -> hsa_3798 -> hsa_3799 -> hsa_3800 -> hsa_5979
+Retained nodes: 
+Reduced model written to: results/models/non_small_cell_lung_cancer/node_elimination.bnet

@@ -1,8 +1,78 @@
 Original size: 70
-After stabilized-node removal: 70
-Reduced size: 70
-Total removed nodes: 0
-Step 1 - no stabilized nodes removed.
+After stabilized-node removal: 0
+Reduced size: 0
+Total removed nodes: 70
+Step 1 - stabilized nodes:
+  hsa_405 = 0
+  hsa_9915 = 0
+  hsa_1387 = 0
+  hsa_2033 = 0
+  hsa_8453 = 0
+  hsa_9978 = 0
+  hsa_6923 = 0
+  hsa_6921 = 0
+  hsa_7428 = 0
+  hsa_112398 = 0
+  hsa_112399 = 0
+  hsa_54583 = 0
+  hsa_2034 = 0
+  hsa_3091 = 0
+  hsa_7040 = 0
+  hsa_7042 = 0
+  hsa_7043 = 0
+  hsa_7422 = 0
+  hsa_6513 = 0
+  hsa_7039 = 0
+  hsa_5155 = 0
+  hsa_201163 = 0
+  hsa_2271 = 0
+  hsa_5879 = 0
+  hsa_998 = 0
+  hsa_10298 = 0
+  hsa_106821730 = 0
+  hsa_5058 = 0
+  hsa_5062 = 0
+  hsa_5063 = 0
+  hsa_56924 = 0
+  hsa_57144 = 0
+  hsa_3082 = 0
+  hsa_4233 = 0
+  hsa_2549 = 0
+  hsa_5781 = 0
+  hsa_1398 = 0
+  hsa_1399 = 0
+  hsa_2889 = 0
+  hsa_2885 = 0
+  hsa_6654 = 0
+  hsa_6655 = 0
+  hsa_5906 = 0
+  hsa_5908 = 0
+  hsa_110117499 = 0
+  hsa_5290 = 0
+  hsa_5291 = 0
+  hsa_5293 = 0
+  hsa_5295 = 0
+  hsa_5296 = 0
+  hsa_8503 = 0
+  hsa_10000 = 0
+  hsa_207 = 0
+  hsa_208 = 0
+  hsa_369 = 0
+  hsa_5894 = 0
+  hsa_673 = 0
+  hsa_5604 = 0
+  hsa_5605 = 0
+  hsa_5594 = 0
+  hsa_5595 = 0
+  hsa_2113 = 0
+  hsa_3725 = 0
+  hsa_3265 = 0
+  hsa_3845 = 0
+  hsa_4893 = 0
+  hsa_572 = 1
+  hsa_5546 = 0
+  hsa_7030 = 0
+  hsa_1026 = 0
 Step 2 - no simple mediators removed.
-Retained nodes: AKT1, AKT2, AKT3, ARAF, ARNT, ARNT2, BAD, BRAF, CDC42, CDKN1A, CREBBP, CRK, CRKL, CUL2, EGLN1, EGLN2, EGLN3, ELOB, ELOC, EP300, EPAS1, ETS1, FH, FLCN, GAB1, GRB2, HGF, HIF1A, HRAS, JUN, KRAS, LOC106821730, MAP2K1, MAP2K2, MAPK1, MAPK3, MET, NRAS, P3R3URF_PIK3R3, PAK1, PAK2, PAK3, PAK4, PAK6, PAK7, PDGFB, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PRCC, PTPN11, RAC1, RAF1, RAP1A, RAP1B, RAPGEF1, RBX1, SLC2A1, SOS1, SOS2, TFE3, TGFA, TGFB1, TGFB2, TGFB3, VEGFA, VHL
-Reduced model written to: results\models\renal_cell_carcinoma\two_step.bnet
+Retained nodes: 
+Reduced model written to: results/models/renal_cell_carcinoma/two_step.bnet

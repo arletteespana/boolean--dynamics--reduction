@@ -1,7 +1,7 @@
 Original size: 73
-Reduced size: 43
-Removed nodes: 30
-Iterations: 31
-Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BRAF -> CCND1 -> CDK4 -> CDKN1A -> EGFR -> FGFR1 -> HRAS -> IGF1R -> KRAS -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MET -> NRAS -> P3R3URF_PIK3R3 -> PDGFRA -> PDGFRB -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> RAF1 -> RB1
-Retained nodes: AREG, BAD, BAK1, BAX, CDH1, CDK6, CDKN2A, DDB2, E2F1, E2F2, E2F3, EGF, EREG, FGF1, FGF10, FGF16, FGF17, FGF18, FGF19, FGF2, FGF20, FGF21, FGF22, FGF23, FGF3, FGF4, FGF5, FGF6, FGF7, FGF8, FGF9, GADD45A, GADD45B, GADD45G, HGF, IGF1, MDM2, MITF, PDGFA, PDGFB, POLK, PTEN, TP53
-Reduced model written to: results\models\melanoma\node_elimination.bnet
+Reduced size: 0
+Removed nodes: 73
+Iterations: 74
+Removal order: hsa_673 -> hsa_999 -> hsa_4893 -> hsa_1019 -> hsa_595 -> hsa_4286 -> hsa_5728 -> hsa_1956 -> hsa_2260 -> hsa_3480 -> hsa_4233 -> hsa_5156 -> hsa_5159 -> hsa_1950 -> hsa_2246 -> hsa_2247 -> hsa_2248 -> hsa_2249 -> hsa_2250 -> hsa_2251 -> hsa_2252 -> hsa_2253 -> hsa_2254 -> hsa_2255 -> hsa_26281 -> hsa_26291 -> hsa_27006 -> hsa_3082 -> hsa_3479 -> hsa_5154 -> hsa_5155 -> hsa_56034 -> hsa_80310 -> hsa_8074 -> hsa_8817 -> hsa_8822 -> hsa_8823 -> hsa_9965 -> hsa_572 -> hsa_1029 -> hsa_1026 -> hsa_4193 -> hsa_7157 -> hsa_1869 -> hsa_1870 -> hsa_1871 -> hsa_5925 -> hsa_1021 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_5594 -> hsa_5595 -> hsa_5604 -> hsa_5605 -> hsa_369 -> hsa_5894 -> hsa_3265 -> hsa_3845 -> hsa_10912 -> hsa_1647 -> hsa_4616 -> hsa_581 -> hsa_578 -> hsa_1643 -> hsa_51426
+Retained nodes: 
+Reduced model written to: results/models/melanoma/node_elimination.bnet

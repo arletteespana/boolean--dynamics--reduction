@@ -1,12 +1,14 @@
 Original size: 77
-Reduced size: 30
-Removed nodes: 47
-Removal rounds: 5
+Reduced size: 0
+Removed nodes: 77
+Removal rounds: 7
 Removal layers:
-  Round 1: BCL2L1, E2F1, E2F2, E2F3, MAPK1, MAPK10, MAPK3, MAPK8, MAPK9, P3R3URF_PIK3R3, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PLD1, PLD2, RAD51, RPS6KB1, RPS6KB2, SMAD4, VEGFA
-  Round 2: MAP2K1, MTOR, NFKB1, RB1, RELA, SMAD2, SMAD3, STAT1, STAT3
-  Round 3: ARAF, BRAF, CCND1, CHUK, IKBKB, IKBKG, JAK1, RAC1, RAC2, RAC3, RAF1, TGFBR2
-  Round 4: ERBB2, TGFBR1
-  Round 5: EGFR
-Retained nodes: AKT1, AKT2, AKT3, ARHGEF6, BAD, BAK1, BAX, BRCA2, CASP9, CDC42, CDK4, CDK6, CDKN1A, CDKN2A, DDB2, EGF, GADD45A, GADD45B, GADD45G, KRAS, POLK, RALA, RALB, RALBP1, RALGDS, TGFA, TGFB1, TGFB2, TGFB3, TP53
-Reduced model written to: results\models\pancreatic_cancer\leaf_node_removal.bnet
+  Round 1: hsa_110117499, hsa_5290, hsa_5291, hsa_5293, hsa_5295, hsa_5296, hsa_8503, hsa_598, hsa_842, hsa_5594, hsa_5595, hsa_5337, hsa_5338, hsa_5599, hsa_5601, hsa_5602, hsa_7422, hsa_1029, hsa_998, hsa_5925, hsa_1869, hsa_1870, hsa_1871, hsa_4087, hsa_4088, hsa_4089, hsa_675, hsa_5888, hsa_6198, hsa_6199, hsa_7157, hsa_1026, hsa_10912, hsa_1647, hsa_4616, hsa_581, hsa_578, hsa_1643, hsa_51426
+  Round 2: hsa_4790, hsa_5970, hsa_572, hsa_5604, hsa_6774, hsa_6772, hsa_1019, hsa_1021, hsa_7046, hsa_7048, hsa_595, hsa_2475
+  Round 3: hsa_5879, hsa_5880, hsa_5881, hsa_1147, hsa_3551, hsa_8517, hsa_369, hsa_5894, hsa_673, hsa_3716, hsa_7040, hsa_7042, hsa_7043
+  Round 4: hsa_2064, hsa_9459, hsa_10000, hsa_207, hsa_208, hsa_10928, hsa_1956
+  Round 5: hsa_5898, hsa_5899, hsa_7039, hsa_1950
+  Round 6: hsa_5900
+  Round 7: hsa_3845
+Retained nodes: 
+Reduced model written to: results/models/pancreatic_cancer/leaf_node_removal.bnet

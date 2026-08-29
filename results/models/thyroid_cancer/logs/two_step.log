@@ -1,8 +1,45 @@
 Original size: 37
-After stabilized-node removal: 37
-Reduced size: 37
-Total removed nodes: 0
-Step 1 - no stabilized nodes removed.
+After stabilized-node removal: 0
+Reduced size: 0
+Total removed nodes: 37
+Step 1 - stabilized nodes:
+  hsa_5468 = 0
+  hsa_7849 = 0
+  hsa_6256 = 0
+  hsa_6257 = 0
+  hsa_6258 = 0
+  hsa_1499 = 0
+  hsa_999 = 0
+  hsa_5979 = 0
+  hsa_8030 = 0
+  hsa_8031 = 0
+  hsa_10342 = 0
+  hsa_4914 = 0
+  hsa_7170 = 0
+  hsa_7175 = 0
+  hsa_3265 = 0
+  hsa_3845 = 0
+  hsa_4893 = 0
+  hsa_673 = 0
+  hsa_5604 = 0
+  hsa_5605 = 0
+  hsa_5594 = 0
+  hsa_5595 = 0
+  hsa_51176 = 0
+  hsa_6932 = 0
+  hsa_6934 = 0
+  hsa_83439 = 0
+  hsa_4609 = 0
+  hsa_595 = 0
+  hsa_7157 = 0
+  hsa_1026 = 0
+  hsa_10912 = 0
+  hsa_1647 = 0
+  hsa_4616 = 0
+  hsa_581 = 0
+  hsa_578 = 0
+  hsa_1643 = 0
+  hsa_51426 = 0
 Step 2 - no simple mediators removed.
-Retained nodes: BAK1, BAX, BRAF, CCDC6, CCND1, CDH1, CDKN1A, CTNNB1, DDB2, GADD45A, GADD45B, GADD45G, HRAS, KRAS, LEF1, MAP2K1, MAP2K2, MAPK1, MAPK3, MYC, NCOA4, NRAS, NTRK1, PAX8, POLK, PPARG, RET, RXRA, RXRB, RXRG, TCF7, TCF7L1, TCF7L2, TFG, TP53, TPM3, TPR
-Reduced model written to: results\models\thyroid_cancer\two_step.bnet
+Retained nodes: 
+Reduced model written to: results/models/thyroid_cancer/two_step.bnet
