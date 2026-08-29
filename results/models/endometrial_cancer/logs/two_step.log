@@ -1,8 +1,67 @@
 Original size: 59
-After stabilized-node removal: 59
-Reduced size: 59
-Total removed nodes: 0
-Step 1 - no stabilized nodes removed.
+After stabilized-node removal: 0
+Reduced size: 0
+Total removed nodes: 59
+Step 1 - stabilized nodes:
+  hsa_1499 = 0
+  hsa_10297 = 0
+  hsa_324 = 0
+  hsa_8312 = 0
+  hsa_8313 = 0
+  hsa_2932 = 0
+  hsa_1495 = 0
+  hsa_1496 = 0
+  hsa_29119 = 0
+  hsa_2064 = 0
+  hsa_999 = 0
+  hsa_51176 = 0
+  hsa_6932 = 0
+  hsa_6934 = 0
+  hsa_83439 = 0
+  hsa_5728 = 0
+  hsa_4292 = 0
+  hsa_595 = 0
+  hsa_4609 = 0
+  hsa_1950 = 0
+  hsa_1956 = 0
+  hsa_2885 = 0
+  hsa_6654 = 0
+  hsa_6655 = 0
+  hsa_3265 = 0
+  hsa_3845 = 0
+  hsa_4893 = 0
+  hsa_110117499 = 0
+  hsa_5290 = 0
+  hsa_5291 = 0
+  hsa_5293 = 0
+  hsa_5295 = 0
+  hsa_5296 = 0
+  hsa_8503 = 0
+  hsa_3611 = 0
+  hsa_5170 = 0
+  hsa_10000 = 0
+  hsa_207 = 0
+  hsa_208 = 0
+  hsa_2309 = 1
+  hsa_572 = 1
+  hsa_842 = 1
+  hsa_369 = 0
+  hsa_5894 = 0
+  hsa_673 = 0
+  hsa_5604 = 0
+  hsa_5605 = 0
+  hsa_5594 = 0
+  hsa_5595 = 0
+  hsa_2002 = 0
+  hsa_7157 = 0
+  hsa_1026 = 0
+  hsa_10912 = 0
+  hsa_1647 = 0
+  hsa_4616 = 0
+  hsa_581 = 0
+  hsa_578 = 0
+  hsa_1643 = 0
+  hsa_51426 = 0
 Step 2 - no simple mediators removed.
-Retained nodes: AKT1, AKT2, AKT3, APC, APC2, ARAF, AXIN1, AXIN2, BAD, BAK1, BAX, BRAF, CASP9, CCND1, CDH1, CDKN1A, CTNNA1, CTNNA2, CTNNA3, CTNNB1, DDB2, EGF, EGFR, ELK1, ERBB2, FOXO3, GADD45A, GADD45B, GADD45G, GRB2, GSK3B, HRAS, ILK, KRAS, LEF1, MAP2K1, MAP2K2, MAPK1, MAPK3, MLH1, MYC, NRAS, P3R3URF_PIK3R3, PDPK1, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, POLK, PTEN, RAF1, SOS1, SOS2, TCF7, TCF7L1, TCF7L2, TP53
-Reduced model written to: results\models\endometrial_cancer\two_step.bnet
+Retained nodes: 
+Reduced model written to: results/models/endometrial_cancer/two_step.bnet

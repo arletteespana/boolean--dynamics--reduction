@@ -1,7 +1,7 @@
 Original size: 77
-Reduced size: 27
-Removed nodes: 50
-Iterations: 51
-Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BCL2L1 -> BRAF -> CBL -> CDKN1A -> CHUK -> CRK -> CRKL -> CTBP1 -> CTBP2 -> GAB2 -> GRB2 -> HDAC1 -> HDAC2 -> HRAS -> IKBKB -> IKBKG -> KRAS -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MDM2 -> MYC -> NFKBIA -> NRAS -> P3R3URF_PIK3R3 -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> PTPN11 -> RAF1 -> RB1 -> SHC1 -> SHC2 -> SHC3 -> SHC4 -> SMAD3 -> SOS1 -> SOS2 -> STAT5A -> STAT5B -> TGFBR1 -> TGFBR2
-Retained nodes: ABL1, BAD, BAK1, BAX, BCR, CCND1, CDK4, CDK6, CDKN1B, CDKN2A, DDB2, E2F1, E2F2, E2F3, GADD45A, GADD45B, GADD45G, MECOM, NFKB1, POLK, RELA, RUNX1, SMAD4, TGFB1, TGFB2, TGFB3, TP53
-Reduced model written to: results\models\chronic_myeloid_leukemia\node_elimination.bnet
+Reduced size: 0
+Removed nodes: 77
+Iterations: 78
+Removal order: hsa_2122 -> hsa_861 -> hsa_598 -> hsa_5781 -> hsa_25 -> hsa_613 -> hsa_7157 -> hsa_7040 -> hsa_7042 -> hsa_7043 -> hsa_3065 -> hsa_3066 -> hsa_1487 -> hsa_1488 -> hsa_4609 -> hsa_7048 -> hsa_7046 -> hsa_6776 -> hsa_6777 -> hsa_4089 -> hsa_4790 -> hsa_5970 -> hsa_4792 -> hsa_1027 -> hsa_4193 -> hsa_1147 -> hsa_3551 -> hsa_8517 -> hsa_572 -> hsa_1029 -> hsa_1026 -> hsa_6654 -> hsa_6655 -> hsa_2885 -> hsa_25759 -> hsa_399694 -> hsa_53358 -> hsa_6464 -> hsa_9846 -> hsa_1398 -> hsa_1399 -> hsa_867 -> hsa_1869 -> hsa_1870 -> hsa_1871 -> hsa_5925 -> hsa_4088 -> hsa_1019 -> hsa_1021 -> hsa_595 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_5594 -> hsa_5595 -> hsa_5604 -> hsa_5605 -> hsa_369 -> hsa_5894 -> hsa_673 -> hsa_3265 -> hsa_3845 -> hsa_4893 -> hsa_10912 -> hsa_1647 -> hsa_4616 -> hsa_581 -> hsa_578 -> hsa_1643 -> hsa_51426
+Retained nodes: 
+Reduced model written to: results/models/chronic_myeloid_leukemia/node_elimination.bnet

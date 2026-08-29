@@ -1,7 +1,7 @@
 Original size: 41
-Reduced size: 27
-Removed nodes: 14
-Iterations: 15
-Removal order: ARAF -> BRAF -> EGFR -> ERBB2 -> HRAS -> KRAS -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> NRAS -> RAF1 -> RB1 -> RPS6KA5
-Retained nodes: CCND1, CDH1, CDK4, CDKN1A, CDKN2A, CXCL8, DAPK1, DAPK2, DAPK3, E2F1, E2F2, E2F3, EGF, FGFR3, HBEGF, MDM2, MMP1, MMP2, MMP9, MYC, RASSF1, SRC, THBS1, TP53, TYMP, UPK3A, VEGFA
-Reduced model written to: results\models\bladder_cancer\node_elimination.bnet
+Reduced size: 0
+Removed nodes: 41
+Iterations: 42
+Removal order: hsa_3265 -> hsa_4312 -> hsa_4313 -> hsa_4318 -> hsa_1890 -> hsa_7422 -> hsa_3576 -> hsa_7057 -> hsa_1956 -> hsa_999 -> hsa_2064 -> hsa_1029 -> hsa_1026 -> hsa_4609 -> hsa_11186 -> hsa_1612 -> hsa_1613 -> hsa_23604 -> hsa_4193 -> hsa_7157 -> hsa_1869 -> hsa_1870 -> hsa_1871 -> hsa_5925 -> hsa_2261 -> hsa_1019 -> hsa_595 -> hsa_9252 -> hsa_1950 -> hsa_5594 -> hsa_5595 -> hsa_5604 -> hsa_5605 -> hsa_369 -> hsa_5894 -> hsa_673 -> hsa_3845 -> hsa_4893 -> hsa_7380 -> hsa_1839 -> hsa_6714
+Retained nodes: 
+Reduced model written to: results/models/bladder_cancer/node_elimination.bnet

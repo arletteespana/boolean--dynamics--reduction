@@ -1,80 +1,82 @@
-# Glioma Boolean network, corrected value-based KEGG reconstruction
-# Missing-interaction entries (-/-) were excluded and do not define regulatory dependencies.
-# Convention retained: --> and ..> positive; --| negative; +p inherits the accompanying sign.
+# Glioma
+# Reconstructed from the supplied KEGG node/edge dumps.
+# missing interaction (-/-), binding/association, and dissociation were excluded.
+# Nodes without retained incoming regulatory dependencies are fixed to 0.
+# Genuine KEGG self-regulation is retained; no artificial identity self-loops are added.
 targets, factors
-AKT1, AKT1
-AKT2, AKT2
-AKT3, AKT3
-ARAF, (HRAS | KRAS | NRAS)
-BAK1, BAK1
-BAX, BAX
-BRAF, (HRAS | KRAS | NRAS)
-CALM1, CALM1
-CALM2, CALM2
-CALM3, CALM3
-CALML3, CALML3
-CALML4, CALML4
-CALML5, CALML5
-CALML6, CALML6
-CAMK1, (CALM1 | CALM2 | CALM3 | CALML3 | CALML4 | CALML5 | CALML6)
-CAMK1D, (CALM1 | CALM2 | CALM3 | CALML3 | CALML4 | CALML5 | CALML6)
-CAMK1G, (CALM1 | CALM2 | CALM3 | CALML3 | CALML4 | CALML5 | CALML6)
-CAMK2A, (CALM1 | CALM2 | CALM3 | CALML3 | CALML4 | CALML5 | CALML6)
-CAMK2B, (CALM1 | CALM2 | CALM3 | CALML3 | CALML4 | CALML5 | CALML6)
-CAMK2D, (CALM1 | CALM2 | CALM3 | CALML3 | CALML4 | CALML5 | CALML6)
-CAMK2G, (CALM1 | CALM2 | CALM3 | CALML3 | CALML4 | CALML5 | CALML6)
-CAMK4, (CALM1 | CALM2 | CALM3 | CALML3 | CALML4 | CALML5 | CALML6)
-CCND1, CCND1 & !CDKN1A
-CDK4, CDK4 & !CDKN1A
-CDK6, CDK6 & !CDKN1A
-CDKN1A, TP53
-CDKN2A, CDKN2A
-DDB2, DDB2
-E2F1, RB1
-E2F2, RB1
-E2F3, RB1
-EGF, EGF
-EGFR, (EGF | TGFA)
-GADD45A, GADD45A
-GADD45B, GADD45B
-GADD45G, GADD45G
-GRB2, (SHC1 | SHC2 | SHC3 | SHC4)
-HRAS, (CAMK1 | CAMK1D | CAMK1G | CAMK2A | CAMK2B | CAMK2D | CAMK2G | CAMK4 | PRKCA | PRKCB | PRKCG | SOS1 | SOS2)
-IGF1, IGF1
-IGF1R, IGF1
-KRAS, (CAMK1 | CAMK1D | CAMK1G | CAMK2A | CAMK2B | CAMK2D | CAMK2G | CAMK4 | PRKCA | PRKCB | PRKCG | SOS1 | SOS2)
-MAP2K1, (ARAF | BRAF | RAF1)
-MAP2K2, (ARAF | BRAF | RAF1)
-MAPK1, (MAP2K1 | MAP2K2)
-MAPK3, (MAP2K1 | MAP2K2)
-MDM2, MDM2
-MTOR, (AKT1 | AKT2 | AKT3)
-NRAS, (CAMK1 | CAMK1D | CAMK1G | CAMK2A | CAMK2B | CAMK2D | CAMK2G | CAMK4 | PRKCA | PRKCB | PRKCG | SOS1 | SOS2)
-P3R3URF_PIK3R3, (EGFR | HRAS | IGF1R | KRAS | NRAS | PDGFRA | PDGFRB)
-PDGFA, PDGFA
-PDGFB, PDGFB
-PDGFRA, (PDGFA | PDGFB)
-PDGFRB, (PDGFA | PDGFB)
-PIK3CA, (EGFR | HRAS | IGF1R | KRAS | NRAS | PDGFRA | PDGFRB)
-PIK3CB, (EGFR | HRAS | IGF1R | KRAS | NRAS | PDGFRA | PDGFRB)
-PIK3CD, (EGFR | HRAS | IGF1R | KRAS | NRAS | PDGFRA | PDGFRB)
-PIK3R1, (EGFR | HRAS | IGF1R | KRAS | NRAS | PDGFRA | PDGFRB)
-PIK3R2, (EGFR | HRAS | IGF1R | KRAS | NRAS | PDGFRA | PDGFRB)
-PIK3R3, (EGFR | HRAS | IGF1R | KRAS | NRAS | PDGFRA | PDGFRB)
-PLCG1, (EGFR | IGF1R | PDGFRA | PDGFRB)
-PLCG2, (EGFR | IGF1R | PDGFRA | PDGFRB)
-POLK, POLK
-PRKCA, PRKCA
-PRKCB, PRKCB
-PRKCG, PRKCG
-PTEN, PTEN
-RAF1, (HRAS | KRAS | NRAS)
-RB1, (CCND1 | CDK4 | CDK6)
-SHC1, (EGFR | IGF1R | PDGFRA | PDGFRB)
-SHC2, (EGFR | IGF1R | PDGFRA | PDGFRB)
-SHC3, (EGFR | IGF1R | PDGFRA | PDGFRB)
-SHC4, (EGFR | IGF1R | PDGFRA | PDGFRB)
-SOS1, GRB2
-SOS2, GRB2
-TGFA, TGFA
-TP53, TP53 & !MDM2
+hsa_1950, 0
+hsa_7039, 0
+hsa_5154, 0
+hsa_5155, 0
+hsa_3479, 0
+hsa_1956, (hsa_1950 | hsa_7039)
+hsa_5156, (hsa_5154 | hsa_5155)
+hsa_5159, (hsa_5154 | hsa_5155)
+hsa_3480, hsa_3479
+hsa_163688, 0
+hsa_51806, 0
+hsa_801, 0
+hsa_805, 0
+hsa_808, 0
+hsa_810, 0
+hsa_91860, 0
+hsa_57118, (hsa_163688 | hsa_51806 | hsa_801 | hsa_805 | hsa_808 | hsa_810 | hsa_91860)
+hsa_57172, (hsa_163688 | hsa_51806 | hsa_801 | hsa_805 | hsa_808 | hsa_810 | hsa_91860)
+hsa_814, (hsa_163688 | hsa_51806 | hsa_801 | hsa_805 | hsa_808 | hsa_810 | hsa_91860)
+hsa_815, (hsa_163688 | hsa_51806 | hsa_801 | hsa_805 | hsa_808 | hsa_810 | hsa_91860)
+hsa_816, (hsa_163688 | hsa_51806 | hsa_801 | hsa_805 | hsa_808 | hsa_810 | hsa_91860)
+hsa_817, (hsa_163688 | hsa_51806 | hsa_801 | hsa_805 | hsa_808 | hsa_810 | hsa_91860)
+hsa_818, (hsa_163688 | hsa_51806 | hsa_801 | hsa_805 | hsa_808 | hsa_810 | hsa_91860)
+hsa_8536, (hsa_163688 | hsa_51806 | hsa_801 | hsa_805 | hsa_808 | hsa_810 | hsa_91860)
+hsa_5578, 0
+hsa_5579, 0
+hsa_5582, 0
+hsa_25759, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480)
+hsa_399694, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480)
+hsa_53358, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480)
+hsa_6464, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480)
+hsa_2885, (hsa_25759 | hsa_399694 | hsa_53358 | hsa_6464)
+hsa_6654, hsa_2885
+hsa_6655, hsa_2885
+hsa_369, (hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5894, (hsa_3265 | hsa_3845 | hsa_4893)
+hsa_673, (hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5604, (hsa_369 | hsa_5894 | hsa_673)
+hsa_5605, (hsa_369 | hsa_5894 | hsa_673)
+hsa_5594, (hsa_5604 | hsa_5605)
+hsa_5595, (hsa_5604 | hsa_5605)
+hsa_110117499, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5290, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5291, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5293, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5295, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_5296, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_8503, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480 | hsa_3265 | hsa_3845 | hsa_4893)
+hsa_10000, 0
+hsa_207, 0
+hsa_208, 0
+hsa_5728, 0
+hsa_2475, (hsa_10000 | hsa_207 | hsa_208)
+hsa_4193, 0
+hsa_1029, 0
+hsa_7157, !hsa_4193
+hsa_595, !hsa_1026
+hsa_1019, !hsa_1026
+hsa_1021, !hsa_1026
+hsa_5925, (hsa_595 | hsa_1019 | hsa_1021)
+hsa_1869, 0
+hsa_1870, 0
+hsa_1871, 0
+hsa_5335, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480)
+hsa_5336, (hsa_1956 | hsa_5156 | hsa_5159 | hsa_3480)
+hsa_3265, (hsa_57118 | hsa_57172 | hsa_814 | hsa_815 | hsa_816 | hsa_817 | hsa_818 | hsa_8536 | hsa_5578 | hsa_5579 | hsa_5582 | hsa_6654 | hsa_6655)
+hsa_3845, (hsa_57118 | hsa_57172 | hsa_814 | hsa_815 | hsa_816 | hsa_817 | hsa_818 | hsa_8536 | hsa_5578 | hsa_5579 | hsa_5582 | hsa_6654 | hsa_6655)
+hsa_4893, (hsa_57118 | hsa_57172 | hsa_814 | hsa_815 | hsa_816 | hsa_817 | hsa_818 | hsa_8536 | hsa_5578 | hsa_5579 | hsa_5582 | hsa_6654 | hsa_6655)
+hsa_1026, hsa_7157
+hsa_10912, 0
+hsa_1647, 0
+hsa_4616, 0
+hsa_581, 0
+hsa_578, 0
+hsa_1643, 0
+hsa_51426, 0

@@ -1,14 +1,16 @@
 Original size: 59
-Reduced size: 39
-Removed nodes: 20
-Removal rounds: 7
+Reduced size: 0
+Removed nodes: 59
+Removal rounds: 9
 Removal layers:
-  Round 1: CCND1, ELK1, MYC
-  Round 2: LEF1, MAPK1, MAPK3, TCF7, TCF7L1, TCF7L2
-  Round 3: MAP2K1, MAP2K2
-  Round 4: ARAF, BRAF, RAF1
-  Round 5: HRAS, KRAS, NRAS
-  Round 6: SOS1, SOS2
-  Round 7: GRB2
-Retained nodes: AKT1, AKT2, AKT3, APC, APC2, AXIN1, AXIN2, BAD, BAK1, BAX, CASP9, CDH1, CDKN1A, CTNNA1, CTNNA2, CTNNA3, CTNNB1, DDB2, EGF, EGFR, ERBB2, FOXO3, GADD45A, GADD45B, GADD45G, GSK3B, ILK, MLH1, P3R3URF_PIK3R3, PDPK1, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, POLK, PTEN, TP53
-Reduced model written to: results\models\endometrial_cancer\leaf_node_removal.bnet
+  Round 1: hsa_10297, hsa_324, hsa_8312, hsa_8313, hsa_2932, hsa_1495, hsa_1496, hsa_29119, hsa_2309, hsa_572, hsa_842, hsa_2064, hsa_999, hsa_5728, hsa_4292, hsa_2002, hsa_595, hsa_4609, hsa_7157, hsa_1026, hsa_10912, hsa_1647, hsa_4616, hsa_581, hsa_578, hsa_1643, hsa_51426
+  Round 2: hsa_51176, hsa_6932, hsa_6934, hsa_83439, hsa_10000, hsa_207, hsa_208, hsa_5594, hsa_5595
+  Round 3: hsa_1499, hsa_3611, hsa_5170, hsa_5604, hsa_5605
+  Round 4: hsa_110117499, hsa_5290, hsa_5291, hsa_5293, hsa_5295, hsa_5296, hsa_8503, hsa_369, hsa_5894, hsa_673
+  Round 5: hsa_3265, hsa_3845, hsa_4893
+  Round 6: hsa_6654, hsa_6655
+  Round 7: hsa_2885
+  Round 8: hsa_1956
+  Round 9: hsa_1950
+Retained nodes: 
+Reduced model written to: results/models/endometrial_cancer/leaf_node_removal.bnet

@@ -1,8 +1,13 @@
 Original size: 63
-Reduced size: 53
-Removed nodes: 10
-Removal rounds: 1
+Reduced size: 3
+Removed nodes: 60
+Removal rounds: 6
 Removal layers:
-  Round 1: BMP2, BMP4, HHIP, LEF1, PTCH1, PTCH2, SUFU, TCF7, TCF7L1, TCF7L2
-Retained nodes: APC, APC2, AXIN1, AXIN2, BAK1, BAX, CDKN1A, CTNNB1, DDB2, DVL1, DVL2, DVL3, FZD1, FZD10, FZD2, FZD3, FZD4, FZD5, FZD6, FZD7, FZD8, FZD9, GADD45A, GADD45B, GADD45G, GLI1, GLI2, GLI3, GSK3B, KIF7, POLK, SHH, SMO, TP53, WNT1, WNT10A, WNT10B, WNT11, WNT16, WNT2, WNT2B, WNT3, WNT3A, WNT4, WNT5A, WNT5B, WNT6, WNT7A, WNT7B, WNT8A, WNT8B, WNT9A, WNT9B
-Reduced model written to: results\models\basal_cell_carcinoma\leaf_node_removal.bnet
+  Round 1: hsa_374654, hsa_5727, hsa_8643, hsa_650, hsa_652, hsa_10297, hsa_324, hsa_51684, hsa_8312, hsa_8313, hsa_64399, hsa_51176, hsa_6932, hsa_6934, hsa_83439, hsa_7157, hsa_1026, hsa_10912, hsa_1647, hsa_4616, hsa_581, hsa_578, hsa_1643, hsa_51426
+  Round 2: hsa_6469, hsa_6608, hsa_1499
+  Round 3: hsa_2932
+  Round 4: hsa_1855, hsa_1856, hsa_1857
+  Round 5: hsa_11211, hsa_2535, hsa_7855, hsa_7976, hsa_8321, hsa_8322, hsa_8323, hsa_8324, hsa_8325, hsa_8326
+  Round 6: hsa_51384, hsa_54361, hsa_7471, hsa_7472, hsa_7473, hsa_7474, hsa_7475, hsa_7476, hsa_7477, hsa_7478, hsa_7479, hsa_7480, hsa_7481, hsa_7482, hsa_7483, hsa_7484, hsa_80326, hsa_81029, hsa_89780
+Retained nodes: hsa_2735, hsa_2736, hsa_2737
+Reduced model written to: results/models/basal_cell_carcinoma/leaf_node_removal.bnet

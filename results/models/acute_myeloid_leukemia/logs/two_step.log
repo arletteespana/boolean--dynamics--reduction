@@ -1,8 +1,64 @@
-Original size: 67
-After stabilized-node removal: 67
-Reduced size: 67
-Total removed nodes: 0
-Step 1 - no stabilized nodes removed.
+Original size: 68
+After stabilized-node removal: 12
+Reduced size: 12
+Total removed nodes: 56
+Step 1 - stabilized nodes:
+  hsa_2322 = 0
+  hsa_861 = 0
+  hsa_862 = 0
+  hsa_1050 = 1
+  hsa_51176 = 0
+  hsa_6932 = 0
+  hsa_6934 = 0
+  hsa_83439 = 0
+  hsa_5371 = 0
+  hsa_3815 = 0
+  hsa_6774 = 0
+  hsa_6776 = 0
+  hsa_6777 = 0
+  hsa_5292 = 0
+  hsa_11040 = 0
+  hsa_2885 = 0
+  hsa_6654 = 0
+  hsa_6655 = 0
+  hsa_3845 = 0
+  hsa_4893 = 0
+  hsa_3265 = 0
+  hsa_110117499 = 0
+  hsa_5290 = 0
+  hsa_5291 = 0
+  hsa_5293 = 0
+  hsa_5295 = 0
+  hsa_5296 = 0
+  hsa_8503 = 0
+  hsa_10000 = 0
+  hsa_207 = 0
+  hsa_208 = 0
+  hsa_1147 = 0
+  hsa_3551 = 0
+  hsa_8517 = 0
+  hsa_4790 = 0
+  hsa_5970 = 0
+  hsa_572 = 1
+  hsa_2475 = 0
+  hsa_6198 = 0
+  hsa_6199 = 0
+  hsa_1978 = 1
+  hsa_369 = 0
+  hsa_5894 = 0
+  hsa_673 = 0
+  hsa_5604 = 0
+  hsa_5605 = 0
+  hsa_5594 = 0
+  hsa_5595 = 0
+  hsa_8864 = 0
+  hsa_929 = 0
+  hsa_3684 = 0
+  hsa_2209 = 0
+  hsa_1436 = 0
+  hsa_4353 = 0
+  hsa_1437 = 0
+  hsa_3562 = 0
 Step 2 - no simple mediators removed.
-Retained nodes: AKT1, AKT2, AKT3, ARAF, BAD, BCL2A1, BRAF, CCNA1, CCNA2, CCND1, CD14, CEBPA, CEBPE, CHUK, CSF1R, CSF2, DUSP6, EIF4EBP1, FCGR1A, FLT3, GRB2, HRAS, IKBKB, IKBKG, IL3, ITGAM, JUP, KIT, KRAS, LEF1, MAP2K1, MAP2K2, MAPK1, MAPK3, MPO, MTOR, MYC, NFKB1, NRAS, P3R3URF_PIK3R3, PER2, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PIM1, PIM2, PML, PPARD, RARA, RELA, RPS6KB1, RPS6KB2, RUNX1, RUNX1T1, SOS1, SOS2, SPI1, STAT3, STAT5A, STAT5B, TCF7, TCF7L1, TCF7L2, ZBTB16
-Reduced model written to: results\models\acute_myeloid_leukemia\two_step.bnet
+Retained nodes: hsa_5914, hsa_7704, hsa_6688, hsa_5467, hsa_4609, hsa_3728, hsa_890, hsa_8900, hsa_595, hsa_1053, hsa_597, hsa_1848
+Reduced model written to: results/models/acute_myeloid_leukemia/two_step.bnet

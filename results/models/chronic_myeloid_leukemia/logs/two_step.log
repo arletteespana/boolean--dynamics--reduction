@@ -1,8 +1,85 @@
 Original size: 77
-After stabilized-node removal: 77
-Reduced size: 77
-Total removed nodes: 0
-Step 1 - no stabilized nodes removed.
+After stabilized-node removal: 0
+Reduced size: 0
+Total removed nodes: 77
+Step 1 - stabilized nodes:
+  hsa_2122 = 0
+  hsa_861 = 0
+  hsa_25 = 0
+  hsa_613 = 0
+  hsa_7040 = 0
+  hsa_7042 = 0
+  hsa_7043 = 0
+  hsa_3065 = 0
+  hsa_3066 = 0
+  hsa_1487 = 0
+  hsa_1488 = 0
+  hsa_4609 = 0
+  hsa_7048 = 0
+  hsa_7046 = 0
+  hsa_6776 = 0
+  hsa_6777 = 0
+  hsa_598 = 0
+  hsa_4089 = 0
+  hsa_4790 = 0
+  hsa_5970 = 0
+  hsa_1029 = 0
+  hsa_2885 = 0
+  hsa_6654 = 0
+  hsa_6655 = 0
+  hsa_25759 = 0
+  hsa_399694 = 0
+  hsa_53358 = 0
+  hsa_6464 = 0
+  hsa_9846 = 0
+  hsa_5781 = 0
+  hsa_1398 = 0
+  hsa_1399 = 0
+  hsa_867 = 0
+  hsa_1869 = 0
+  hsa_1870 = 0
+  hsa_1871 = 0
+  hsa_4088 = 0
+  hsa_110117499 = 0
+  hsa_5290 = 0
+  hsa_5291 = 0
+  hsa_5293 = 0
+  hsa_5295 = 0
+  hsa_5296 = 0
+  hsa_8503 = 0
+  hsa_10000 = 0
+  hsa_207 = 0
+  hsa_208 = 0
+  hsa_1027 = 1
+  hsa_4193 = 0
+  hsa_7157 = 1
+  hsa_1147 = 0
+  hsa_3551 = 0
+  hsa_8517 = 0
+  hsa_4792 = 0
+  hsa_572 = 1
+  hsa_1026 = 1
+  hsa_1019 = 0
+  hsa_1021 = 0
+  hsa_595 = 0
+  hsa_5925 = 0
+  hsa_3265 = 0
+  hsa_3845 = 0
+  hsa_4893 = 0
+  hsa_369 = 0
+  hsa_5894 = 0
+  hsa_673 = 0
+  hsa_5604 = 0
+  hsa_5605 = 0
+  hsa_5594 = 0
+  hsa_5595 = 0
+  hsa_10912 = 0
+  hsa_1647 = 0
+  hsa_4616 = 0
+  hsa_581 = 0
+  hsa_578 = 0
+  hsa_1643 = 0
+  hsa_51426 = 0
 Step 2 - no simple mediators removed.
-Retained nodes: ABL1, AKT1, AKT2, AKT3, ARAF, BAD, BAK1, BAX, BCL2L1, BCR, BRAF, CBL, CCND1, CDK4, CDK6, CDKN1A, CDKN1B, CDKN2A, CHUK, CRK, CRKL, CTBP1, CTBP2, DDB2, E2F1, E2F2, E2F3, GAB2, GADD45A, GADD45B, GADD45G, GRB2, HDAC1, HDAC2, HRAS, IKBKB, IKBKG, KRAS, MAP2K1, MAP2K2, MAPK1, MAPK3, MDM2, MECOM, MYC, NFKB1, NFKBIA, NRAS, P3R3URF_PIK3R3, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, POLK, PTPN11, RAF1, RB1, RELA, RUNX1, SHC1, SHC2, SHC3, SHC4, SMAD3, SMAD4, SOS1, SOS2, STAT5A, STAT5B, TGFB1, TGFB2, TGFB3, TGFBR1, TGFBR2, TP53
-Reduced model written to: results\models\chronic_myeloid_leukemia\two_step.bnet
+Retained nodes: 
+Reduced model written to: results/models/chronic_myeloid_leukemia/two_step.bnet

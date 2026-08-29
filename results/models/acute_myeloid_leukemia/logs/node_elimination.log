@@ -1,7 +1,7 @@
-Original size: 67
-Reduced size: 21
-Removed nodes: 46
-Iterations: 47
-Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BRAF -> CCNA1 -> CCNA2 -> CCND1 -> CHUK -> GRB2 -> HRAS -> IKBKB -> IKBKG -> JUP -> KRAS -> LEF1 -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MTOR -> MYC -> NFKB1 -> NRAS -> P3R3URF_PIK3R3 -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> PIM1 -> PIM2 -> PPARD -> RELA -> RPS6KB1 -> RPS6KB2 -> SOS1 -> SOS2 -> STAT3 -> STAT5A -> STAT5B -> TCF7 -> TCF7L1 -> TCF7L2 -> ZBTB16
-Retained nodes: BAD, BCL2A1, CD14, CEBPA, CEBPE, CSF1R, CSF2, DUSP6, EIF4EBP1, FCGR1A, FLT3, IL3, ITGAM, KIT, MPO, PER2, PML, RARA, RUNX1, RUNX1T1, SPI1
-Reduced model written to: results\models\acute_myeloid_leukemia\node_elimination.bnet
+Original size: 68
+Reduced size: 1
+Removed nodes: 67
+Iterations: 68
+Removal order: hsa_7704 -> hsa_3845 -> hsa_4893 -> hsa_2322 -> hsa_6688 -> hsa_1050 -> hsa_861 -> hsa_862 -> hsa_5467 -> hsa_4609 -> hsa_4790 -> hsa_5970 -> hsa_6774 -> hsa_6776 -> hsa_6777 -> hsa_3728 -> hsa_890 -> hsa_8900 -> hsa_595 -> hsa_51176 -> hsa_6932 -> hsa_6934 -> hsa_83439 -> hsa_5371 -> hsa_5292 -> hsa_3265 -> hsa_1147 -> hsa_3551 -> hsa_8517 -> hsa_572 -> hsa_11040 -> hsa_6198 -> hsa_6199 -> hsa_6654 -> hsa_6655 -> hsa_2885 -> hsa_3815 -> hsa_2475 -> hsa_1978 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_5594 -> hsa_5595 -> hsa_5604 -> hsa_5605 -> hsa_369 -> hsa_5894 -> hsa_673 -> hsa_1053 -> hsa_597 -> hsa_8864 -> hsa_929 -> hsa_3684 -> hsa_2209 -> hsa_1848 -> hsa_1436 -> hsa_4353 -> hsa_1437 -> hsa_3562
+Retained nodes: hsa_5914
+Reduced model written to: results/models/acute_myeloid_leukemia/node_elimination.bnet

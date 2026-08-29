@@ -1,10 +1,15 @@
-Original size: 67
-Reduced size: 39
-Removed nodes: 28
-Removal rounds: 3
+Original size: 68
+Reduced size: 2
+Removed nodes: 66
+Removal rounds: 8
 Removal layers:
-  Round 1: CCNA1, CCNA2, CCND1, LEF1, MAPK1, MAPK3, MYC, NFKB1, PIM1, PIM2, PPARD, RELA, RPS6KB1, RPS6KB2, TCF7, TCF7L1, TCF7L2
-  Round 2: CHUK, IKBKB, IKBKG, JUP, MAP2K1, MAP2K2, STAT3, STAT5A, STAT5B
-  Round 3: ARAF, BRAF
-Retained nodes: AKT1, AKT2, AKT3, BAD, BCL2A1, CD14, CEBPA, CEBPE, CSF1R, CSF2, DUSP6, EIF4EBP1, FCGR1A, FLT3, GRB2, HRAS, IL3, ITGAM, KIT, KRAS, MPO, MTOR, NRAS, P3R3URF_PIK3R3, PER2, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PML, RARA, RUNX1, RUNX1T1, SOS1, SOS2, SPI1, ZBTB16
-Reduced model written to: results\models\acute_myeloid_leukemia\leaf_node_removal.bnet
+  Round 1: hsa_6688, hsa_1050, hsa_5467, hsa_4609, hsa_4790, hsa_5970, hsa_890, hsa_8900, hsa_595, hsa_51176, hsa_6932, hsa_6934, hsa_83439, hsa_5292, hsa_572, hsa_11040, hsa_6198, hsa_6199, hsa_1978, hsa_5594, hsa_5595, hsa_1053, hsa_597, hsa_8864, hsa_929, hsa_3684, hsa_2209, hsa_1848, hsa_1436, hsa_4353, hsa_1437, hsa_3562
+  Round 2: hsa_6774, hsa_6776, hsa_6777, hsa_3728, hsa_1147, hsa_3551, hsa_8517, hsa_2475, hsa_5604, hsa_5605
+  Round 3: hsa_7704, hsa_861, hsa_862, hsa_10000, hsa_207, hsa_208, hsa_369, hsa_5894, hsa_673
+  Round 4: hsa_110117499, hsa_5290, hsa_5291, hsa_5293, hsa_5295, hsa_5296, hsa_8503
+  Round 5: hsa_3845, hsa_4893, hsa_3265
+  Round 6: hsa_6654, hsa_6655
+  Round 7: hsa_2885
+  Round 8: hsa_2322, hsa_3815
+Retained nodes: hsa_5914, hsa_5371
+Reduced model written to: results/models/acute_myeloid_leukemia/leaf_node_removal.bnet

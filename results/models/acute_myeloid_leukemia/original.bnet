@@ -1,71 +1,74 @@
-# Acute myeloid leukemia Boolean network, corrected value-based KEGG reconstruction
-# Missing-interaction entries (-/-) were excluded and do not define regulatory dependencies.
-# Convention retained: --> and ..> positive; --| negative; +p inherits the accompanying sign.
+# Acute Myeloid Leukemia
+# Reconstructed from the supplied KEGG node/edge dumps.
+# missing interaction (-/-), binding/association, and dissociation were excluded.
+# Nodes without retained incoming regulatory dependencies are fixed to 0.
+# Genuine KEGG self-regulation is retained; no artificial identity self-loops are added.
 targets, factors
-AKT1, (P3R3URF_PIK3R3 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-AKT2, (P3R3URF_PIK3R3 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-AKT3, (P3R3URF_PIK3R3 | PIK3CA | PIK3CB | PIK3CD | PIK3R1 | PIK3R2 | PIK3R3)
-ARAF, (HRAS | KRAS | NRAS)
-BAD, BAD & !(AKT1 | AKT2 | AKT3)
-BCL2A1, BCL2A1 & !(PML | RARA)
-BRAF, (HRAS | KRAS | NRAS)
-CCNA1, (PML | RARA | ZBTB16)
-CCNA2, (PML | RARA | ZBTB16)
-CCND1, JUP
-CD14, CD14
-CEBPA, CEBPA & !(FLT3 | RUNX1 | RUNX1T1)
-CEBPE, CEBPE & !(PML | RARA)
-CHUK, (AKT1 | AKT2 | AKT3)
-CSF1R, CSF1R
-CSF2, CSF2
-DUSP6, DUSP6 & !(RARA | ZBTB16)
-EIF4EBP1, EIF4EBP1 & !MTOR
-FCGR1A, FCGR1A
-FLT3, FLT3
-GRB2, (FLT3 | KIT)
-HRAS, (SOS1 | SOS2)
-IKBKB, (AKT1 | AKT2 | AKT3)
-IKBKG, (AKT1 | AKT2 | AKT3)
-IL3, IL3
-ITGAM, ITGAM
-JUP, (PML | RARA | RUNX1 | RUNX1T1 | ZBTB16)
-KIT, KIT
-KRAS, (SOS1 | SOS2)
-LEF1, JUP
-MAP2K1, (ARAF | BRAF)
-MAP2K2, (ARAF | BRAF)
-MAPK1, (MAP2K1 | MAP2K2)
-MAPK3, (MAP2K1 | MAP2K2)
-MPO, MPO
-MTOR, (AKT1 | AKT2 | AKT3)
-MYC, (JUP | PML | RARA)
-NFKB1, (CHUK | IKBKB | IKBKG)
-NRAS, (SOS1 | SOS2)
-P3R3URF_PIK3R3, (FLT3 | HRAS | KIT | KRAS | NRAS)
-PER2, PER2
-PIK3CA, (FLT3 | HRAS | KIT | KRAS | NRAS)
-PIK3CB, (FLT3 | HRAS | KIT | KRAS | NRAS)
-PIK3CD, (FLT3 | HRAS | KIT | KRAS | NRAS)
-PIK3R1, (FLT3 | HRAS | KIT | KRAS | NRAS)
-PIK3R2, (FLT3 | HRAS | KIT | KRAS | NRAS)
-PIK3R3, (FLT3 | HRAS | KIT | KRAS | NRAS)
-PIM1, (STAT3 | STAT5A | STAT5B)
-PIM2, (STAT3 | STAT5A | STAT5B)
-PML, PML
-PPARD, JUP
-RARA, (PML | RARA)
-RELA, (CHUK | IKBKB | IKBKG)
-RPS6KB1, MTOR
-RPS6KB2, MTOR
-RUNX1, RUNX1
-RUNX1T1, RUNX1T1
-SOS1, GRB2
-SOS2, GRB2
-SPI1, SPI1 & !(FLT3 | PML | RARA | RUNX1 | RUNX1T1)
-STAT3, (FLT3 | KIT)
-STAT5A, (FLT3 | KIT)
-STAT5B, (FLT3 | KIT)
-TCF7, JUP
-TCF7L1, JUP
-TCF7L2, JUP
-ZBTB16, (PML | RARA)
+hsa_5914, (hsa_5914 | hsa_5371)
+hsa_7704, (hsa_5914 | hsa_5371)
+hsa_3845, (hsa_6654 | hsa_6655)
+hsa_4893, (hsa_6654 | hsa_6655)
+hsa_2322, 0
+hsa_6688, !(hsa_5914 | hsa_2322 | hsa_861 | hsa_862 | hsa_5371)
+hsa_1050, !(hsa_2322 | hsa_861 | hsa_862)
+hsa_861, 0
+hsa_862, 0
+hsa_5467, hsa_3728
+hsa_4609, (hsa_5914 | hsa_3728 | hsa_5371)
+hsa_4790, (hsa_1147 | hsa_3551 | hsa_8517)
+hsa_5970, (hsa_1147 | hsa_3551 | hsa_8517)
+hsa_6774, (hsa_2322 | hsa_3815)
+hsa_6776, (hsa_2322 | hsa_3815)
+hsa_6777, (hsa_2322 | hsa_3815)
+hsa_3728, (hsa_5914 | hsa_7704 | hsa_861 | hsa_862 | hsa_5371)
+hsa_890, (hsa_5914 | hsa_7704 | hsa_5371)
+hsa_8900, (hsa_5914 | hsa_7704 | hsa_5371)
+hsa_595, hsa_3728
+hsa_51176, 0
+hsa_6932, 0
+hsa_6934, 0
+hsa_83439, 0
+hsa_5371, 0
+hsa_5292, (hsa_6774 | hsa_6776 | hsa_6777)
+hsa_3265, (hsa_6654 | hsa_6655)
+hsa_1147, (hsa_10000 | hsa_207 | hsa_208)
+hsa_3551, (hsa_10000 | hsa_207 | hsa_208)
+hsa_8517, (hsa_10000 | hsa_207 | hsa_208)
+hsa_572, !(hsa_10000 | hsa_207 | hsa_208)
+hsa_11040, (hsa_6774 | hsa_6776 | hsa_6777)
+hsa_6198, hsa_2475
+hsa_6199, hsa_2475
+hsa_6654, hsa_2885
+hsa_6655, hsa_2885
+hsa_2885, (hsa_2322 | hsa_3815)
+hsa_3815, 0
+hsa_2475, (hsa_10000 | hsa_207 | hsa_208)
+hsa_1978, !hsa_2475
+hsa_10000, (hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_207, (hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_208, (hsa_110117499 | hsa_5290 | hsa_5291 | hsa_5293 | hsa_5295 | hsa_5296 | hsa_8503)
+hsa_110117499, (hsa_3845 | hsa_4893 | hsa_2322 | hsa_3265 | hsa_3815)
+hsa_5290, (hsa_3845 | hsa_4893 | hsa_2322 | hsa_3265 | hsa_3815)
+hsa_5291, (hsa_3845 | hsa_4893 | hsa_2322 | hsa_3265 | hsa_3815)
+hsa_5293, (hsa_3845 | hsa_4893 | hsa_2322 | hsa_3265 | hsa_3815)
+hsa_5295, (hsa_3845 | hsa_4893 | hsa_2322 | hsa_3265 | hsa_3815)
+hsa_5296, (hsa_3845 | hsa_4893 | hsa_2322 | hsa_3265 | hsa_3815)
+hsa_8503, (hsa_3845 | hsa_4893 | hsa_2322 | hsa_3265 | hsa_3815)
+hsa_5594, (hsa_5604 | hsa_5605)
+hsa_5595, (hsa_5604 | hsa_5605)
+hsa_5604, (hsa_369 | hsa_5894 | hsa_673)
+hsa_5605, (hsa_369 | hsa_5894 | hsa_673)
+hsa_369, (hsa_3845 | hsa_4893 | hsa_3265)
+hsa_5894, (hsa_3845 | hsa_4893 | hsa_3265)
+hsa_673, (hsa_3845 | hsa_4893 | hsa_3265)
+hsa_1053, !(hsa_5914 | hsa_5371)
+hsa_597, !(hsa_5914 | hsa_5371)
+hsa_8864, 0
+hsa_929, 0
+hsa_3684, 0
+hsa_2209, 0
+hsa_1848, !(hsa_5914 | hsa_7704)
+hsa_1436, 0
+hsa_4353, 0
+hsa_1437, 0
+hsa_3562, 0

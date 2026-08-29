@@ -1,7 +1,7 @@
 Original size: 76
-Reduced size: 32
-Removed nodes: 44
-Iterations: 45
-Removal order: ARAF -> BRAF -> CAMK1 -> CAMK1D -> CAMK1G -> CAMK2A -> CAMK2B -> CAMK2D -> CAMK2G -> CAMK4 -> CDKN1A -> E2F1 -> E2F2 -> E2F3 -> EGFR -> GRB2 -> HRAS -> IGF1R -> KRAS -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MTOR -> NRAS -> P3R3URF_PIK3R3 -> PDGFRA -> PDGFRB -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> PLCG1 -> PLCG2 -> RAF1 -> RB1 -> SHC1 -> SHC2 -> SHC3 -> SHC4 -> SOS1 -> SOS2
-Retained nodes: AKT1, AKT2, AKT3, BAK1, BAX, CALM1, CALM2, CALM3, CALML3, CALML4, CALML5, CALML6, CCND1, CDK4, CDK6, CDKN2A, DDB2, EGF, GADD45A, GADD45B, GADD45G, IGF1, MDM2, PDGFA, PDGFB, POLK, PRKCA, PRKCB, PRKCG, PTEN, TGFA, TP53
-Reduced model written to: results\models\glioma\node_elimination.bnet
+Reduced size: 0
+Removed nodes: 76
+Iterations: 77
+Removal order: hsa_1950 -> hsa_7039 -> hsa_5154 -> hsa_5155 -> hsa_3479 -> hsa_1956 -> hsa_5156 -> hsa_5159 -> hsa_3480 -> hsa_163688 -> hsa_51806 -> hsa_801 -> hsa_805 -> hsa_808 -> hsa_810 -> hsa_91860 -> hsa_57118 -> hsa_57172 -> hsa_814 -> hsa_815 -> hsa_816 -> hsa_817 -> hsa_818 -> hsa_8536 -> hsa_5578 -> hsa_5579 -> hsa_5582 -> hsa_25759 -> hsa_399694 -> hsa_53358 -> hsa_6464 -> hsa_2885 -> hsa_6654 -> hsa_6655 -> hsa_369 -> hsa_5894 -> hsa_673 -> hsa_5604 -> hsa_5605 -> hsa_5594 -> hsa_5595 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_5728 -> hsa_2475 -> hsa_4193 -> hsa_1029 -> hsa_7157 -> hsa_595 -> hsa_1019 -> hsa_1021 -> hsa_5925 -> hsa_1869 -> hsa_1870 -> hsa_1871 -> hsa_5335 -> hsa_5336 -> hsa_3265 -> hsa_3845 -> hsa_4893 -> hsa_1026 -> hsa_10912 -> hsa_1647 -> hsa_4616 -> hsa_581 -> hsa_578 -> hsa_1643 -> hsa_51426
+Retained nodes: 
+Reduced model written to: results/models/glioma/node_elimination.bnet

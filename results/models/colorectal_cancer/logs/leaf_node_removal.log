@@ -1,13 +1,17 @@
 Original size: 87
-Reduced size: 52
-Removed nodes: 35
-Removal rounds: 6
+Reduced size: 0
+Removed nodes: 87
+Removal rounds: 10
 Removal layers:
-  Round 1: BIRC5, CASP9, CCND1, DCC, GSK3B, MAPK10, MAPK8, MAPK9, RPS6KB1, RPS6KB2, SMAD4
-  Round 2: FOS, JUN, MTOR, MYC, RAC1, RAC2, RAC3, RHOA
-  Round 3: LEF1, MAPK1, MAPK3, RALA, RALB, TCF7, TCF7L1, TCF7L2
-  Round 4: MAP2K1, MAP2K2, RALGDS
-  Round 5: ARAF, BRAF, RAF1
-  Round 6: HRAS, NRAS
-Retained nodes: AKT1, AKT2, AKT3, APC, APC2, APPL1, AREG, AXIN1, AXIN2, BAD, BAK1, BAX, BBC3, BCL2, BCL2L11, CASP3, CDKN1A, CTNNB1, CYCS, DDB2, EGF, EGFR, EREG, GADD45A, GADD45B, GADD45G, GRB2, KRAS, MLH1, MSH2, MSH3, MSH6, P3R3URF_PIK3R3, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PMAIP1, POLK, SMAD2, SMAD3, SOS1, SOS2, TGFA, TGFB1, TGFB2, TGFB3, TGFBR1, TGFBR2, TP53
-Reduced model written to: results\models\colorectal_cancer\leaf_node_removal.bnet
+  Round 1: hsa_1630, hsa_7040, hsa_7042, hsa_7043, hsa_842, hsa_26060, hsa_10297, hsa_324, hsa_4087, hsa_4088, hsa_7046, hsa_4089, hsa_4292, hsa_4436, hsa_5599, hsa_5601, hsa_5602, hsa_8312, hsa_8313, hsa_332, hsa_595, hsa_54205, hsa_596, hsa_7157, hsa_2932, hsa_2956, hsa_4437, hsa_7048, hsa_1026, hsa_10912, hsa_1647, hsa_4616, hsa_578, hsa_1643, hsa_51426, hsa_6198, hsa_6199
+  Round 2: hsa_836, hsa_387, hsa_5879, hsa_5880, hsa_5881, hsa_4609, hsa_3725, hsa_2353, hsa_572, hsa_581, hsa_5366, hsa_10018, hsa_27113, hsa_2475
+  Round 3: hsa_5594, hsa_5595, hsa_51176, hsa_6932, hsa_6934, hsa_83439, hsa_10000, hsa_207, hsa_208, hsa_5898, hsa_5899
+  Round 4: hsa_110117499, hsa_5290, hsa_5291, hsa_5293, hsa_5295, hsa_5296, hsa_8503, hsa_5900, hsa_5604, hsa_5605, hsa_1499
+  Round 5: hsa_369, hsa_5894, hsa_673
+  Round 6: hsa_3845, hsa_3265, hsa_4893
+  Round 7: hsa_6654, hsa_6655
+  Round 8: hsa_2885
+  Round 9: hsa_1956
+  Round 10: hsa_1950, hsa_7039, hsa_2069, hsa_374
+Retained nodes: 
+Reduced model written to: results/models/colorectal_cancer/leaf_node_removal.bnet

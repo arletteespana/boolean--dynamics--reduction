@@ -1,7 +1,7 @@
 Original size: 87
-Reduced size: 36
-Removed nodes: 51
-Iterations: 52
-Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BAD -> BIRC5 -> BRAF -> CASP9 -> CCND1 -> DCC -> EGFR -> FOS -> GRB2 -> GSK3B -> HRAS -> JUN -> KRAS -> LEF1 -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK10 -> MAPK3 -> MAPK8 -> MAPK9 -> MTOR -> MYC -> NRAS -> P3R3URF_PIK3R3 -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> RAC1 -> RAC2 -> RAC3 -> RAF1 -> RALA -> RALB -> RALGDS -> RHOA -> RPS6KB1 -> RPS6KB2 -> SMAD4 -> SOS1 -> SOS2 -> TCF7 -> TCF7L1 -> TCF7L2
-Retained nodes: APC, APC2, APPL1, AREG, AXIN1, AXIN2, BAK1, BAX, BBC3, BCL2, BCL2L11, CASP3, CDKN1A, CTNNB1, CYCS, DDB2, EGF, EREG, GADD45A, GADD45B, GADD45G, MLH1, MSH2, MSH3, MSH6, PMAIP1, POLK, SMAD2, SMAD3, TGFA, TGFB1, TGFB2, TGFB3, TGFBR1, TGFBR2, TP53
-Reduced model written to: results\models\colorectal_cancer\node_elimination.bnet
+Reduced size: 0
+Removed nodes: 87
+Iterations: 88
+Removal order: hsa_1630 -> hsa_836 -> hsa_7040 -> hsa_7042 -> hsa_7043 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_842 -> hsa_26060 -> hsa_10297 -> hsa_324 -> hsa_4087 -> hsa_4088 -> hsa_7046 -> hsa_4089 -> hsa_4292 -> hsa_4436 -> hsa_3845 -> hsa_369 -> hsa_5894 -> hsa_673 -> hsa_5599 -> hsa_5601 -> hsa_5602 -> hsa_8312 -> hsa_8313 -> hsa_5900 -> hsa_387 -> hsa_5879 -> hsa_5880 -> hsa_5881 -> hsa_332 -> hsa_4609 -> hsa_595 -> hsa_5604 -> hsa_5605 -> hsa_5594 -> hsa_5595 -> hsa_3725 -> hsa_2353 -> hsa_54205 -> hsa_596 -> hsa_7157 -> hsa_51176 -> hsa_6932 -> hsa_6934 -> hsa_83439 -> hsa_2932 -> hsa_1499 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_572 -> hsa_2956 -> hsa_581 -> hsa_4437 -> hsa_7048 -> hsa_1026 -> hsa_10912 -> hsa_1647 -> hsa_4616 -> hsa_578 -> hsa_1643 -> hsa_51426 -> hsa_5366 -> hsa_10018 -> hsa_27113 -> hsa_5898 -> hsa_5899 -> hsa_3265 -> hsa_4893 -> hsa_6198 -> hsa_6199 -> hsa_6654 -> hsa_6655 -> hsa_2885 -> hsa_2475 -> hsa_1956 -> hsa_1950 -> hsa_7039 -> hsa_2069 -> hsa_374
+Retained nodes: 
+Reduced model written to: results/models/colorectal_cancer/node_elimination.bnet

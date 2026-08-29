@@ -1,8 +1,95 @@
 Original size: 87
-After stabilized-node removal: 87
-Reduced size: 87
-Total removed nodes: 0
-Step 1 - no stabilized nodes removed.
+After stabilized-node removal: 0
+Reduced size: 0
+Total removed nodes: 87
+Step 1 - stabilized nodes:
+  hsa_836 = 0
+  hsa_1630 = 0
+  hsa_7040 = 0
+  hsa_7042 = 0
+  hsa_7043 = 0
+  hsa_26060 = 0
+  hsa_10297 = 0
+  hsa_324 = 0
+  hsa_4087 = 0
+  hsa_4088 = 0
+  hsa_7046 = 0
+  hsa_4089 = 0
+  hsa_4292 = 0
+  hsa_4436 = 0
+  hsa_8312 = 0
+  hsa_8313 = 0
+  hsa_54205 = 0
+  hsa_7157 = 0
+  hsa_1499 = 0
+  hsa_51176 = 0
+  hsa_6932 = 0
+  hsa_6934 = 0
+  hsa_83439 = 0
+  hsa_332 = 0
+  hsa_2956 = 0
+  hsa_581 = 0
+  hsa_4437 = 0
+  hsa_7048 = 0
+  hsa_1026 = 0
+  hsa_10912 = 0
+  hsa_1647 = 0
+  hsa_4616 = 0
+  hsa_578 = 0
+  hsa_1643 = 0
+  hsa_51426 = 0
+  hsa_5366 = 0
+  hsa_10018 = 0
+  hsa_27113 = 0
+  hsa_1950 = 0
+  hsa_7039 = 0
+  hsa_2069 = 0
+  hsa_374 = 0
+  hsa_1956 = 0
+  hsa_2885 = 0
+  hsa_6654 = 0
+  hsa_6655 = 0
+  hsa_3845 = 0
+  hsa_110117499 = 0
+  hsa_5290 = 0
+  hsa_5291 = 0
+  hsa_5293 = 0
+  hsa_5295 = 0
+  hsa_5296 = 0
+  hsa_8503 = 0
+  hsa_5900 = 0
+  hsa_10000 = 0
+  hsa_207 = 0
+  hsa_208 = 0
+  hsa_842 = 0
+  hsa_2932 = 0
+  hsa_572 = 0
+  hsa_596 = 1
+  hsa_5898 = 0
+  hsa_5899 = 0
+  hsa_387 = 0
+  hsa_5879 = 0
+  hsa_5880 = 0
+  hsa_5881 = 0
+  hsa_5599 = 0
+  hsa_5601 = 0
+  hsa_5602 = 0
+  hsa_3265 = 0
+  hsa_4893 = 0
+  hsa_369 = 0
+  hsa_5894 = 0
+  hsa_673 = 0
+  hsa_5604 = 0
+  hsa_5605 = 0
+  hsa_5594 = 0
+  hsa_5595 = 0
+  hsa_4609 = 0
+  hsa_3725 = 0
+  hsa_2353 = 0
+  hsa_595 = 0
+  hsa_2475 = 0
+  hsa_6198 = 0
+  hsa_6199 = 0
 Step 2 - no simple mediators removed.
-Retained nodes: AKT1, AKT2, AKT3, APC, APC2, APPL1, ARAF, AREG, AXIN1, AXIN2, BAD, BAK1, BAX, BBC3, BCL2, BCL2L11, BIRC5, BRAF, CASP3, CASP9, CCND1, CDKN1A, CTNNB1, CYCS, DCC, DDB2, EGF, EGFR, EREG, FOS, GADD45A, GADD45B, GADD45G, GRB2, GSK3B, HRAS, JUN, KRAS, LEF1, MAP2K1, MAP2K2, MAPK1, MAPK10, MAPK3, MAPK8, MAPK9, MLH1, MSH2, MSH3, MSH6, MTOR, MYC, NRAS, P3R3URF_PIK3R3, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PMAIP1, POLK, RAC1, RAC2, RAC3, RAF1, RALA, RALB, RALGDS, RHOA, RPS6KB1, RPS6KB2, SMAD2, SMAD3, SMAD4, SOS1, SOS2, TCF7, TCF7L1, TCF7L2, TGFA, TGFB1, TGFB2, TGFB3, TGFBR1, TGFBR2, TP53
-Reduced model written to: results\models\colorectal_cancer\two_step.bnet
+Retained nodes: 
+Reduced model written to: results/models/colorectal_cancer/two_step.bnet

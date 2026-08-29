@@ -1,7 +1,7 @@
 Original size: 59
-Reduced size: 26
-Removed nodes: 33
-Iterations: 34
-Removal order: AKT1 -> AKT2 -> AKT3 -> ARAF -> BRAF -> CCND1 -> EGFR -> ELK1 -> GRB2 -> HRAS -> ILK -> KRAS -> LEF1 -> MAP2K1 -> MAP2K2 -> MAPK1 -> MAPK3 -> MYC -> NRAS -> P3R3URF_PIK3R3 -> PDPK1 -> PIK3CA -> PIK3CB -> PIK3CD -> PIK3R1 -> PIK3R2 -> PIK3R3 -> RAF1 -> SOS1 -> SOS2 -> TCF7 -> TCF7L1 -> TCF7L2
-Retained nodes: APC, APC2, AXIN1, AXIN2, BAD, BAK1, BAX, CASP9, CDH1, CDKN1A, CTNNA1, CTNNA2, CTNNA3, CTNNB1, DDB2, EGF, ERBB2, FOXO3, GADD45A, GADD45B, GADD45G, GSK3B, MLH1, POLK, PTEN, TP53
-Reduced model written to: results\models\endometrial_cancer\node_elimination.bnet
+Reduced size: 0
+Removed nodes: 59
+Iterations: 60
+Removal order: hsa_1499 -> hsa_3265 -> hsa_3845 -> hsa_4893 -> hsa_10297 -> hsa_324 -> hsa_8312 -> hsa_8313 -> hsa_2932 -> hsa_1495 -> hsa_1496 -> hsa_29119 -> hsa_2309 -> hsa_572 -> hsa_842 -> hsa_3611 -> hsa_2064 -> hsa_999 -> hsa_51176 -> hsa_6932 -> hsa_6934 -> hsa_83439 -> hsa_5728 -> hsa_5170 -> hsa_6654 -> hsa_6655 -> hsa_2885 -> hsa_4292 -> hsa_2002 -> hsa_1956 -> hsa_595 -> hsa_4609 -> hsa_10000 -> hsa_207 -> hsa_208 -> hsa_110117499 -> hsa_5290 -> hsa_5291 -> hsa_5293 -> hsa_5295 -> hsa_5296 -> hsa_8503 -> hsa_1950 -> hsa_5594 -> hsa_5595 -> hsa_5604 -> hsa_5605 -> hsa_369 -> hsa_5894 -> hsa_673 -> hsa_7157 -> hsa_1026 -> hsa_10912 -> hsa_1647 -> hsa_4616 -> hsa_581 -> hsa_578 -> hsa_1643 -> hsa_51426
+Retained nodes: 
+Reduced model written to: results/models/endometrial_cancer/node_elimination.bnet

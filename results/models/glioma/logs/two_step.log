@@ -1,8 +1,84 @@
 Original size: 76
-After stabilized-node removal: 76
-Reduced size: 76
-Total removed nodes: 0
-Step 1 - no stabilized nodes removed.
+After stabilized-node removal: 0
+Reduced size: 0
+Total removed nodes: 76
+Step 1 - stabilized nodes:
+  hsa_1950 = 0
+  hsa_7039 = 0
+  hsa_5154 = 0
+  hsa_5155 = 0
+  hsa_3479 = 0
+  hsa_1956 = 0
+  hsa_5156 = 0
+  hsa_5159 = 0
+  hsa_3480 = 0
+  hsa_163688 = 0
+  hsa_51806 = 0
+  hsa_801 = 0
+  hsa_805 = 0
+  hsa_808 = 0
+  hsa_810 = 0
+  hsa_91860 = 0
+  hsa_57118 = 0
+  hsa_57172 = 0
+  hsa_814 = 0
+  hsa_815 = 0
+  hsa_816 = 0
+  hsa_817 = 0
+  hsa_818 = 0
+  hsa_8536 = 0
+  hsa_5578 = 0
+  hsa_5579 = 0
+  hsa_5582 = 0
+  hsa_25759 = 0
+  hsa_399694 = 0
+  hsa_53358 = 0
+  hsa_6464 = 0
+  hsa_2885 = 0
+  hsa_6654 = 0
+  hsa_6655 = 0
+  hsa_10000 = 0
+  hsa_207 = 0
+  hsa_208 = 0
+  hsa_5728 = 0
+  hsa_2475 = 0
+  hsa_4193 = 0
+  hsa_1029 = 0
+  hsa_7157 = 1
+  hsa_1869 = 0
+  hsa_1870 = 0
+  hsa_1871 = 0
+  hsa_5335 = 0
+  hsa_5336 = 0
+  hsa_3265 = 0
+  hsa_3845 = 0
+  hsa_4893 = 0
+  hsa_369 = 0
+  hsa_5894 = 0
+  hsa_673 = 0
+  hsa_5604 = 0
+  hsa_5605 = 0
+  hsa_5594 = 0
+  hsa_5595 = 0
+  hsa_110117499 = 0
+  hsa_5290 = 0
+  hsa_5291 = 0
+  hsa_5293 = 0
+  hsa_5295 = 0
+  hsa_5296 = 0
+  hsa_8503 = 0
+  hsa_1026 = 1
+  hsa_595 = 0
+  hsa_1019 = 0
+  hsa_1021 = 0
+  hsa_5925 = 0
+  hsa_10912 = 0
+  hsa_1647 = 0
+  hsa_4616 = 0
+  hsa_581 = 0
+  hsa_578 = 0
+  hsa_1643 = 0
+  hsa_51426 = 0
 Step 2 - no simple mediators removed.
-Retained nodes: AKT1, AKT2, AKT3, ARAF, BAK1, BAX, BRAF, CALM1, CALM2, CALM3, CALML3, CALML4, CALML5, CALML6, CAMK1, CAMK1D, CAMK1G, CAMK2A, CAMK2B, CAMK2D, CAMK2G, CAMK4, CCND1, CDK4, CDK6, CDKN1A, CDKN2A, DDB2, E2F1, E2F2, E2F3, EGF, EGFR, GADD45A, GADD45B, GADD45G, GRB2, HRAS, IGF1, IGF1R, KRAS, MAP2K1, MAP2K2, MAPK1, MAPK3, MDM2, MTOR, NRAS, P3R3URF_PIK3R3, PDGFA, PDGFB, PDGFRA, PDGFRB, PIK3CA, PIK3CB, PIK3CD, PIK3R1, PIK3R2, PIK3R3, PLCG1, PLCG2, POLK, PRKCA, PRKCB, PRKCG, PTEN, RAF1, RB1, SHC1, SHC2, SHC3, SHC4, SOS1, SOS2, TGFA, TP53
-Reduced model written to: results\models\glioma\two_step.bnet
+Retained nodes: 
+Reduced model written to: results/models/glioma/two_step.bnet

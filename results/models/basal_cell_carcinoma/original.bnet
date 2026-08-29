@@ -1,67 +1,69 @@
-# Basal cell carcinoma Boolean network, corrected value-based KEGG reconstruction
-# Missing-interaction entries (-/-) were excluded and do not define regulatory dependencies.
-# Convention retained: --> and ..> positive; --| negative; +p inherits the accompanying sign.
+# Basal Cell Carcinoma
+# Reconstructed from the supplied KEGG node/edge dumps.
+# missing interaction (-/-), binding/association, and dissociation were excluded.
+# Nodes without retained incoming regulatory dependencies are fixed to 0.
+# Genuine KEGG self-regulation is retained; no artificial identity self-loops are added.
 targets, factors
-APC, APC
-APC2, APC2
-AXIN1, AXIN1
-AXIN2, AXIN2
-BAK1, BAK1
-BAX, BAX
-BMP2, (GLI1 | GLI2 | GLI3)
-BMP4, (GLI1 | GLI2 | GLI3)
-CDKN1A, CDKN1A
-CTNNB1, CTNNB1 & !GSK3B
-DDB2, DDB2
-DVL1, (FZD1 | FZD10 | FZD2 | FZD3 | FZD4 | FZD5 | FZD6 | FZD7 | FZD8 | FZD9)
-DVL2, (FZD1 | FZD10 | FZD2 | FZD3 | FZD4 | FZD5 | FZD6 | FZD7 | FZD8 | FZD9)
-DVL3, (FZD1 | FZD10 | FZD2 | FZD3 | FZD4 | FZD5 | FZD6 | FZD7 | FZD8 | FZD9)
-FZD1, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-FZD10, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-FZD2, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-FZD3, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-FZD4, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-FZD5, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-FZD6, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-FZD7, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-FZD8, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-FZD9, (WNT1 | WNT10A | WNT10B | WNT11 | WNT16 | WNT2 | WNT2B | WNT3 | WNT3A | WNT4 | WNT5A | WNT5B | WNT6 | WNT7A | WNT7B | WNT8A | WNT8B | WNT9A | WNT9B)
-GADD45A, GADD45A
-GADD45B, GADD45B
-GADD45G, GADD45G
-GLI1, (GLI1 | GLI2 | GLI3)
-GLI2, GLI2
-GLI3, GLI3
-GSK3B, GSK3B & !(DVL1 | DVL2 | DVL3)
-HHIP, (GLI1 | GLI2 | GLI3)
-KIF7, KIF7
-LEF1, CTNNB1
-POLK, POLK
-PTCH1, (GLI1 | GLI2 | GLI3) & !SHH
-PTCH2, (GLI1 | GLI2 | GLI3)
-SHH, SHH
-SMO, SMO
-SUFU, (KIF7 | SMO)
-TCF7, CTNNB1
-TCF7L1, CTNNB1
-TCF7L2, CTNNB1
-TP53, TP53
-WNT1, (GLI1 | GLI2 | GLI3)
-WNT10A, (GLI1 | GLI2 | GLI3)
-WNT10B, (GLI1 | GLI2 | GLI3)
-WNT11, (GLI1 | GLI2 | GLI3)
-WNT16, (GLI1 | GLI2 | GLI3)
-WNT2, (GLI1 | GLI2 | GLI3)
-WNT2B, (GLI1 | GLI2 | GLI3)
-WNT3, (GLI1 | GLI2 | GLI3)
-WNT3A, (GLI1 | GLI2 | GLI3)
-WNT4, (GLI1 | GLI2 | GLI3)
-WNT5A, (GLI1 | GLI2 | GLI3)
-WNT5B, (GLI1 | GLI2 | GLI3)
-WNT6, (GLI1 | GLI2 | GLI3)
-WNT7A, (GLI1 | GLI2 | GLI3)
-WNT7B, (GLI1 | GLI2 | GLI3)
-WNT8A, (GLI1 | GLI2 | GLI3)
-WNT8B, (GLI1 | GLI2 | GLI3)
-WNT9A, (GLI1 | GLI2 | GLI3)
-WNT9B, (GLI1 | GLI2 | GLI3)
+hsa_374654, 0
+hsa_2735, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_5727, (hsa_2735 | hsa_2736 | hsa_2737) & !hsa_6469
+hsa_8643, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_650, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_652, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_51384, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_54361, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7471, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7472, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7473, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7474, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7475, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7476, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7477, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7478, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7479, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7480, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7481, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7482, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7483, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_7484, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_80326, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_81029, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_89780, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_6469, 0
+hsa_10297, 0
+hsa_324, 0
+hsa_51684, hsa_6608
+hsa_8312, 0
+hsa_8313, 0
+hsa_1855, (hsa_11211 | hsa_2535 | hsa_7855 | hsa_7976 | hsa_8321 | hsa_8322 | hsa_8323 | hsa_8324 | hsa_8325 | hsa_8326)
+hsa_1856, (hsa_11211 | hsa_2535 | hsa_7855 | hsa_7976 | hsa_8321 | hsa_8322 | hsa_8323 | hsa_8324 | hsa_8325 | hsa_8326)
+hsa_1857, (hsa_11211 | hsa_2535 | hsa_7855 | hsa_7976 | hsa_8321 | hsa_8322 | hsa_8323 | hsa_8324 | hsa_8325 | hsa_8326)
+hsa_11211, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_2535, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_7855, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_7976, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_8321, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_8322, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_8323, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_8324, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_8325, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_8326, (hsa_51384 | hsa_54361 | hsa_7471 | hsa_7472 | hsa_7473 | hsa_7474 | hsa_7475 | hsa_7476 | hsa_7477 | hsa_7478 | hsa_7479 | hsa_7480 | hsa_7481 | hsa_7482 | hsa_7483 | hsa_7484 | hsa_80326 | hsa_81029 | hsa_89780)
+hsa_2736, 0
+hsa_2737, 0
+hsa_6608, 0
+hsa_64399, (hsa_2735 | hsa_2736 | hsa_2737)
+hsa_1499, !hsa_2932
+hsa_2932, !(hsa_1855 | hsa_1856 | hsa_1857)
+hsa_51176, hsa_1499
+hsa_6932, hsa_1499
+hsa_6934, hsa_1499
+hsa_83439, hsa_1499
+hsa_7157, 0
+hsa_1026, 0
+hsa_10912, 0
+hsa_1647, 0
+hsa_4616, 0
+hsa_581, 0
+hsa_578, 0
+hsa_1643, 0
+hsa_51426, 0

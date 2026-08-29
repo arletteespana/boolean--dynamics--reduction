@@ -1,8 +1,27 @@
 Original size: 63
-After stabilized-node removal: 63
-Reduced size: 63
-Total removed nodes: 0
-Step 1 - no stabilized nodes removed.
+After stabilized-node removal: 44
+Reduced size: 44
+Total removed nodes: 19
+Step 1 - stabilized nodes:
+  hsa_374654 = 0
+  hsa_6469 = 0
+  hsa_10297 = 0
+  hsa_324 = 0
+  hsa_8312 = 0
+  hsa_8313 = 0
+  hsa_2736 = 0
+  hsa_2737 = 0
+  hsa_6608 = 0
+  hsa_51684 = 0
+  hsa_7157 = 0
+  hsa_1026 = 0
+  hsa_10912 = 0
+  hsa_1647 = 0
+  hsa_4616 = 0
+  hsa_581 = 0
+  hsa_578 = 0
+  hsa_1643 = 0
+  hsa_51426 = 0
 Step 2 - no simple mediators removed.
-Retained nodes: APC, APC2, AXIN1, AXIN2, BAK1, BAX, BMP2, BMP4, CDKN1A, CTNNB1, DDB2, DVL1, DVL2, DVL3, FZD1, FZD10, FZD2, FZD3, FZD4, FZD5, FZD6, FZD7, FZD8, FZD9, GADD45A, GADD45B, GADD45G, GLI1, GLI2, GLI3, GSK3B, HHIP, KIF7, LEF1, POLK, PTCH1, PTCH2, SHH, SMO, SUFU, TCF7, TCF7L1, TCF7L2, TP53, WNT1, WNT10A, WNT10B, WNT11, WNT16, WNT2, WNT2B, WNT3, WNT3A, WNT4, WNT5A, WNT5B, WNT6, WNT7A, WNT7B, WNT8A, WNT8B, WNT9A, WNT9B
-Reduced model written to: results\models\basal_cell_carcinoma\two_step.bnet
+Retained nodes: hsa_2735, hsa_5727, hsa_8643, hsa_650, hsa_652, hsa_51384, hsa_54361, hsa_7471, hsa_7472, hsa_7473, hsa_7474, hsa_7475, hsa_7476, hsa_7477, hsa_7478, hsa_7479, hsa_7480, hsa_7481, hsa_7482, hsa_7483, hsa_7484, hsa_80326, hsa_81029, hsa_89780, hsa_1855, hsa_1856, hsa_1857, hsa_11211, hsa_2535, hsa_7855, hsa_7976, hsa_8321, hsa_8322, hsa_8323, hsa_8324, hsa_8325, hsa_8326, hsa_64399, hsa_1499, hsa_2932, hsa_51176, hsa_6932, hsa_6934, hsa_83439
+Reduced model written to: results/models/basal_cell_carcinoma/two_step.bnet

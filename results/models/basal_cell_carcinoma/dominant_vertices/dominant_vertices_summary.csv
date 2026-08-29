@@ -1,2 +1,2 @@
 id,file,dominant_set_size,dominant_set,depth,recurrence_length,state_dimension
-1,dominant_vertices_01.bnet,21,APC;APC2;AXIN1;AXIN2;BAK1;BAX;CDKN1A;CTNNB1;DDB2;GADD45A;GADD45B;GADD45G;GLI1;GLI2;GLI3;GSK3B;KIF7;POLK;SHH;SMO;TP53,3,4,84
+1,dominant_vertices_01.bnet,19,hsa_1026;hsa_10297;hsa_10912;hsa_1643;hsa_1647;hsa_2735;hsa_2736;hsa_2737;hsa_324;hsa_374654;hsa_4616;hsa_51426;hsa_578;hsa_581;hsa_6469;hsa_6608;hsa_7157;hsa_8312;hsa_8313,6,1,19
