@@ -6,8 +6,15 @@ from pathlib import Path
 
 from src.metrics.attractors import analyze_fixed_points
 from src.metrics.structural import compute_structural_metrics
-from src.metrics.transients import analyze_synchronous_dynamics
-from src.metrics.utils import discover_models, load_bnet
+from src.metrics.transients import (
+    analyze_synchronous_dynamics,
+    count_fixed_variables,
+    count_free_variables,
+)
+from src.metrics.utils import (
+    discover_models,
+    load_bnet,
+)
 
 
 def write_csv(
@@ -42,6 +49,7 @@ def write_csv(
             handle,
             fieldnames=fieldnames,
         )
+
         writer.writeheader()
         writer.writerows(rows)
 
@@ -51,6 +59,7 @@ def merge_model_rows(
     fixed_point_rows: list[dict[str, object]],
     dynamic_rows: list[dict[str, object]],
 ) -> list[dict[str, object]]:
+
     def make_index(rows):
         return {
             (
@@ -64,6 +73,7 @@ def merge_model_rows(
     fixed_index = make_index(
         fixed_point_rows
     )
+
     dynamic_index = make_index(
         dynamic_rows
     )
@@ -77,13 +87,22 @@ def merge_model_rows(
             structural["variant"],
         )
 
-        row = dict(structural)
+        row = dict(
+            structural
+        )
 
         for source in (
-            fixed_index.get(key, {}),
-            dynamic_index.get(key, {}),
+            fixed_index.get(
+                key,
+                {},
+            ),
+            dynamic_index.get(
+                key,
+                {},
+            ),
         ):
             for name, value in source.items():
+
                 if name not in {
                     "network",
                     "method",
@@ -91,10 +110,15 @@ def merge_model_rows(
                     "model_file",
                     "state_dimension",
                     "state_space_size",
+                    "fixed_variables",
+                    "free_variables",
+                    "effective_state_space_size",
                 }:
                     row[name] = value
 
-        merged.append(row)
+        merged.append(
+            row
+        )
 
     return merged
 
@@ -102,23 +126,35 @@ def merge_model_rows(
 def add_fixed_point_agreement(
     rows: list[dict[str, object]],
 ) -> None:
-    original_counts: dict[str, object] = {}
+    original_counts: dict[
+        str,
+        object,
+    ] = {}
 
     for row in rows:
+
         if row["method"] == "original":
             original_counts[
                 row["network"]
-            ] = row["fixed_points"]
+            ] = row[
+                "fixed_points"
+            ]
 
     for row in rows:
+
         original = original_counts.get(
             row["network"]
         )
 
-        row["fixed_point_count_match"] = (
+        row[
+            "fixed_point_count_match"
+        ] = (
             ""
             if original is None
-            else row["fixed_points"] == original
+            else (
+                row["fixed_points"]
+                == original
+            )
         )
 
 
@@ -131,26 +167,38 @@ def add_total_attractor_agreement(
     ] = {}
 
     for row in rows:
+
         if row["method"] == "original":
-            originals[row["network"]] = (
+            originals[
+                row["network"]
+            ] = (
                 bool(
                     row[
                         "attractor_count_is_complete"
                     ]
                 ),
-                row["attractors_observed"],
+                row[
+                    "attractors_observed"
+                ],
             )
 
     for row in rows:
+
         original = originals.get(
             row["network"]
         )
 
         if original is None:
-            row["total_attractor_count_match"] = ""
+            row[
+                "total_attractor_count_match"
+            ] = ""
             continue
 
-        original_complete, original_count = original
+        (
+            original_complete,
+            original_count,
+        ) = original
+
         current_complete = bool(
             row[
                 "attractor_count_is_complete"
@@ -161,10 +209,17 @@ def add_total_attractor_agreement(
             original_complete
             and current_complete
         ):
-            row["total_attractor_count_match"] = ""
+            row[
+                "total_attractor_count_match"
+            ] = ""
+
         else:
-            row["total_attractor_count_match"] = (
-                row["attractors_observed"]
+            row[
+                "total_attractor_count_match"
+            ] = (
+                row[
+                    "attractors_observed"
+                ]
                 == original_count
             )
 
@@ -174,15 +229,24 @@ def theoretical_dv_fixed_point_row(
     model,
     original_fixed_points: int,
 ) -> dict[str, object]:
+
     return {
         "network": record.network,
         "method": record.method,
         "variant": record.variant,
-        "model_file": str(record.path),
-        "state_dimension": len(model.nodes),
-        "fixed_points": original_fixed_points,
+        "model_file": str(
+            record.path
+        ),
+        "state_dimension": len(
+            model.nodes
+        ),
+        "fixed_points": (
+            original_fixed_points
+        ),
         "fixed_point_time_seconds": "",
-        "fixed_point_source": "theoretical_preservation",
+        "fixed_point_source": (
+            "theoretical_preservation"
+        ),
     }
 
 
@@ -197,13 +261,19 @@ def main() -> None:
     parser.add_argument(
         "--results-dir",
         default="results/models",
-        help="Directory containing one subdirectory per network.",
+        help=(
+            "Directory containing one "
+            "subdirectory per network."
+        ),
     )
 
     parser.add_argument(
         "--output-dir",
         default="results/analysis",
-        help="Directory where metric CSV files will be written.",
+        help=(
+            "Directory where metric CSV "
+            "files will be written."
+        ),
     )
 
     parser.add_argument(
@@ -213,7 +283,7 @@ def main() -> None:
         type=int,
         default=20,
         help=(
-            "Models with dimension <= this value are analyzed "
+            "Models with free dimension <= this value are analyzed "
             "exhaustively; larger models use Monte Carlo."
         ),
     )
@@ -223,8 +293,8 @@ def main() -> None:
         type=int,
         default=10_000,
         help=(
-            "Number of uniformly sampled initial states for models "
-            "above the exact-dimension threshold."
+            "Number of uniformly sampled admissible initial states for "
+            "models above the exact-dimension threshold."
         ),
     )
 
@@ -243,13 +313,15 @@ def main() -> None:
     results_dir = Path(
         args.results_dir
     )
+
     output_dir = Path(
         args.output_dir
     )
 
     if not results_dir.exists():
         raise FileNotFoundError(
-            f"Results directory not found: {results_dir}"
+            f"Results directory not found: "
+            f"{results_dir}"
         )
 
     network_dirs = sorted(
@@ -275,8 +347,10 @@ def main() -> None:
     ] = []
 
     for network_dir in network_dirs:
+
         original_path = (
-            network_dir / "original.bnet"
+            network_dir
+            / "original.bnet"
         )
 
         if not original_path.exists():
@@ -286,8 +360,24 @@ def main() -> None:
             )
             continue
 
+        original_model = load_bnet(
+            original_path
+        )
+
         original_variables = len(
-            load_bnet(original_path).nodes
+            original_model.nodes
+        )
+
+        original_fixed_variables = (
+            count_fixed_variables(
+                original_model
+            )
+        )
+
+        original_free_variables = (
+            count_free_variables(
+                original_model
+            )
         )
 
         records = discover_models(
@@ -298,7 +388,8 @@ def main() -> None:
             (
                 record
                 for record in records
-                if record.method == "original"
+                if record.method
+                == "original"
             ),
             None,
         )
@@ -312,12 +403,32 @@ def main() -> None:
 
         print()
         print("=" * 70)
+
         print(
-            f"Network: {network_dir.name}"
+            f"Network: "
+            f"{network_dir.name}"
         )
+
         print(
-            f"Models found: {len(records)}"
+            f"Models found: "
+            f"{len(records)}"
         )
+
+        print(
+            f"Original variables: "
+            f"{original_variables}"
+        )
+
+        print(
+            f"Original fixed variables: "
+            f"{original_fixed_variables}"
+        )
+
+        print(
+            f"Original free variables: "
+            f"{original_free_variables}"
+        )
+
         print("=" * 70)
 
         print(
@@ -325,9 +436,12 @@ def main() -> None:
             "(exact mpbn)"
         )
 
-        original_fixed_row = analyze_fixed_points(
-            original_record
+        original_fixed_row = (
+            analyze_fixed_points(
+                original_record
+            )
         )
+
         original_fixed_row[
             "fixed_point_source"
         ] = "mpbn_exact"
@@ -339,21 +453,37 @@ def main() -> None:
         )
 
         for record in records:
+
             model = load_bnet(
                 record.path
             )
 
+            fixed_variables = (
+                count_fixed_variables(
+                    model
+                )
+            )
+
+            free_variables = (
+                count_free_variables(
+                    model
+                )
+            )
+
             analysis_type = (
                 "exact"
-                if len(model.nodes)
+                if free_variables
                 <= args.exact_dimension
                 else "monte_carlo"
             )
 
             print(
-                f"[ANALYZE] {record.method} / "
+                f"[ANALYZE] "
+                f"{record.method} / "
                 f"{record.variant} "
                 f"(D={len(model.nodes)}, "
+                f"fixed={fixed_variables}, "
+                f"free={free_variables}, "
                 f"{analysis_type})"
             )
 
@@ -361,36 +491,48 @@ def main() -> None:
                 compute_structural_metrics(
                     record,
                     original_variables,
+                    original_fixed_variables,
                 )
             )
 
             if record.method == "original":
+
                 fixed_row = dict(
                     original_fixed_row
                 )
 
-            elif record.method == "dominant_vertices":
+            elif (
+                record.method
+                == "dominant_vertices"
+            ):
+
                 print(
                     "  [FIXED POINTS] inherited from original "
                     "(theoretical preservation)"
                 )
 
-                fixed_row = theoretical_dv_fixed_point_row(
-                    record=record,
-                    model=model,
-                    original_fixed_points=(
-                        original_fixed_points
-                    ),
+                fixed_row = (
+                    theoretical_dv_fixed_point_row(
+                        record=record,
+                        model=model,
+                        original_fixed_points=(
+                            original_fixed_points
+                        ),
+                    )
                 )
 
             else:
+
                 print(
                     "  [FIXED POINTS] exact mpbn"
                 )
 
-                fixed_row = analyze_fixed_points(
-                    record
+                fixed_row = (
+                    analyze_fixed_points(
+                        record
+                    )
                 )
+
                 fixed_row[
                     "fixed_point_source"
                 ] = "mpbn_exact"
@@ -400,7 +542,8 @@ def main() -> None:
             )
 
             print(
-                f"  [DYNAMICS] {analysis_type}"
+                f"  [DYNAMICS] "
+                f"{analysis_type}"
             )
 
             dynamics, basins = (
@@ -446,10 +589,12 @@ def main() -> None:
         dynamic_rows
     )
 
-    summary_rows = merge_model_rows(
-        structural_rows,
-        fixed_point_rows,
-        dynamic_rows,
+    summary_rows = (
+        merge_model_rows(
+            structural_rows,
+            fixed_point_rows,
+            dynamic_rows,
+        )
     )
 
     write_csv(
@@ -486,17 +631,23 @@ def main() -> None:
     print("=" * 70)
     print("Analysis finished")
     print("=" * 70)
+
     print(
-        f"Exact threshold: D <= "
+        f"Exact threshold: "
+        f"free D <= "
         f"{args.exact_dimension}"
     )
+
     print(
         f"Monte Carlo samples: "
         f"{args.monte_carlo_samples}"
     )
+
     print(
-        f"Base seed: {args.seed}"
+        f"Base seed: "
+        f"{args.seed}"
     )
+
     print(
         f"Results written to: "
         f"{output_dir}"
