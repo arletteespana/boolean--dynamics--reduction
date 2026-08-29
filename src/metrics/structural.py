@@ -6,6 +6,7 @@ from .utils import ModelRecord, load_bnet
 def compute_structural_metrics(
     record: ModelRecord,
     original_variables: int,
+    original_fixed_variables: int,
 ) -> dict[str, object]:
     model = load_bnet(record.path)
     serialized_dimension = len(model.nodes)
@@ -29,7 +30,10 @@ def compute_structural_metrics(
             "recurrence_length",
             "",
         )
-        depth = record.metadata.get("depth", "")
+        depth = record.metadata.get(
+            "depth",
+            "",
+        )
         dominant_set = record.metadata.get(
             "dominant_set",
             "",
@@ -41,6 +45,7 @@ def compute_structural_metrics(
                 f"summary state_dimension={state_dimension}, "
                 f".bnet variables={serialized_dimension}"
             )
+
     else:
         retained_variables = serialized_dimension
         state_dimension = serialized_dimension
@@ -48,8 +53,6 @@ def compute_structural_metrics(
         depth = ""
         dominant_set = ""
 
-    # Variables whose update rule is constant do not contribute
-    # a free Boolean degree of freedom to the reduced dynamics.
     fixed_variables = sum(
         1
         for node in model.nodes
@@ -57,7 +60,13 @@ def compute_structural_metrics(
     )
 
     free_variables = (
-        state_dimension - fixed_variables
+        state_dimension
+        - fixed_variables
+    )
+
+    original_free_variables = (
+        original_variables
+        - original_fixed_variables
     )
 
     retained_fraction = (
@@ -70,7 +79,18 @@ def compute_structural_metrics(
         1.0 - retained_fraction
     )
 
-    # Serialized state space: all variables written in the reduced .bnet.
+    free_retained_fraction = (
+        free_variables / original_free_variables
+        if original_free_variables
+        else 0.0
+    )
+
+    free_eliminated_fraction = (
+        1.0 - free_retained_fraction
+        if original_free_variables
+        else 0.0
+    )
+
     state_space_size = (
         2 ** state_dimension
     )
@@ -80,23 +100,24 @@ def compute_structural_metrics(
     )
 
     state_space_ratio = (
-        2.0
-        ** (
+        2.0 ** (
             state_dimension
             - original_variables
         )
     )
 
-    # Effective state space: only Boolean coordinates that remain free.
     effective_state_space_size = (
         2 ** free_variables
     )
 
+    original_effective_state_space_size = (
+        2 ** original_free_variables
+    )
+
     effective_state_space_ratio = (
-        2.0
-        ** (
+        2.0 ** (
             free_variables
-            - original_variables
+            - original_free_variables
         )
     )
 
@@ -107,15 +128,19 @@ def compute_structural_metrics(
         "model_file": str(record.path),
 
         "original_variables": original_variables,
+        "original_fixed_variables": original_fixed_variables,
+        "original_free_variables": original_free_variables,
 
         "retained_variables": retained_variables,
         "state_dimension": state_dimension,
-
         "fixed_variables": fixed_variables,
         "free_variables": free_variables,
 
         "retained_fraction": retained_fraction,
         "eliminated_fraction": eliminated_fraction,
+
+        "free_retained_fraction": free_retained_fraction,
+        "free_eliminated_fraction": free_eliminated_fraction,
 
         "state_space_size": str(
             state_space_size
@@ -125,9 +150,7 @@ def compute_structural_metrics(
             original_state_space_size
         ),
 
-        "state_space_ratio": (
-            state_space_ratio
-        ),
+        "state_space_ratio": state_space_ratio,
 
         "log2_state_space_ratio": (
             state_dimension
@@ -138,18 +161,22 @@ def compute_structural_metrics(
             effective_state_space_size
         ),
 
+        "original_effective_state_space_size": str(
+            original_effective_state_space_size
+        ),
+
         "effective_state_space_ratio": (
             effective_state_space_ratio
         ),
 
         "log2_effective_state_space_ratio": (
             free_variables
-            - original_variables
+            - original_free_variables
         ),
 
         "effective_state_space_reduction": (
             free_variables
-            < original_variables
+            < original_free_variables
         ),
 
         "recurrence_length": recurrence_length,
