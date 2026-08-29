@@ -6,6 +6,8 @@ import random
 from collections import Counter
 from time import perf_counter
 
+import sympy as sp
+
 from .attractors import (
     attractor_signature,
     canonical_cycle,
@@ -68,6 +70,84 @@ def _wilson_interval(
     )
 
 
+def _state_space_layout(
+    model: BNetModel,
+) -> tuple[list[int], dict[int, int]]:
+    """
+    Return free variable positions and prescribed constant values.
+
+    A variable whose Boolean update rule is constant is interpreted as a
+    prescribed fixed component and is therefore fixed to that value already
+    in the admissible initial conditions.
+    """
+    free_indices: list[int] = []
+    fixed_values: dict[int, int] = {}
+
+    for i, node in enumerate(model.nodes):
+        rule = model.rules[node]
+
+        if rule.free_symbols:
+            free_indices.append(i)
+            continue
+
+        if rule == sp.true:
+            fixed_values[i] = 1
+
+        elif rule == sp.false:
+            fixed_values[i] = 0
+
+        else:
+            raise ValueError(
+                f"Constant rule for {node!r} could not be interpreted "
+                f"as Boolean 0/1: {rule!r}"
+            )
+
+    return free_indices, fixed_values
+
+
+def count_free_variables(
+    model: BNetModel,
+) -> int:
+    free_indices, _ = _state_space_layout(
+        model
+    )
+
+    return len(free_indices)
+
+
+def count_fixed_variables(
+    model: BNetModel,
+) -> int:
+    _, fixed_values = _state_space_layout(
+        model
+    )
+
+    return len(fixed_values)
+
+
+def _expand_free_state(
+    free_state: int,
+    free_indices: list[int],
+    fixed_values: dict[int, int],
+) -> int:
+    """
+    Embed a state of the free coordinates into the full serialized state.
+    """
+    full_state = 0
+
+    for index, value in fixed_values.items():
+        if value:
+            full_state |= 1 << index
+
+    for free_position, model_position in enumerate(
+        free_indices
+    ):
+        if (free_state >> free_position) & 1:
+            full_state |= 1 << model_position
+
+    return full_state
+
+
 def _assign_path_to_known_attractor(
     path: list[int],
     successor_state: int,
@@ -79,6 +159,7 @@ def _assign_path_to_known_attractor(
 
     for state in reversed(path):
         distance += 1
+
         state_cache[state] = (
             attractor,
             distance,
@@ -91,7 +172,9 @@ def _assign_new_cycle(
     state_cache: dict[int, tuple[tuple[int, ...], int]],
 ) -> tuple[int, ...]:
     cycle_states = path[cycle_start:]
-    attractor = canonical_cycle(cycle_states)
+    attractor = canonical_cycle(
+        cycle_states
+    )
 
     for state in cycle_states:
         state_cache[state] = (
@@ -101,8 +184,11 @@ def _assign_new_cycle(
 
     distance = 0
 
-    for state in reversed(path[:cycle_start]):
+    for state in reversed(
+        path[:cycle_start]
+    ):
         distance += 1
+
         state_cache[state] = (
             attractor,
             distance,
@@ -123,19 +209,30 @@ def _trace_state(
         (attractor, transient_length)
     """
     if initial_state in state_cache:
-        return state_cache[initial_state]
+        return state_cache[
+            initial_state
+        ]
 
     path: list[int] = []
     local_position: dict[int, int] = {}
+
     current = initial_state
 
     while (
         current not in state_cache
         and current not in local_position
     ):
-        local_position[current] = len(path)
-        path.append(current)
-        current = successor(current)
+        local_position[
+            current
+        ] = len(path)
+
+        path.append(
+            current
+        )
+
+        current = successor(
+            current
+        )
 
     if current in state_cache:
         _assign_path_to_known_attractor(
@@ -143,8 +240,11 @@ def _trace_state(
             current,
             state_cache,
         )
+
     else:
-        cycle_start = local_position[current]
+        cycle_start = local_position[
+            current
+        ]
 
         _assign_new_cycle(
             path,
@@ -152,7 +252,9 @@ def _trace_state(
             state_cache,
         )
 
-    return state_cache[initial_state]
+    return state_cache[
+        initial_state
+    ]
 
 
 def _basin_rows(
@@ -177,7 +279,10 @@ def _basin_rows(
         sorted_attractors,
         1,
     ):
-        count = attractor_counts[attractor]
+        count = attractor_counts[
+            attractor
+        ]
+
         fraction = (
             count / total_initial_states
             if total_initial_states
@@ -185,10 +290,13 @@ def _basin_rows(
         )
 
         if analysis_type == "monte_carlo":
-            ci_low, ci_high = _wilson_interval(
-                count,
-                total_initial_states,
+            ci_low, ci_high = (
+                _wilson_interval(
+                    count,
+                    total_initial_states,
+                )
             )
+
         else:
             ci_low = fraction
             ci_high = fraction
@@ -201,9 +309,13 @@ def _basin_rows(
                 "analysis_type": analysis_type,
                 "attractor_id": f"A{i:03d}",
                 "attractor_signature": (
-                    attractor_signature(attractor)
+                    attractor_signature(
+                        attractor
+                    )
                 ),
-                "period": len(attractor),
+                "period": len(
+                    attractor
+                ),
                 "basin_count_or_sample_count": count,
                 "basin_fraction": fraction,
                 "basin_fraction_ci95_low": ci_low,
@@ -219,14 +331,47 @@ def analyze_exact_dynamics(
     network: str,
     method: str,
     variant: str,
-) -> tuple[dict[str, object], list[dict[str, object]]]:
+) -> tuple[
+    dict[str, object],
+    list[dict[str, object]],
+]:
     """
-    Exhaustively analyze synchronous dynamics over all 2^n states.
+    Exhaustively analyze synchronous dynamics over all admissible states.
+
+    Constant-rule variables are fixed to their prescribed values in the
+    initial conditions. Enumeration is therefore performed over the free
+    Boolean coordinates only.
     """
-    n = len(model.nodes)
-    total_states = 1 << n
-    successor = compile_synchronous_update(
-        model
+    serialized_dimension = len(
+        model.nodes
+    )
+
+    free_indices, fixed_values = (
+        _state_space_layout(
+            model
+        )
+    )
+
+    free_variables = len(
+        free_indices
+    )
+
+    fixed_variables = len(
+        fixed_values
+    )
+
+    total_states = (
+        1 << free_variables
+    )
+
+    serialized_state_space_size = (
+        1 << serialized_dimension
+    )
+
+    successor = (
+        compile_synchronous_update(
+            model
+        )
     )
 
     state_cache: dict[
@@ -241,20 +386,38 @@ def analyze_exact_dynamics(
     transient_sum = 0
     transient_max = 0
 
-    for initial_state in range(total_states):
-        attractor, transient = _trace_state(
-            initial_state,
-            successor,
-            state_cache,
+    for free_state in range(
+        total_states
+    ):
+        initial_state = (
+            _expand_free_state(
+                free_state,
+                free_indices,
+                fixed_values,
+            )
         )
 
-        basin_counts[attractor] += 1
+        attractor, transient = (
+            _trace_state(
+                initial_state,
+                successor,
+                state_cache,
+            )
+        )
+
+        basin_counts[
+            attractor
+        ] += 1
+
         transient_sum += transient
 
         if transient > transient_max:
             transient_max = transient
 
-    elapsed = perf_counter() - start
+    elapsed = (
+        perf_counter()
+        - start
+    )
 
     periods = sorted(
         len(attractor)
@@ -276,23 +439,58 @@ def analyze_exact_dynamics(
     metrics = {
         "analysis_type": "exact",
         "attractor_count_is_complete": True,
+
+        "serialized_dimension": serialized_dimension,
+        "fixed_variables": fixed_variables,
+        "free_variables": free_variables,
+
         "initial_states_analyzed": total_states,
-        "state_space_size": str(total_states),
+
+        "state_space_size": str(
+            total_states
+        ),
+
+        "serialized_state_space_size": str(
+            serialized_state_space_size
+        ),
+
+        "effective_state_space_size": str(
+            total_states
+        ),
+
         "coverage_fraction": 1.0,
-        "attractors_observed": len(basin_counts),
-        "fixed_attractors_observed": fixed_observed,
-        "periodic_attractors_observed": periodic_observed,
+
+        "attractors_observed": len(
+            basin_counts
+        ),
+
+        "fixed_attractors_observed": (
+            fixed_observed
+        ),
+
+        "periodic_attractors_observed": (
+            periodic_observed
+        ),
+
         "attractor_periods": ";".join(
             str(period)
             for period in periods
         ),
+
         "mean_transient_length": (
             transient_sum / total_states
             if total_states
             else 0.0
         ),
-        "max_transient_length": transient_max,
-        "dynamic_analysis_time_seconds": elapsed,
+
+        "max_transient_length": (
+            transient_max
+        ),
+
+        "dynamic_analysis_time_seconds": (
+            elapsed
+        ),
+
         "monte_carlo_samples_requested": "",
         "random_seed": "",
     }
@@ -306,7 +504,10 @@ def analyze_exact_dynamics(
         total_initial_states=total_states,
     )
 
-    return metrics, basin_rows
+    return (
+        metrics,
+        basin_rows,
+    )
 
 
 def _sample_unique_states(
@@ -321,7 +522,9 @@ def _sample_unique_states(
             rng.getrandbits(n)
         )
 
-    return list(selected)
+    return list(
+        selected
+    )
 
 
 def analyze_monte_carlo_dynamics(
@@ -331,21 +534,47 @@ def analyze_monte_carlo_dynamics(
     variant: str,
     samples: int = 10_000,
     base_seed: int = 2026,
-) -> tuple[dict[str, object], list[dict[str, object]]]:
+) -> tuple[
+    dict[str, object],
+    list[dict[str, object]],
+]:
     """
     Estimate synchronous basin and transient properties from uniformly sampled
-    initial states.
+    admissible initial states.
 
-    The reported attractor count is the number observed in the sample. It is
-    not claimed to be complete.
+    Constant-rule variables are fixed to their prescribed Boolean values.
+    Monte Carlo sampling is uniform over the remaining free coordinates.
     """
     if samples <= 0:
         raise ValueError(
             "Monte Carlo sample size must be positive."
         )
 
-    n = len(model.nodes)
-    total_states = 1 << n
+    serialized_dimension = len(
+        model.nodes
+    )
+
+    free_indices, fixed_values = (
+        _state_space_layout(
+            model
+        )
+    )
+
+    free_variables = len(
+        free_indices
+    )
+
+    fixed_variables = len(
+        fixed_values
+    )
+
+    total_states = (
+        1 << free_variables
+    )
+
+    serialized_state_space_size = (
+        1 << serialized_dimension
+    )
 
     if samples >= total_states:
         return analyze_exact_dynamics(
@@ -362,16 +591,32 @@ def analyze_monte_carlo_dynamics(
         variant,
     )
 
-    rng = random.Random(seed)
-
-    initial_states = _sample_unique_states(
-        n,
-        samples,
-        rng,
+    rng = random.Random(
+        seed
     )
 
-    successor = compile_synchronous_update(
-        model
+    sampled_free_states = (
+        _sample_unique_states(
+            free_variables,
+            samples,
+            rng,
+        )
+    )
+
+    initial_states = [
+        _expand_free_state(
+            free_state,
+            free_indices,
+            fixed_values,
+        )
+        for free_state
+        in sampled_free_states
+    ]
+
+    successor = (
+        compile_synchronous_update(
+            model
+        )
     )
 
     state_cache: dict[
@@ -387,19 +632,27 @@ def analyze_monte_carlo_dynamics(
     start = perf_counter()
 
     for initial_state in initial_states:
-        attractor, transient = _trace_state(
-            initial_state,
-            successor,
-            state_cache,
+        attractor, transient = (
+            _trace_state(
+                initial_state,
+                successor,
+                state_cache,
+            )
         )
 
-        basin_counts[attractor] += 1
+        basin_counts[
+            attractor
+        ] += 1
+
         transient_sum += transient
 
         if transient > transient_max:
             transient_max = transient
 
-    elapsed = perf_counter() - start
+    elapsed = (
+        perf_counter()
+        - start
+    )
 
     periods = sorted(
         len(attractor)
@@ -421,24 +674,64 @@ def analyze_monte_carlo_dynamics(
     metrics = {
         "analysis_type": "monte_carlo",
         "attractor_count_is_complete": False,
+
+        "serialized_dimension": serialized_dimension,
+        "fixed_variables": fixed_variables,
+        "free_variables": free_variables,
+
         "initial_states_analyzed": samples,
-        "state_space_size": str(total_states),
-        "coverage_fraction": (
-            samples / total_states
+
+        "state_space_size": str(
+            total_states
         ),
-        "attractors_observed": len(basin_counts),
-        "fixed_attractors_observed": fixed_observed,
-        "periodic_attractors_observed": periodic_observed,
+
+        "serialized_state_space_size": str(
+            serialized_state_space_size
+        ),
+
+        "effective_state_space_size": str(
+            total_states
+        ),
+
+        "coverage_fraction": (
+            samples
+            / total_states
+        ),
+
+        "attractors_observed": len(
+            basin_counts
+        ),
+
+        "fixed_attractors_observed": (
+            fixed_observed
+        ),
+
+        "periodic_attractors_observed": (
+            periodic_observed
+        ),
+
         "attractor_periods": ";".join(
             str(period)
             for period in periods
         ),
+
         "mean_transient_length": (
-            transient_sum / samples
+            transient_sum
+            / samples
         ),
-        "max_transient_length": transient_max,
-        "dynamic_analysis_time_seconds": elapsed,
-        "monte_carlo_samples_requested": samples,
+
+        "max_transient_length": (
+            transient_max
+        ),
+
+        "dynamic_analysis_time_seconds": (
+            elapsed
+        ),
+
+        "monte_carlo_samples_requested": (
+            samples
+        ),
+
         "random_seed": seed,
     }
 
@@ -451,7 +744,10 @@ def analyze_monte_carlo_dynamics(
         total_initial_states=samples,
     )
 
-    return metrics, basin_rows
+    return (
+        metrics,
+        basin_rows,
+    )
 
 
 def analyze_synchronous_dynamics(
@@ -462,16 +758,25 @@ def analyze_synchronous_dynamics(
     exact_dimension: int = 20,
     monte_carlo_samples: int = 10_000,
     base_seed: int = 2026,
-) -> tuple[dict[str, object], list[dict[str, object]]]:
+) -> tuple[
+    dict[str, object],
+    list[dict[str, object]],
+]:
     """
-    Select exact enumeration or Monte Carlo automatically from model dimension.
+    Select exact enumeration or Monte Carlo from the number of free variables.
     """
     if exact_dimension < 0:
         raise ValueError(
             "Exact dimension threshold cannot be negative."
         )
 
-    if len(model.nodes) <= exact_dimension:
+    free_variables = (
+        count_free_variables(
+            model
+        )
+    )
+
+    if free_variables <= exact_dimension:
         return analyze_exact_dynamics(
             model,
             network,
