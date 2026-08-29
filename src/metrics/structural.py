@@ -48,19 +48,56 @@ def compute_structural_metrics(
         depth = ""
         dominant_set = ""
 
+    # Variables whose update rule is constant do not contribute
+    # a free Boolean degree of freedom to the reduced dynamics.
+    fixed_variables = sum(
+        1
+        for node in model.nodes
+        if not model.rules[node].free_symbols
+    )
+
+    free_variables = (
+        state_dimension - fixed_variables
+    )
+
     retained_fraction = (
         retained_variables / original_variables
         if original_variables
         else 0.0
     )
 
-    eliminated_fraction = 1.0 - retained_fraction
+    eliminated_fraction = (
+        1.0 - retained_fraction
+    )
 
-    state_space_size = 2 ** state_dimension
-    original_state_space_size = 2 ** original_variables
+    # Serialized state space: all variables written in the reduced .bnet.
+    state_space_size = (
+        2 ** state_dimension
+    )
 
-    state_space_ratio = 2.0 ** (
-        state_dimension - original_variables
+    original_state_space_size = (
+        2 ** original_variables
+    )
+
+    state_space_ratio = (
+        2.0
+        ** (
+            state_dimension
+            - original_variables
+        )
+    )
+
+    # Effective state space: only Boolean coordinates that remain free.
+    effective_state_space_size = (
+        2 ** free_variables
+    )
+
+    effective_state_space_ratio = (
+        2.0
+        ** (
+            free_variables
+            - original_variables
+        )
     )
 
     return {
@@ -68,20 +105,53 @@ def compute_structural_metrics(
         "method": record.method,
         "variant": record.variant,
         "model_file": str(record.path),
+
         "original_variables": original_variables,
+
         "retained_variables": retained_variables,
         "state_dimension": state_dimension,
+
+        "fixed_variables": fixed_variables,
+        "free_variables": free_variables,
+
         "retained_fraction": retained_fraction,
         "eliminated_fraction": eliminated_fraction,
-        "state_space_size": str(state_space_size),
-        "original_state_space_size": str(original_state_space_size),
-        "state_space_ratio": state_space_ratio,
+
+        "state_space_size": str(
+            state_space_size
+        ),
+
+        "original_state_space_size": str(
+            original_state_space_size
+        ),
+
+        "state_space_ratio": (
+            state_space_ratio
+        ),
+
         "log2_state_space_ratio": (
-            state_dimension - original_variables
+            state_dimension
+            - original_variables
         ),
+
+        "effective_state_space_size": str(
+            effective_state_space_size
+        ),
+
+        "effective_state_space_ratio": (
+            effective_state_space_ratio
+        ),
+
+        "log2_effective_state_space_ratio": (
+            free_variables
+            - original_variables
+        ),
+
         "effective_state_space_reduction": (
-            state_dimension < original_variables
+            free_variables
+            < original_variables
         ),
+
         "recurrence_length": recurrence_length,
         "depth": depth,
         "dominant_set": dominant_set,
