@@ -1,0 +1,9 @@
+network,method,free_variables,original_attractors,attractors_observed,attractor_count_match_complete
+bladder_cancer,dominant_vertices,0,1,1,True
+bladder_cancer,leaf_node_removal,0,1,1,True
+bladder_cancer,node_elimination,0,1,1,True
+bladder_cancer,two_step,0,1,1,True
+thyroid_cancer,dominant_vertices,0,1,1,True
+thyroid_cancer,leaf_node_removal,0,1,1,True
+thyroid_cancer,node_elimination,0,1,1,True
+thyroid_cancer,two_step,0,1,1,True

@@ -1,0 +1,6 @@
+method,networks,original_variables_total,original_fixed_variables_total,original_free_variables_total,retained_variables_total,fixed_variables_total,free_variables_total,mean_retained_variables,mean_free_variables,median_free_variables,mean_free_reduction_fraction,median_free_reduction_fraction,global_free_reduction_fraction,networks_with_zero_free_variables,exact_models,monte_carlo_models,fixed_point_matches,fixed_point_match_rate,mean_log2_effective_state_space_ratio,mean_transient_length,maximum_transient_length,complete_attractor_analyses
+original,14,1000,412,588,1000,412,588,71.42857142857143,42.0,45.0,0.0,0.0,0.0,0,2,12,14,1.0,0.0,6.195716005161829,9,2
+dominant_vertices,14,1000,412,588,415,412,3,29.642857142857142,0.21428571428571427,0.0,0.9959132370897077,1.0,0.9948979591836735,11,14,0,14,1.0,-41.785714285714285,0.0,0,14
+node_elimination,14,1000,412,588,3,0,3,0.21428571428571427,0.21428571428571427,0.0,0.9959132370897077,1.0,0.9948979591836735,11,14,0,14,1.0,-41.785714285714285,0.0,0,14
+two_step,14,1000,412,588,58,0,58,4.142857142857143,4.142857142857143,0.0,0.9111542052718524,1.0,0.9013605442176871,11,13,1,14,1.0,-37.857142857142854,0.4743651227678572,6,13
+leaf_node_removal,14,1000,412,588,38,14,24,2.7142857142857144,1.7142857142857142,0.0,0.9728363140127846,1.0,0.9591836734693877,11,13,1,14,1.0,-40.285714285714285,0.49945,7,13

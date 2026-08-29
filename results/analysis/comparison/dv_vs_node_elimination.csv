@@ -1,0 +1,15 @@
+network,DV_retained,DV_fixed,DV_free,DV_free_elimination,NE_retained,NE_fixed,NE_free,NE_free_elimination,same_free_dimension
+acute_myeloid_leukemia,18,17,1,0.9803921568627452,1,0,1,0.9803921568627452,True
+basal_cell_carcinoma,19,18,1,0.9777777777777776,1,0,1,0.9777777777777776,True
+bladder_cancer,26,26,0,1.0,0,0,0,1.0,True
+chronic_myeloid_leukemia,21,21,0,1.0,0,0,0,1.0,True
+colorectal_cancer,36,36,0,1.0,0,0,0,1.0,True
+endometrial_cancer,23,23,0,1.0,0,0,0,1.0,True
+glioma,31,31,0,1.0,0,0,0,1.0,True
+melanoma,40,40,0,1.0,0,0,0,1.0,True
+non_small_cell_lung_cancer,35,35,0,1.0,0,0,0,1.0,True
+pancreatic_cancer,30,30,0,1.0,0,0,0,1.0,True
+prostate_cancer,42,41,1,0.9846153846153848,1,0,1,0.9846153846153848,True
+renal_cell_carcinoma,26,26,0,1.0,0,0,0,1.0,True
+small_cell_lung_cancer,45,45,0,1.0,0,0,0,1.0,True
+thyroid_cancer,23,23,0,1.0,0,0,0,1.0,True
