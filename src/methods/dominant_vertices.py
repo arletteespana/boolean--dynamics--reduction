@@ -28,25 +28,39 @@ class BNetModel:
 def _tokenize_rule(rule: str) -> list[str]:
     tokens = []
     i = 0
+
     while i < len(rule):
         ch = rule[i]
+
         if ch.isspace():
             i += 1
             continue
+
         if ch in "()!~&|":
             tokens.append(ch)
             i += 1
             continue
 
         j = i
-        while j < len(rule) and (not rule[j].isspace()) and rule[j] not in "()!~&|":
+
+        while (
+            j < len(rule)
+            and not rule[j].isspace()
+            and rule[j] not in "()!~&|"
+        ):
             j += 1
+
         tokens.append(rule[i:j])
         i = j
+
     return tokens
 
 
-def _parse_rule(rule: str, symbols: dict[str, sp.Symbol]) -> sp.Basic:
+def _parse_rule(
+    rule: str,
+    symbols: dict[str, sp.Symbol],
+) -> sp.Basic:
+
     converted = []
 
     for token in _tokenize_rule(rule):
@@ -54,20 +68,30 @@ def _parse_rule(rule: str, symbols: dict[str, sp.Symbol]) -> sp.Basic:
 
         if token in ("!", "~") or low == "not":
             converted.append("~")
+
         elif token == "&" or low == "and":
             converted.append("&")
+
         elif token == "|" or low == "or":
             converted.append("|")
+
         elif token == "(":
             converted.append("(")
+
         elif token == ")":
             converted.append(")")
+
         elif low in ("1", "true"):
             converted.append("_TRUE")
+
         elif low in ("0", "false"):
             converted.append("_FALSE")
+
         elif token in symbols:
-            converted.append(symbols[token].name)
+            converted.append(
+                symbols[token].name
+            )
+
         else:
             raise ValueError(
                 f"Unknown token in Boolean rule: {token!r}\n"
@@ -89,7 +113,10 @@ def _parse_rule(rule: str, symbols: dict[str, sp.Symbol]) -> sp.Basic:
     )
 
 
-def load_bnet(path: str | Path) -> BNetModel:
+def load_bnet(
+    path: str | Path,
+) -> BNetModel:
+
     path = Path(path)
 
     if not path.exists():
@@ -102,7 +129,10 @@ def load_bnet(path: str | Path) -> BNetModel:
             f"Input file must be a .bnet file: {path}"
         )
 
-    raw_rules: list[tuple[str, str]] = []
+    raw_rules: list[
+        tuple[str, str]
+    ] = []
+
     has_header = False
 
     for line_number, raw_line in enumerate(
@@ -113,10 +143,16 @@ def load_bnet(path: str | Path) -> BNetModel:
     ):
         line = raw_line.strip()
 
-        if not line or line.startswith("#"):
+        if (
+            not line
+            or line.startswith("#")
+        ):
             continue
 
-        if line.lower().replace(" ", "") in {
+        if line.lower().replace(
+            " ",
+            "",
+        ) in {
             "targets,factors",
             "target,factor",
         }:
@@ -125,23 +161,29 @@ def load_bnet(path: str | Path) -> BNetModel:
 
         if "," not in line:
             raise ValueError(
-                f"Invalid .bnet line {line_number}: "
-                f"{raw_line}"
+                f"Invalid .bnet line "
+                f"{line_number}: {raw_line}"
             )
 
-        node, rule = line.split(",", 1)
+        node, rule = line.split(
+            ",",
+            1,
+        )
 
         node = node.strip()
         rule = rule.strip()
 
         if not node or not rule:
             raise ValueError(
-                f"Invalid .bnet line {line_number}: "
-                f"{raw_line}"
+                f"Invalid .bnet line "
+                f"{line_number}: {raw_line}"
             )
 
         raw_rules.append(
-            (node, rule)
+            (
+                node,
+                rule,
+            )
         )
 
     nodes = [
@@ -194,7 +236,9 @@ def _expr_to_bnet(
         arg = expr.args[0]
 
         if isinstance(arg, sp.Symbol):
-            return f"!{_expr_to_bnet(arg, symbol_names)}"
+            return (
+                f"!{_expr_to_bnet(arg, symbol_names)}"
+            )
 
         return (
             f"!({_expr_to_bnet(arg, symbol_names)})"
@@ -233,8 +277,13 @@ def _expr_to_bnet(
 
 def write_bnet(
     path: str | Path,
-    output_rules: list[tuple[str, sp.Basic]],
-    symbol_names: dict[sp.Symbol, str],
+    output_rules: list[
+        tuple[str, sp.Basic]
+    ],
+    symbol_names: dict[
+        sp.Symbol,
+        str,
+    ],
     has_header: bool,
 ) -> None:
 
@@ -285,6 +334,7 @@ def interaction_graph(
     }
 
     for target in model.nodes:
+
         for symbol in model.rules[
             target
         ].free_symbols:
@@ -343,7 +393,10 @@ def _disjoint_cycle_lower_bound(
     count = 0
 
     while True:
-        cycle = _cycle_nodes(work)
+
+        cycle = _cycle_nodes(
+            work
+        )
 
         if cycle is None:
             return count
@@ -360,6 +413,7 @@ def _minimum_fvs_component(
 ) -> list[frozenset[str]]:
 
     best_size = float("inf")
+
     best_sets: set[
         frozenset[str]
     ] = set()
@@ -375,16 +429,22 @@ def _minimum_fvs_component(
         if len(chosen) > best_size:
             return
 
-        cycle = _cycle_nodes(work)
+        cycle = _cycle_nodes(
+            work
+        )
 
         if cycle is None:
 
             if len(chosen) < best_size:
                 best_size = len(chosen)
-                best_sets = {chosen}
+                best_sets = {
+                    chosen
+                }
 
             elif len(chosen) == best_size:
-                best_sets.add(chosen)
+                best_sets.add(
+                    chosen
+                )
 
             return
 
@@ -413,12 +473,17 @@ def _minimum_fvs_component(
         for node in cycle:
 
             child = work.copy()
-            child.remove_node(node)
+
+            child.remove_node(
+                node
+            )
 
             search(
                 child,
                 chosen
-                | frozenset([node]),
+                | frozenset(
+                    [node]
+                ),
             )
 
     search(
@@ -473,6 +538,7 @@ def minimum_dominant_sets(
             reduced
         )
     ):
+
         subgraph = reduced.subgraph(
             component
         ).copy()
@@ -492,6 +558,7 @@ def minimum_dominant_sets(
     ] = []
 
     for component in cyclic_components:
+
         component_solutions.append(
             _minimum_fvs_component(
                 component
@@ -499,6 +566,7 @@ def minimum_dominant_sets(
         )
 
     if not component_solutions:
+
         return [
             tuple(
                 sorted(forced)
@@ -516,6 +584,7 @@ def minimum_dominant_sets(
         )
 
         for solution in combination:
+
             combined.update(
                 solution
             )
@@ -567,6 +636,7 @@ def dominant_depth(
         }
 
         if not new_nodes:
+
             raise ValueError(
                 "The supplied set is not dominant "
                 "for this interaction graph."
@@ -590,6 +660,11 @@ def recurrence_length(
         dominant_set
     )
 
+    # If there are no dynamic dominant vertices,
+    # there is no temporal memory to reconstruct.
+    if not U:
+        return 1
+
     non_u = [
         node
         for node in graph.nodes
@@ -604,8 +679,8 @@ def recurrence_length(
         dag
     ):
         raise ValueError(
-            "The supplied set is not dominant: "
-            "G - U contains a directed cycle."
+            "The supplied dynamic dominant set "
+            "does not intersect every directed cycle."
         )
 
     topo = list(
@@ -618,11 +693,12 @@ def recurrence_length(
 
     for source in U:
 
-        # Direct U -> U edges,
+        # Direct dynamic U -> U edges,
         # including self-loops.
         for target in graph.successors(
             source
         ):
+
             if target in U:
                 ell = max(
                     ell,
@@ -639,6 +715,7 @@ def recurrence_length(
         ):
 
             if target not in U:
+
                 dist[target] = max(
                     dist.get(
                         target,
@@ -665,12 +742,14 @@ def recurrence_length(
                 )
 
                 if target in U:
+
                     ell = max(
                         ell,
                         candidate,
                     )
 
                 else:
+
                     dist[target] = max(
                         dist.get(
                             target,
@@ -683,7 +762,12 @@ def recurrence_length(
 
 
 # -----------------------------------------------------------------------------
-# Induced Boolean realization on |U| * ell binary memory coordinates
+# Induced Boolean realization
+#
+# Fixed dominant vertices are retained once, because their value is prescribed
+# and they require no temporal memory.
+#
+# Temporal memory is assigned only to dynamic dominant vertices.
 # -----------------------------------------------------------------------------
 
 def build_induced_bnet(
@@ -701,9 +785,22 @@ def build_induced_bnet(
         dominant_set
     )
 
+    fixed_dominant = {
+        node
+        for node in U
+        if not model.rules[
+            node
+        ].free_symbols
+    }
+
+    dynamic_dominant = (
+        U
+        - fixed_dominant
+    )
+
     ell = recurrence_length(
         graph,
-        U,
+        dynamic_dominant,
     )
 
     depth = dominant_depth(
@@ -711,7 +808,7 @@ def build_induced_bnet(
         U,
     )
 
-    # __t0 is the most recent stored value of a dominant variable,
+    # __t0 is the most recent stored value of a dynamic dominant variable,
     # __t1 is one step older, etc.
     memory_symbols: dict[
         tuple[str, int],
@@ -736,6 +833,9 @@ def build_induced_bnet(
         )
 
     for node in dominant_set:
+
+        if node in fixed_dominant:
+            continue
 
         for absolute_time in range(
             ell
@@ -771,13 +871,24 @@ def build_induced_bnet(
         absolute_time: int,
     ) -> sp.Basic:
 
-        if node in U:
+        # Fixed dominant vertices have a prescribed value
+        # and require no state history.
+        if node in fixed_dominant:
+
+            return model.rules[
+                node
+            ]
+
+        # Dynamic dominant vertices are represented
+        # by their stored temporal coordinates.
+        if node in dynamic_dominant:
 
             if (
                 0
                 <= absolute_time
                 < ell
             ):
+
                 return memory_symbols[
                     (
                         node,
@@ -786,18 +897,19 @@ def build_induced_bnet(
                 ]
 
             raise ValueError(
-                "Insufficient dominant-state history while "
-                "constructing the induced dynamics. "
-                f"Reached dominant variable {node!r} "
-                "before the available history."
+                "Insufficient dynamic dominant-state history "
+                "while constructing the induced dynamics. "
+                f"Reached dynamic dominant variable "
+                f"{node!r} before the available history."
             )
 
         rule = model.rules[
             node
         ]
 
-        # Constant rules do not require any state history.
+        # Any constant rule requires no state history.
         if not rule.free_symbols:
+
             return rule
 
         substitutions = {}
@@ -823,7 +935,22 @@ def build_induced_bnet(
         tuple[str, sp.Basic]
     ] = []
 
+    # One output coordinate for every member of the dominant set.
+    # Fixed vertices appear once; dynamic vertices appear with their current rule.
     for node in dominant_set:
+
+        if node in fixed_dominant:
+
+            output_rules.append(
+                (
+                    node,
+                    model.rules[
+                        node
+                    ],
+                )
+            )
+
+            continue
 
         substitutions = {}
 
@@ -854,6 +981,7 @@ def build_induced_bnet(
         )
 
         if unknown:
+
             raise ValueError(
                 f"The induced rule for "
                 f"{node!r} still contains "
@@ -871,9 +999,14 @@ def build_induced_bnet(
             )
         )
 
+    # Older temporal coordinates are required
+    # only for dynamic dominant vertices.
     if ell > 1:
 
         for node in dominant_set:
+
+            if node in fixed_dominant:
+                continue
 
             for age in range(
                 1,
@@ -994,9 +1127,8 @@ def generate_dominant_vertex_models(
                 ),
                 "depth": depth,
                 "recurrence_length": ell,
-                "state_dimension": (
-                    len(dominant_set)
-                    * ell
+                "state_dimension": len(
+                    rules
                 ),
             }
         )
@@ -1026,6 +1158,7 @@ def generate_dominant_vertex_models(
         )
 
         writer.writeheader()
+
         writer.writerows(
             rows
         )
@@ -1070,10 +1203,12 @@ def main() -> None:
     )
 
     if not rows:
+
         print(
             "No dominant-set models "
             "were generated."
         )
+
         return
 
     print(
